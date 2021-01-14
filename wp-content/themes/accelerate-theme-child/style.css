@@ -28,13 +28,13 @@ Text Domain:  accelerate-theme-child
 }
 
 
-ul {
+ul.homepage-featured-work  {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+li.individual-featured-work {
   float: left;
   padding: 10px;
 }
@@ -102,6 +102,41 @@ h2.title{
 
 /*Footer*/
 
-nav .social-media-navigation {
-  color:#45AC9D;
+.social-media-navigation a{
+  color:#FFFFFF;
+}
+
+ul.social-media-menu {
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+}
+ li.twitter-icon , .facebook-icon , .linkedin-icon {
+   float:left;
+   margin-right: 5px;
+ }
+
+.twitter-icon a {
+
+  border-radius:50%;
+  background-color: #3b3b3b;
+  padding: 0.5em 0.6em;
+  align-items: center;
+
+}
+
+.facebook-icon a{
+
+  border-radius: 50%;
+  background-color: #3b3b3b;
+  padding: 0.5em 0.6em;
+
+}
+
+.linkedin-icon a{
+
+  border-radius: 50%;
+  background-color: #3b3b3b;
+  padding: 0.5em 0.6em;
+
 }
