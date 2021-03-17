@@ -10,9 +10,11 @@ Tags:     	light, dark, two-columns, right-sidebar, responsive-layout, accessibi
 Text Domain:  accelerate-theme-child
 */
 
+/*Front Page Styles*/
 
 .home-page {
     background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
+    margin: 0 0 3em;
 }
 
 #masthead {
@@ -23,29 +25,61 @@ Text Domain:  accelerate-theme-child
     background: none repeat scroll 0 0 #45ac9d;
 }
 
+/*Homepage Featured Work*/
+
 .featured-work h4 {
   text-align: center;
+  text-transform: uppercase;
+  margin: 2em auto;
 }
 
 
 ul.homepage-featured-work  {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 li.individual-featured-work {
-  float: left;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
 }
+
+.featured-work h3 {
+  text-align: center;
+  font-weight: 525;
+  margin: 10px auto;
+  font-size: 0.8em;
+}
+
+
 
 
 
 .blog-post {
-	width: 50%;
-	float: left;
-	margin-bottom: 2em;
+  float:left;
+  width: 45%;
 }
+
+.twitter-feed {
+  float: right;
+  width: 45%;
+}
+
+.twitter-feed h4 {
+    font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+    color: #a6a6a6;
+    text-transform: uppercase;
+    padding-bottom:12px;
+
+}
+h3.widget-title {
+  font-size: 24px;
+	font-family: 'Montserrat';
+	font-weight: bold;
+  line-height: 1;
+}
+
 
 .blog-post h4 {
     font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
@@ -64,6 +98,28 @@ li.individual-featured-work {
 	color: #45ac9d;
 	text-transform: uppercase;
 }
+
+/* Homepage Twitter Module */
+#pi_simpletwittertweets-2 > h3 {
+  display: none;
+}
+.stt-em a {
+  display: none;
+}
+
+/*Blog Page*/
+
+#mc4wp-form-1 > div.mc4wp-form-fields > p:nth-child(2) > input[type=submit] {
+  background: #45ac9d;
+  padding: .5em 3.75em;
+}
+#sidebar .widget_search {
+  border-top: 1px solid #BFBFBF;
+}
+
+
+
+
 
 /* Case Studies */
 
@@ -139,4 +195,133 @@ ul.social-media-menu {
   background-color: #3b3b3b;
   padding: 0.5em 0.6em;
 
+}
+
+/* Contact Us page */
+
+div.main-content-contact-us {
+      padding: 2em 8.5em 0 8.5em;
+}
+
+#nf-label-field-1 , #nf-label-field-2 , #nf-label-field-3 {
+  font-size: .85em;
+}
+
+#nf-field-1, #nf-field-2, #nf-field-3 {
+  background: #FFFFFF;
+}
+
+#nf-field-4 {
+
+    background: #45AC9D;
+    color: #ffffff;
+    transition: all .5s;
+    float:right;
+    width:25%;
+  }
+
+  /* About Page */
+
+  div#primary.home-page.hero-content.about {
+    padding: 3em 0;
+  }
+
+.about .main-content {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  padding: 0;
+}
+
+.about h3 {
+  font-size: 1.4em;
+  width: 55%;
+  margin:auto;
+}
+
+.about-subheading {
+  width:55%;
+  margin: 50px auto;
+}
+
+.about-subheading h4 {
+  text-align: center;
+  text-transform: uppercase;
+  }
+
+  .about-subheading p{
+  text-align: center;
+}
+
+ul.about-services {
+  display: flex;
+  flex-direction: column;
+}
+
+li.individual-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.individual-services-icons {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.individual-services-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 66%;
+    text-align: left;
+}
+
+.individual-services-text h3{
+  font-family: 'Open Sans';
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: auto 0;
+}
+
+.individual-services:nth-child(even) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.contact-us-button {
+  border-top: 1px solid #bfbfbf;
+  width: 100%;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: 1.2em;
+}
+.contact-us-button h2 {
+  margin: 2em .25em 1em;
+  line-height: 1;
+  text-align: center;
+}
+
+/* 404 Page */
+
+.error {
+  background-color: #000000;
+  padding: 125px 0 125px 0;
+}
+
+.error h1 {
+ text-align: center;
+ font-family: 'Roboto Mono', monospace;
+ font-size: 3em;
+ color: #FFFFFF;
+ line-height: 1px;
+ padding-bottom: 20px;
 }

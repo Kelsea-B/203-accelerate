@@ -39,7 +39,7 @@ get_header(); ?>
 			<?php echo wp_get_attachment_image($image_1,$size); ?>
 		</figure>
 
-		<h4><?php the_title(); ?></h4>
+		<h3><?php the_title(); ?></h3>
 	</li>
 
 	<?php endwhile; ?>
@@ -56,12 +56,25 @@ get_header(); ?>
 		 <h4>From The Blog</h4>
 		 <?php query_posts('posts_per_page=1'); ?>
 		 <?php while ( have_posts() ) : the_post(); ?>
-			<h2><?php the_title(); ?></h2>
+			<h3><?php the_title(); ?></h3>
 			<?php the_excerpt(); ?>
 		 <?php endwhile; ?>
 	   <?php wp_reset_query(); ?>
-	 </div>
+		  </div>
+
+		 <div class="twitter-feed">
+	 				<h4>Recent Tweet</h4>
+	 				<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+	 				<div id="secondary" class="widget-area" role="complementary">
+	 					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	 					<p class="read-more-link"><a href="http://www.twitter.com">Follow Us &rsaquo;</a></p>
+	 					<?php endif; ?>
+	 				</div>
+
+
  </div>
+</div>
 </section>
+
 
 <?php get_footer();?>
