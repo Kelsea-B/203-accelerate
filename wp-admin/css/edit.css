@@ -150,7 +150,11 @@ body.post-new-php .submitbox .submitdelete {
 
 /* Only highlight drop zones when dragging and only in the 2 columns layout. */
 .is-dragging-metaboxes .metabox-holder .postbox-container .meta-box-sortables {
+<<<<<<< HEAD
 	outline: 3px dashed #646970;
+=======
+	outline: 3px dashed #606a73;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Prevent margin on the child from collapsing with margin on the parent. */
 	display: flow-root;
 	/*
@@ -166,7 +170,11 @@ body.post-new-php .submitbox .submitdelete {
 .postbox {
 	position: relative;
 	min-width: 255px;
+<<<<<<< HEAD
 	border: 1px solid #c3c4c7;
+=======
+	border: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 	background: #fff;
 }
@@ -322,7 +330,11 @@ form#tags-filter {
 #post-status-info {
 	width: 100%;
 	border-spacing: 0;
+<<<<<<< HEAD
 	border: 1px solid #c3c4c7;
+=======
+	border: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	border-top: none;
 	background-color: #f6f7f7;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
@@ -373,7 +385,11 @@ form#tags-filter {
 
 .wp-editor-expand #wp-content-editor-tools {
 	z-index: 1000;
+<<<<<<< HEAD
 	border-bottom: 1px solid #c3c4c7;
+=======
+	border-bottom: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .wp-editor-expand #wp-content-editor-container {
@@ -390,7 +406,11 @@ form#tags-filter {
 }
 
 .wp-editor-expand #post-status-info {
+<<<<<<< HEAD
 	border-top: 1px solid #c3c4c7;
+=======
+	border-top: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .wp-editor-expand div.mce-toolbar-grp {
@@ -464,7 +484,11 @@ form#tags-filter {
 #post-body .misc-pub-revisions:before,
 #post-body .misc-pub-response-to:before,
 #post-body .misc-pub-comment-status:before {
+<<<<<<< HEAD
 	color: #8c8f94;
+=======
+	color: #82878c;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #post-body .misc-pub-post-status:before,
@@ -647,7 +671,11 @@ form#tags-filter {
 }
 
 #poststuff .stuffbox > h2 {
+<<<<<<< HEAD
 	border-bottom: 1px solid #f0f0f1;
+=======
+	border-bottom: 1px solid #eee;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #poststuff .inside {
@@ -698,6 +726,14 @@ form#tags-filter {
 	margin-top: 0.5385em;
 	display: inline-block;
 	min-height: 1.6923em;
+<<<<<<< HEAD
+=======
+}
+
+/* Suggested text for privacy policy */
+.wp-privacy-policy-guide {
+	max-width: 1000px;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /**
@@ -836,6 +872,7 @@ form#tags-filter {
 	background-color: #f6f7f7;
 }
 
+<<<<<<< HEAD
 .privacy-settings-accordion-trigger .title {
 	pointer-events: none;
 	font-weight: 600;
@@ -860,12 +897,55 @@ form#tags-filter {
 	color: #2c3338;
 	font-weight: 600;
 	margin-left: 0.5rem;
+=======
+.text-removed .policy-text {
+	color: #666;
+	font-weight: 300;
+	padding-left: 1em;
+	border-left: 3px solid #ffb900;
+}
+
+.text-removed .policy-text h1,
+.text-removed .policy-text h2,
+.text-removed .policy-text h3,
+.text-removed .policy-text h4,
+.text-removed .policy-text h5,
+.text-removed .policy-text h6 {
+	color: #39424a;
+	font-weight: 500;
+}
+
+.privacy-text-actions {
+	display: inline-block;
+	width: 100%;
+	height: 32px;
+	line-height: 2.46153846;
+	padding-bottom: 6px;
+}
+
+.privacy-text-actions .success {
+	display: none;
+	color: #40860a;
+	float: right;
+	padding-right: 1em;
+}
+
+.privacy-text-actions .success.visible {
+	display: inline-block;
+	height: 32px;
+}
+
+.wp-privacy-policy-guide .policy-text h2 {
+	margin: 1.2em 0 1em;
+	padding: 0;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .privacy-settings-accordion-trigger .badge.blue {
 	border: 1px solid #72aee6;
 }
 
+<<<<<<< HEAD
 .privacy-settings-accordion-trigger .badge.orange {
 	border: 1px solid #dba617;
 }
@@ -889,6 +969,64 @@ form#tags-filter {
 .privacy-settings-accordion-trigger[aria-expanded="true"] .icon,
 .privacy-settings-view-passed[aria-expanded="true"] .icon {
 	transform: translateY(-30%) rotate(-135deg)
+=======
+.privacy-text-section .return-to-top {
+	float: right;
+	margin-right: -250px;
+	margin-top: 6px;
+}
+
+#wpbody:target:before {
+	content: "";
+	display: block;
+	padding-top: 50px;
+	margin-top: -50px;
+}
+
+.hide-privacy-policy-tutorial {
+	background-color: #fff;
+}
+
+.hide-privacy-policy-tutorial .wp-policy-help, /* For back-compat, see #49282 */
+.hide-privacy-policy-tutorial .privacy-policy-tutorial {
+	display: none;
+}
+
+.policy-text {
+	margin-bottom: 1em;
+}
+
+.policy-text > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help),
+.policy-text div > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help) {
+	background-color: #fff;
+	margin: 0;
+	padding: 1em;
+}
+
+.policy-text > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help),
+.policy-text div > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help) {
+	padding-top: 0;
+}
+
+.hide-privacy-policy-tutorial > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(div):not(.privacy-policy-tutorial):not(.wp-policy-help) {
+	margin: 1em 0;
+	padding: 0;
+}
+
+.policy-text ul li,
+.policy-text ol li {
+	margin-left: 2em;
+}
+
+.policy-text ul {
+	list-style: disc;
+}
+
+strong.wp-policy-help, /* For back-compat, see #49282 */
+strong.privacy-policy-tutorial {
+	display: block;
+	margin: 0 0 1em;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .privacy-settings-accordion-panel {
@@ -1113,7 +1251,11 @@ form#tags-filter {
 }
 
 a.post-format-icon:hover:before {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #post-formats-select {
@@ -1212,7 +1354,11 @@ div.tabs-panel-inactive {
 }
 
 div.tabs-panel-active:focus {
+<<<<<<< HEAD
 	box-shadow: inset 0 0 0 1px #4f94d4, inset 0 0 2px 1px rgba(79, 148, 212, 0.8);
+=======
+	box-shadow: inset 0 0 0 1px #5b9dd9, inset 0 0 2px 1px rgba(30, 140, 190, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	outline: 0 none;
 }
 
@@ -1356,7 +1502,11 @@ p.popular-tags a {
 #poststuff .inside .the-tagcloud {
 	margin: 5px 0 10px;
 	padding: 8px;
+<<<<<<< HEAD
 	border: 1px solid #dcdcde;
+=======
+	border: 1px solid #ddd;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	line-height: 1.2;
 	word-spacing: 3px;
 }

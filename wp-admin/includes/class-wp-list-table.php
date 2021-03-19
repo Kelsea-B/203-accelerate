@@ -486,6 +486,7 @@ class WP_List_Table {
 		echo '<label for="bulk-action-selector-' . esc_attr( $which ) . '" class="screen-reader-text">' . __( 'Select bulk action' ) . '</label>';
 		echo '<select name="action' . $two . '" id="bulk-action-selector-' . esc_attr( $which ) . "\">\n";
 		echo '<option value="-1">' . __( 'Bulk actions' ) . "</option>\n";
+<<<<<<< HEAD
 
 		foreach ( $this->_actions as $key => $value ) {
 			if ( is_array( $value ) ) {
@@ -494,6 +495,16 @@ class WP_List_Table {
 				foreach ( $value as $name => $title ) {
 					$class = ( 'edit' === $name ) ? ' class="hide-if-no-js"' : '';
 
+=======
+
+		foreach ( $this->_actions as $key => $value ) {
+			if ( is_array( $value ) ) {
+				echo "\t" . '<optgroup label="' . esc_attr( $key ) . '">' . "\n";
+
+				foreach ( $value as $name => $title ) {
+					$class = ( 'edit' === $name ) ? ' class="hide-if-no-js"' : '';
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					echo "\t\t" . '<option value="' . esc_attr( $name ) . '"' . $class . '>' . $title . "</option>\n";
 				}
 				echo "\t" . "</optgroup>\n";

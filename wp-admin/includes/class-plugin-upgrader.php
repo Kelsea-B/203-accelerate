@@ -162,9 +162,15 @@ class Plugin_Upgrader extends WP_Upgrader {
 			 *
 			 * @since 5.5.0
 			 *
+<<<<<<< HEAD
 			 * @param string  $package      The package file.
 			 * @param array   $data         The new plugin or theme data.
 			 * @param string  $package_type The package type ('plugin' or 'theme').
+=======
+			 * @param string  $package          The package file.
+			 * @param array   $new_plugin_data  The new plugin data.
+			 * @param string  $package_type     The package type (plugin or theme).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			do_action( 'upgrader_overwrote_package', $package, $this->new_plugin_data, 'plugin' );
 		}

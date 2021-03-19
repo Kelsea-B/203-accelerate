@@ -38,8 +38,12 @@ class WP_Customize_Upload_Control extends WP_Customize_Media_Control {
 	 * @var array
 	 */
 	public $button_labels = array();
+<<<<<<< HEAD
 
 	public $removed = '';         // Unused.
+=======
+	public $removed       = '';   // Unused.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	public $context;              // Unused.
 	public $extensions = array(); // Unused.
 

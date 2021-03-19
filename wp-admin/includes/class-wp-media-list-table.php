@@ -71,11 +71,17 @@ class WP_Media_List_Table extends WP_List_Table {
 
 		$mode = empty( $_REQUEST['mode'] ) ? 'list' : $_REQUEST['mode'];
 
+<<<<<<< HEAD
 		/*
 		 * Exclude attachments scheduled for deletion in the next two hours
 		 * if they are for zip packages for interrupted or failed updates.
 		 * See File_Upload_Upgrader class.
 		 */
+=======
+		// Exclude attachments scheduled for deletion in the next two hours
+		// if they are for zip packages for interrupted or failed updates.
+		// See File_Upload_Upgrader class.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$not_in = array();
 
 		foreach ( _get_cron_array() as $cron ) {
@@ -198,15 +204,26 @@ class WP_Media_List_Table extends WP_List_Table {
 		}
 		?>
 		<div class="actions">
+<<<<<<< HEAD
 			<?php
 			if ( ! $this->is_trash ) {
 				$this->months_dropdown( 'attachment' );
 			}
+=======
+		<?php
+		if ( ! $this->is_trash ) {
+			$this->months_dropdown( 'attachment' );
+		}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
-			/** This action is documented in wp-admin/includes/class-wp-posts-list-table.php */
-			do_action( 'restrict_manage_posts', $this->screen->post_type, $which );
+		/** This action is documented in wp-admin/includes/class-wp-posts-list-table.php */
+		do_action( 'restrict_manage_posts', $this->screen->post_type, $which );
 
+<<<<<<< HEAD
 			submit_button( __( 'Filter' ), '', 'filter_action', false, array( 'id' => 'post-query-submit' ) );
+=======
+		submit_button( __( 'Filter' ), '', 'filter_action', false, array( 'id' => 'post-query-submit' ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 			if ( $this->is_trash && current_user_can( 'edit_others_posts' ) && $this->has_items() ) {
 				submit_button( __( 'Empty Trash' ), 'apply', 'delete_all', false );
@@ -296,11 +313,18 @@ class WP_Media_List_Table extends WP_List_Table {
 				?>
 			</div>
 
+<<<<<<< HEAD
 			<div class="search-form">
 				<label for="media-search-input" class="media-search-input-label"><?php esc_html_e( 'Search' ); ?></label>
 				<input type="search" id="media-search-input" class="search" name="s" value="<?php _admin_search_query(); ?>">
 			</div>
 		</div>
+=======
+	<div class="search-form">
+		<label for="media-search-input" class="media-search-input-label"><?php esc_html_e( 'Search' ); ?></label>
+		<input type="search" id="media-search-input" class="search" name="s" value="<?php _admin_search_query(); ?>"></div>
+	</div>
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		<?php
 	}
 
@@ -648,8 +672,14 @@ class WP_Media_List_Table extends WP_List_Table {
 
 		while ( have_posts() ) :
 			the_post();
+<<<<<<< HEAD
 			if ( $this->is_trash && 'trash' !== $post->post_status
 				|| ! $this->is_trash && 'trash' === $post->post_status
+=======
+			if (
+				( $this->is_trash && 'trash' !== $post->post_status )
+				|| ( ! $this->is_trash && 'trash' === $post->post_status )
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			) {
 				continue;
 			}

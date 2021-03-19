@@ -76,6 +76,7 @@ function current_time( $type, $gmt = 0 ) {
 
 	if ( 'mysql' === $type ) {
 		$type = 'Y-m-d H:i:s';
+<<<<<<< HEAD
 	}
 
 	$timezone = $gmt ? new DateTimeZone( 'UTC' ) : wp_timezone();
@@ -125,6 +126,57 @@ function wp_timezone_string() {
 }
 
 /**
+=======
+	}
+
+	$timezone = $gmt ? new DateTimeZone( 'UTC' ) : wp_timezone();
+	$datetime = new DateTime( 'now', $timezone );
+
+	return $datetime->format( $type );
+}
+
+/**
+ * Retrieves the current time as an object with the timezone from settings.
+ *
+ * @since 5.3.0
+ *
+ * @return DateTimeImmutable Date and time object.
+ */
+function current_datetime() {
+	return new DateTimeImmutable( 'now', wp_timezone() );
+}
+
+/**
+ * Retrieves the timezone from site settings as a string.
+ *
+ * Uses the `timezone_string` option to get a proper timezone if available,
+ * otherwise falls back to an offset.
+ *
+ * @since 5.3.0
+ *
+ * @return string PHP timezone string or a ±HH:MM offset.
+ */
+function wp_timezone_string() {
+	$timezone_string = get_option( 'timezone_string' );
+
+	if ( $timezone_string ) {
+		return $timezone_string;
+	}
+
+	$offset  = (float) get_option( 'gmt_offset' );
+	$hours   = (int) $offset;
+	$minutes = ( $offset - $hours );
+
+	$sign      = ( $offset < 0 ) ? '-' : '+';
+	$abs_hour  = abs( $hours );
+	$abs_mins  = abs( $minutes * 60 );
+	$tz_offset = sprintf( '%s%02d:%02d', $sign, $abs_hour, $abs_mins );
+
+	return $tz_offset;
+}
+
+/**
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * Retrieves the timezone from site settings as a `DateTimeZone` object.
  *
  * Timezone can be based on a PHP timezone string or a ±HH:MM offset.
@@ -348,6 +400,7 @@ function wp_maybe_decline_date( $date, $format = '' ) {
 		}
 
 		if ( $decline ) {
+<<<<<<< HEAD
 			foreach ( $months as $key => $month ) {
 				$months[ $key ] = '# ' . preg_quote( $month, '#' ) . '\b#u';
 			}
@@ -376,6 +429,36 @@ function wp_maybe_decline_date( $date, $format = '' ) {
 			}
 
 			foreach ( $months_genitive as $key => $month ) {
+=======
+			foreach ( $months as $key => $month ) {
+				$months[ $key ] = '# ' . preg_quote( $month, '#' ) . '\b#u';
+			}
+
+			foreach ( $months_genitive as $key => $month ) {
+				$months_genitive[ $key ] = ' ' . $month;
+			}
+
+			$date = preg_replace( $months, $months_genitive, $date );
+		}
+
+		/*
+		 * Match a format like 'F jS' or 'F j' (month name, followed by day with an optional ordinal suffix)
+		 * and change it to declined 'j F'.
+		 */
+		if ( $format ) {
+			$decline = preg_match( '#F [dj]#', $format );
+		} else {
+			// If the format is not passed, try to guess it from the date string.
+			$decline = preg_match( '#\b[^\d ]+ \d{1,2}(st|nd|rd|th)?\b#u', trim( $date ) );
+		}
+
+		if ( $decline ) {
+			foreach ( $months as $key => $month ) {
+				$months[ $key ] = '#\b' . preg_quote( $month, '#' ) . ' (\d{1,2})(st|nd|rd|th)?([-–]\d{1,2})?(st|nd|rd|th)?\b#u';
+			}
+
+			foreach ( $months_genitive as $key => $month ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$months_genitive[ $key ] = '$1$3 ' . $month;
 			}
 
@@ -837,7 +920,11 @@ function wp_extract_urls( $content ) {
  *
  * @param string|null $content Post content. If `null`, the `post_content` field from `$post` is used.
  * @param int|WP_Post $post    Post ID or post object.
+<<<<<<< HEAD
  * @return void|false Void on success, false if the post is not found.
+=======
+ * @return null|bool Returns false if post is not found.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function do_enclose( $content, $post ) {
 	global $wpdb;
@@ -1178,7 +1265,11 @@ function remove_query_arg( $key, $query = false ) {
  *
  * @since 4.4.0
  *
+<<<<<<< HEAD
  * @return string[] An array of query variable names to remove from the URL.
+=======
+ * @return string[] An array of parameters to remove from the URL.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_removable_query_args() {
 	$removable_query_args = array(
@@ -1217,7 +1308,11 @@ function wp_removable_query_args() {
 	 *
 	 * @since 4.2.0
 	 *
+<<<<<<< HEAD
 	 * @param string[] $removable_query_args An array of query variable names to remove from a URL.
+=======
+	 * @param string[] $removable_query_args An array of query variables to remove from a URL.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	return apply_filters( 'removable_query_args', $removable_query_args );
 }
@@ -1640,8 +1735,12 @@ function do_feed_atom( $for_comments ) {
  *
  * @since 2.1.0
  * @since 5.3.0 Remove the "Disallow: /" output if search engine visiblity is
+<<<<<<< HEAD
  *              discouraged in favor of robots meta HTML tag via wp_robots_no_robots()
  *              filter callback.
+=======
+ *              discouraged in favor of robots meta HTML tag in wp_no_robots().
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function do_robots() {
 	header( 'Content-Type: text/plain; charset=utf-8' );
@@ -2546,12 +2645,21 @@ function wp_unique_filename( $dir, $filename, $unique_filename_callback = null )
 		if ( $name && $ext && @is_dir( $dir ) && false !== strpos( $dir, $upload_dir['basedir'] ) ) {
 			/**
 			 * Filters the file list used for calculating a unique filename for a newly added file.
+<<<<<<< HEAD
 			 *
 			 * Returning an array from the filter will effectively short-circuit retrieval
 			 * from the filesystem and return the passed value instead.
 			 *
 			 * @since 5.5.0
 			 *
+=======
+			 *
+			 * Returning an array from the filter will effectively short-circuit retrieval
+			 * from the filesystem and return the passed value instead.
+			 *
+			 * @since 5.5.0
+			 *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 * @param array|null $files    The list of files to use for filename comparisons.
 			 *                             Default null (to retrieve the list from the filesystem).
 			 * @param string     $dir      The directory for the new file.
@@ -2792,7 +2900,11 @@ function wp_ext2type( $ext ) {
  * @since 2.0.4
  *
  * @param string   $filename File name or path.
+<<<<<<< HEAD
  * @param string[] $mimes    Optional. Array of allowed mime types keyed by their file extension regex.
+=======
+ * @param string[] $mimes    Optional. Array of mime types keyed by their file extension regex.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return array {
  *     Values for the extension and mime type.
  *
@@ -2834,7 +2946,11 @@ function wp_check_filetype( $filename, $mimes = null ) {
  * @param string   $file     Full path to the file.
  * @param string   $filename The name of the file (may differ from $file due to $file being
  *                           in a tmp directory).
+<<<<<<< HEAD
  * @param string[] $mimes    Optional. Array of allowed mime types keyed by their file extension regex.
+=======
+ * @param string[] $mimes    Optional. Array of mime types keyed by their file extension regex.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return array {
  *     Values for the extension, mime type, and corrected filename.
  *
@@ -2952,6 +3068,7 @@ function wp_check_filetype_and_ext( $file, $filename, $mimes = null ) {
 					'text/vtt',
 				),
 				true
+<<<<<<< HEAD
 			)
 			) {
 				$type = false;
@@ -2967,10 +3084,30 @@ function wp_check_filetype_and_ext( $file, $filename, $mimes = null ) {
 					'application/csv',
 				),
 				true
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			)
 			) {
 				$type = false;
 				$ext  = false;
+<<<<<<< HEAD
+=======
+			}
+		} elseif ( 'application/csv' === $real_mime ) {
+			// Special casing for CSV files.
+			if ( ! in_array(
+				$type,
+				array(
+					'text/csv',
+					'text/plain',
+					'application/csv',
+				),
+				true
+			)
+			) {
+				$type = false;
+				$ext  = false;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		} elseif ( 'text/rtf' === $real_mime ) {
 			// Special casing for RTF files.
@@ -3015,18 +3152,30 @@ function wp_check_filetype_and_ext( $file, $filename, $mimes = null ) {
 	 * @since 3.0.0
 	 * @since 5.1.0 The $real_mime parameter was added.
 	 *
+<<<<<<< HEAD
 	 * @param array        $wp_check_filetype_and_ext {
+=======
+	 * @param array       $wp_check_filetype_and_ext {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *     Values for the extension, mime type, and corrected filename.
 	 *
 	 *     @type string|false $ext             File extension, or false if the file doesn't match a mime type.
 	 *     @type string|false $type            File mime type, or false if the file doesn't match a mime type.
 	 *     @type string|false $proper_filename File name with its correct extension, or false if it cannot be determined.
 	 * }
+<<<<<<< HEAD
 	 * @param string       $file                      Full path to the file.
 	 * @param string       $filename                  The name of the file (may differ from $file due to
 	 *                                                $file being in a tmp directory).
 	 * @param string[]     $mimes                     Array of mime types keyed by their file extension regex.
 	 * @param string|false $real_mime                 The actual mime type or false if the type cannot be determined.
+=======
+	 * @param string      $file                      Full path to the file.
+	 * @param string      $filename                  The name of the file (may differ from $file due to
+	 *                                               $file being in a tmp directory).
+	 * @param string[]    $mimes                     Array of mime types keyed by their file extension regex.
+	 * @param string|bool $real_mime                 The actual mime type or false if the type cannot be determined.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	return apply_filters( 'wp_check_filetype_and_ext', compact( 'ext', 'type', 'proper_filename' ), $file, $filename, $mimes, $real_mime );
 }
@@ -3052,7 +3201,11 @@ function wp_get_image_mime( $file ) {
 			$imagetype = exif_imagetype( $file );
 			$mime      = ( $imagetype ) ? image_type_to_mime_type( $imagetype ) : false;
 		} elseif ( function_exists( 'getimagesize' ) ) {
+<<<<<<< HEAD
 			$imagesize = wp_getimagesize( $file );
+=======
+			$imagesize = @getimagesize( $file );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$mime      = ( isset( $imagesize['mime'] ) ) ? $imagesize['mime'] : false;
 		} else {
 			$mime = false;
@@ -3575,13 +3728,24 @@ function _default_wp_die_handler( $message, $title = '', $args = array() ) {
 			-moz-box-sizing:    border-box;
 			box-sizing:         border-box;
 
+<<<<<<< HEAD
+=======
+			-webkit-box-shadow: 0 1px 0 #ccc;
+			box-shadow: 0 1px 0 #ccc;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			vertical-align: top;
 		}
 
 		.button.button-large {
+<<<<<<< HEAD
 			line-height: 2.30769231;
 			min-height: 32px;
 			padding: 0 12px;
+=======
+			height: 30px;
+			line-height: 2.15384615;
+			padding: 0 12px 2px;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		.button:hover,
@@ -3600,10 +3764,17 @@ function _default_wp_die_handler( $message, $title = '', $args = array() ) {
 		}
 
 		.button:active {
+<<<<<<< HEAD
 			background: #f3f5f6;
 			border-color: #7e8993;
 			-webkit-box-shadow: none;
 			box-shadow: none;
+=======
+			background: #eee;
+			border-color: #999;
+			-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+			box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		<?php
@@ -4106,6 +4277,7 @@ function wp_send_json( $response, $status_code = null, $options = 0 ) {
 			),
 			'5.5.0'
 		);
+<<<<<<< HEAD
 	}
 
 	if ( ! headers_sent() ) {
@@ -4115,6 +4287,17 @@ function wp_send_json( $response, $status_code = null, $options = 0 ) {
 		}
 	}
 
+=======
+	}
+
+	if ( ! headers_sent() ) {
+		header( 'Content-Type: application/json; charset=' . get_option( 'blog_charset' ) );
+		if ( null !== $status_code ) {
+			status_header( $status_code );
+		}
+	}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	echo wp_json_encode( $response, $options );
 
 	if ( wp_doing_ajax() ) {
@@ -7398,7 +7581,11 @@ function wp_privacy_delete_old_export_files() {
 	}
 
 	require_once ABSPATH . 'wp-admin/includes/file.php';
+<<<<<<< HEAD
 	$export_files = list_files( $exports_dir, 100, array( 'index.php' ) );
+=======
+	$export_files = list_files( $exports_dir, 100, array( 'index.html' ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	/**
 	 * Filters the lifetime, in seconds, of a personal data export file.

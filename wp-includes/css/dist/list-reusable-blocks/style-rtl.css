@@ -5,6 +5,7 @@
  * Breakpoints & Media Queries
  */
 /**
+<<<<<<< HEAD
  * SCSS Variables.
  *
  * Please use variables from this sheet to ensure consistency across the UI.
@@ -12,6 +13,8 @@
  * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
  */
 /**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * Colors
  */
 /**
@@ -31,6 +34,7 @@
  * Editor widths.
  */
 /**
+<<<<<<< HEAD
  * Block & Editor UI.
  */
 /**
@@ -39,6 +43,15 @@
 /**
  * React Native specific.
  * These variables do not appear to be used anywhere else.
+=======
+ * Block UI.
+ */
+/**
+ * Border radii.
+ */
+/**
+ * Block paddings.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 /**
  * Breakpoint mixins
@@ -68,6 +81,7 @@
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
+<<<<<<< HEAD
 /**
  * These are default block editor widths in case the theme doesn't provide them.
  */
@@ -86,6 +100,15 @@
 .list-reusable-blocks-import-dropdown__content .components-popover__content > div {
   padding: 10px;
 }
+=======
+:root {
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color-darker-10: #006ba1;
+  --wp-admin-theme-color-darker-20: #005a87; }
+
+.list-reusable-blocks-import-dropdown__content .components-popover__content > div {
+  padding: 10px; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 .list-reusable-blocks-import-form__label {
   display: block;
@@ -110,15 +133,22 @@
   display: inline-flex;
   align-items: center;
   position: relative;
+<<<<<<< HEAD
   top: -3px;
 }
 .list-reusable-blocks__container .components-button {
   height: 26px;
 }
+=======
+  top: -3px; }
+  .list-reusable-blocks__container .components-button {
+    height: 26px; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-light {
   --wp-admin-theme-color: #0085ba;
   --wp-admin-theme-color-darker-10: #0073a1;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #006187;
   --wp-admin-border-width-focus: 2px;
 }
@@ -127,10 +157,14 @@ body.admin-color-light {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #006187; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-modern {
   --wp-admin-theme-color: #3858e9;
   --wp-admin-theme-color-darker-10: #2145e6;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #183ad6;
   --wp-admin-border-width-focus: 2px;
 }
@@ -139,10 +173,14 @@ body.admin-color-modern {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #183ad6; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-blue {
   --wp-admin-theme-color: #096484;
   --wp-admin-theme-color-darker-10: #07526c;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #064054;
   --wp-admin-border-width-focus: 2px;
 }
@@ -151,10 +189,14 @@ body.admin-color-blue {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #064054; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-coffee {
   --wp-admin-theme-color: #46403c;
   --wp-admin-theme-color-darker-10: #383330;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #2b2724;
   --wp-admin-border-width-focus: 2px;
 }
@@ -163,10 +205,14 @@ body.admin-color-coffee {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #2b2724; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-ectoplasm {
   --wp-admin-theme-color: #523f6d;
   --wp-admin-theme-color-darker-10: #46365d;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #3a2c4d;
   --wp-admin-border-width-focus: 2px;
 }
@@ -175,10 +221,14 @@ body.admin-color-ectoplasm {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #3a2c4d; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-midnight {
   --wp-admin-theme-color: #e14d43;
   --wp-admin-theme-color-darker-10: #dd382d;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #d02c21;
   --wp-admin-border-width-focus: 2px;
 }
@@ -187,10 +237,14 @@ body.admin-color-midnight {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #d02c21; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-ocean {
   --wp-admin-theme-color: #627c83;
   --wp-admin-theme-color-darker-10: #576e74;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #4c6066;
   --wp-admin-border-width-focus: 2px;
 }
@@ -199,10 +253,14 @@ body.admin-color-ocean {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #4c6066; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 body.admin-color-sunrise {
   --wp-admin-theme-color: #dd823b;
   --wp-admin-theme-color-darker-10: #d97426;
+<<<<<<< HEAD
   --wp-admin-theme-color-darker-20: #c36922;
   --wp-admin-border-width-focus: 2px;
 }
@@ -211,3 +269,6 @@ body.admin-color-sunrise {
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+  --wp-admin-theme-color-darker-20: #c36922; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

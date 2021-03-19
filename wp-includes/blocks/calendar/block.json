@@ -12,6 +12,10 @@
 	},
 	"supports": {
 		"align": true
+<<<<<<< HEAD
 	},
 	"style": "wp-block-calendar"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

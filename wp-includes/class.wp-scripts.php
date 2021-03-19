@@ -415,7 +415,11 @@ class WP_Scripts extends WP_Dependencies {
 	 *
 	 * @param string $handle   Name of the script to add the inline script to.
 	 *                         Must be lowercase.
+<<<<<<< HEAD
 	 * @param string $data     String containing the JavaScript to be added.
+=======
+	 * @param string $data     String containing the javascript to be added.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @param string $position Optional. Whether to add the inline script
 	 *                         before the handle or after. Default 'after'.
 	 * @return bool True on success, false on failure.

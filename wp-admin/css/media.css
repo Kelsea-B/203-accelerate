@@ -310,7 +310,11 @@
 
 #find-posts-close:hover,
 #find-posts-close:focus {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #find-posts-close:focus {
@@ -693,7 +697,11 @@ border color while dragging a file over the uploader drop area */
 
 .edit-attachment-frame .edit-media-header [disabled],
 .edit-attachment-frame .edit-media-header [disabled]:hover {
+<<<<<<< HEAD
 	color: #c3c4c7;
+=======
+	color: #ccc;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	background: inherit;
 	cursor: default;
 }
@@ -813,7 +821,11 @@ border color while dragging a file over the uploader drop area */
 }
 
 .copy-to-clipboard-container .success {
+<<<<<<< HEAD
 	color: #008a20;
+=======
+	color: #40860a;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	margin-left: 8px;
 }
 
@@ -971,9 +983,15 @@ border color while dragging a file over the uploader drop area */
 }
 
 .imgedit-menu .button.disabled {
+<<<<<<< HEAD
 	color: #a7aaad;
 	border-color: #dcdcde;
 	background: #f6f7f7;
+=======
+	color: #a0a5aa;
+	border-color: #ddd;
+	background: #f7f7f7;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: none;
 	text-shadow: 0 1px 0 #fff;
 	cursor: default;
@@ -1162,6 +1180,11 @@ span.imgedit-scale-warn {
 	text-align: center;
 	font-size: 13px;
 	color: #3c434a;
+}
+
+.imgedit-settings .imgedit-scale-button-wrapper {
+	margin-top: 0.3077em;
+	display: block;
 }
 
 .imgedit-settings .imgedit-scale-button-wrapper {

@@ -88,7 +88,11 @@ if ( is_wp_error( $is_valid ) ) {
 	);
 }
 
+<<<<<<< HEAD
 if ( wp_is_site_protected_by_basic_auth( 'front' ) ) {
+=======
+if ( ! empty( $_SERVER['PHP_AUTH_USER'] ) || ! empty( $_SERVER['PHP_AUTH_PW'] ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	wp_die(
 		__( 'Your website appears to use Basic Authentication, which is not currently compatible with Application Passwords.' ),
 		__( 'Cannot Authorize Application' ),
@@ -141,7 +145,11 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 	<?php endif; ?>
 
 	<div class="card auth-app-card">
+<<<<<<< HEAD
 		<h2 class="title"><?php _e( 'An application would like to connect to your account.' ); ?></h2>
+=======
+		<h2 class="title"><?php __( 'An application would like to connect to your account.' ); ?></h2>
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		<?php if ( $app_name ) : ?>
 			<p>
 				<?php
@@ -200,6 +208,7 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 			<?php
 			/**
+<<<<<<< HEAD
 			 * Fires in the Authorize Application Password new password section in the no-JS version.
 			 *
 			 * In most cases, this should be used in combination with the {@see 'wp_application_passwords_approve_app_request_success'}
@@ -207,12 +216,21 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 			 *
 			 * @since 5.6.0
 			 * @since 5.6.1 Corrected action name and signature.
+=======
+			 * Fires in the Authorize Application Password new password section.
+			 *
+			 * @since 5.6.0
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 *
 			 * @param string  $new_password The newly generated application password.
 			 * @param array   $request      The array of request data. All arguments are optional and may be empty.
 			 * @param WP_User $user         The user authorizing the application.
 			 */
+<<<<<<< HEAD
 			do_action( 'wp_authorize_application_password_form_approved_no_js', $new_password, $request, $user );
+=======
+			do_action( 'wp_authorize_application_password_form', $request, $user );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			?>
 		<?php else : ?>
 			<form action="<?php echo esc_url( admin_url( 'authorize-application.php' ) ); ?>" method="post" class="form-wrap">

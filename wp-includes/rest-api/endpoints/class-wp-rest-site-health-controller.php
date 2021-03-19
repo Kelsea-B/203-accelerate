@@ -90,6 +90,7 @@ class WP_REST_Site_Health_Controller extends WP_REST_Controller {
 			sprintf(
 				'/%s/%s',
 				$this->rest_base,
+<<<<<<< HEAD
 				'https-status'
 			),
 			array(
@@ -109,6 +110,8 @@ class WP_REST_Site_Health_Controller extends WP_REST_Controller {
 			sprintf(
 				'/%s/%s',
 				$this->rest_base,
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'dotorg-communication'
 			),
 			array(
@@ -219,6 +222,7 @@ class WP_REST_Site_Health_Controller extends WP_REST_Controller {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks that the site's frontend can be accessed over HTTPS.
 	 *
 	 * @since 5.7.0
@@ -231,6 +235,8 @@ class WP_REST_Site_Health_Controller extends WP_REST_Controller {
 	}
 
 	/**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * Checks that the authorization header is valid.
 	 *
 	 * @since 5.6.0

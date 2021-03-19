@@ -140,7 +140,10 @@ $core_actions_post = array(
 	'health-check-loopback-requests',
 	'health-check-get-sizes',
 	'toggle-auto-updates',
+<<<<<<< HEAD
 	'send-password-reset',
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 );
 
 // Deprecated.

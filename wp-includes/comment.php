@@ -454,7 +454,11 @@ function get_comment_count( $post_id = 0 ) {
  * @param mixed  $meta_value Metadata value. Must be serializable if non-scalar.
  * @param bool   $unique     Optional. Whether the same key should not be added.
  *                           Default false.
+<<<<<<< HEAD
  * @return int|false Meta ID on success, false on failure.
+=======
+ * @return int|bool Meta ID on success, false on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function add_comment_meta( $comment_id, $meta_key, $meta_value, $unique = false ) {
 	return add_metadata( 'comment', $comment_id, $meta_key, $meta_value, $unique );
@@ -1935,8 +1939,13 @@ function wp_get_unapproved_comment_author_email() {
 		$comment    = get_comment( $comment_id );
 
 		if ( $comment && hash_equals( $_GET['moderation-hash'], wp_hash( $comment->comment_date_gmt ) ) ) {
+<<<<<<< HEAD
 			// The comment will only be viewable by the comment author for 10 minutes.
 			$comment_preview_expires = strtotime( $comment->comment_date_gmt . '+10 minutes' );
+=======
+			// The comment will only be viewable by the comment author for 1 minute.
+			$comment_preview_expires = strtotime( $comment->comment_date_gmt . '+1 minute' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 			if ( time() < $comment_preview_expires ) {
 				$commenter_email = $comment->comment_author_email;
@@ -2718,7 +2727,11 @@ function wp_update_comment_count_now( $post_id ) {
  * @since 1.5.0
  *
  * @param string $url        URL to ping.
+<<<<<<< HEAD
  * @param string $deprecated Not Used.
+=======
+ * @param int    $deprecated Not Used.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return string|false String containing URI on success, false on failure.
  */
 function discover_pingback_server_uri( $url, $deprecated = '' ) {

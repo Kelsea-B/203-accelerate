@@ -1601,11 +1601,19 @@ function wpmu_welcome_notification( $blog_id, $user_id, $password, $title, $meta
 	 *
 	 * @since MU (3.0.0)
 	 *
+<<<<<<< HEAD
 	 * @param int|false $blog_id  Site ID, or false to prevent the email from sending.
 	 * @param int       $user_id  User ID of the site administrator.
 	 * @param string    $password User password, or "N/A" if the user account is not new.
 	 * @param string    $title    Site title.
 	 * @param array     $meta     Signup meta data. By default, contains the requested privacy setting and lang_id.
+=======
+	 * @param int|bool $blog_id  Site ID.
+	 * @param int      $user_id  User ID of the site administrator.
+	 * @param string   $password User password, or "N/A" if the user account is not new.
+	 * @param string   $title    Site title.
+	 * @param array    $meta     Signup meta data. By default, contains the requested privacy setting and lang_id.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	if ( ! apply_filters( 'wpmu_welcome_notification', $blog_id, $user_id, $password, $title, $meta ) ) {
 		return false;
@@ -2298,7 +2306,11 @@ function maybe_add_existing_user_to_blog() {
  *
  * @since MU (3.0.0)
  *
+<<<<<<< HEAD
  * @param array|false $details {
+=======
+ * @param array $details {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  *     User details. Must at least contain values for the keys listed below.
  *
  *     @type int    $user_id The ID of the user being added to the current blog.

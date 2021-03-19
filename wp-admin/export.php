@@ -29,7 +29,11 @@ function export_add_js() {
 		var form = $('#export-filters'),
 			filters = form.find('.export-filters');
 		filters.hide();
+<<<<<<< HEAD
 		form.find('input:radio').on( 'change', function() {
+=======
+		form.find('input:radio').change(function() {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			filters.slideUp('fast');
 			switch ( $(this).val() ) {
 				case 'attachment': $('#attachment-filters').slideDown(); break;

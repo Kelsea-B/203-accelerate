@@ -2485,6 +2485,7 @@ function get_theme_starter_content() {
  *
  * @global array $_wp_theme_features
  *
+<<<<<<< HEAD
  * @param string $feature The feature being added. Likely core values include:
  *                          - 'admin-bar'
  *                          - 'align-wide'
@@ -2516,6 +2517,16 @@ function get_theme_starter_content() {
  *                          - 'widgets'
  * @param mixed  ...$args Optional extra arguments to pass along with certain features.
  * @return void|false Void on success, false on failure.
+=======
+ * @param string $feature The feature being added. Likely core values include 'post-formats', 'post-thumbnails',
+ *                        'custom-header', 'custom-background', 'custom-logo', 'menus', 'automatic-feed-links',
+ *                        'html5', 'title-tag', 'customize-selective-refresh-widgets', 'starter-content',
+ *                        'responsive-embeds', 'align-wide', 'dark-editor-style', 'disable-custom-colors',
+ *                        'disable-custom-font-sizes', 'editor-color-palette', 'editor-font-sizes',
+ *                        'editor-styles', 'wp-block-styles', and 'core-block-patterns'.
+ * @param mixed  ...$args Optional extra arguments to pass along with certain features.
+ * @return void|bool False on failure, void otherwise.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function add_theme_support( $feature, ...$args ) {
 	global $_wp_theme_features;

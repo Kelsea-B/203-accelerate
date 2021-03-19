@@ -17,6 +17,7 @@ if ( ! class_exists( 'WP_Privacy_Policy_Content' ) ) {
 	include_once ABSPATH . 'wp-admin/includes/class-wp-privacy-policy-content.php';
 }
 
+<<<<<<< HEAD
 add_filter(
 	'admin_body_class',
 	function( $body_class ) {
@@ -25,12 +26,16 @@ add_filter(
 		return $body_class;
 	}
 );
+=======
+$title = __( 'Privacy Policy Guide' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 wp_enqueue_script( 'privacy-tools' );
 
 require_once ABSPATH . 'wp-admin/admin-header.php';
 
 ?>
+<<<<<<< HEAD
 <div class="privacy-settings-header">
 	<div class="privacy-settings-title-section">
 		<h1>
@@ -85,6 +90,12 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 	<hr class="hr-separator">
 	<h3 class="section-title"><?php _e( 'Policies' ); ?></h3>
 	<div class="privacy-settings-accordion wp-privacy-policy-guide">
+=======
+<div class="wrap">
+	<h1><?php echo esc_html( $title ); ?></h1>
+
+	<div class="wp-privacy-policy-guide">
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		<?php WP_Privacy_Policy_Content::privacy_policy_guide(); ?>
 	</div>
 </div>

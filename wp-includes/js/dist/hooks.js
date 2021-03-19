@@ -82,12 +82,20 @@ this["wp"] = this["wp"] || {}; this["wp"]["hooks"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 451);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 482);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 15:
+=======
+/***/ 17:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96,7 +104,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["hooks"] =
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+<<<<<<< HEAD
 var arrayLikeToArray = __webpack_require__(24);
+=======
+var arrayLikeToArray = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
@@ -124,7 +136,11 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 24:
+=======
+/***/ 27:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -141,6 +157,7 @@ function _arrayLikeToArray(arr, len) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 25:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -154,12 +171,18 @@ function _classCallCheck(instance, Constructor) {
 
 /***/ }),
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -183,7 +206,11 @@ function _iterableToArray(iter) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 451:
+=======
+/***/ 482:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -208,11 +235,16 @@ __webpack_require__.d(__webpack_exports__, "doingAction", function() { return /*
 __webpack_require__.d(__webpack_exports__, "doingFilter", function() { return /* binding */ doingFilter; });
 __webpack_require__.d(__webpack_exports__, "didAction", function() { return /* binding */ didAction; });
 __webpack_require__.d(__webpack_exports__, "didFilter", function() { return /* binding */ didFilter; });
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "actions", function() { return /* binding */ actions; });
 __webpack_require__.d(__webpack_exports__, "filters", function() { return /* binding */ filters; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 var classCallCheck = __webpack_require__(25);
+=======
+__webpack_require__.d(__webpack_exports__, "actions", function() { return /* binding */ build_module_actions; });
+__webpack_require__.d(__webpack_exports__, "filters", function() { return /* binding */ build_module_filters; });
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/validateNamespace.js
 /**
@@ -492,6 +524,7 @@ function createRemoveHook(hooks, storeKey) {
  * @param  {import('.').Hooks}    hooks Hooks instance.
  * @param  {import('.').StoreKey} storeKey
  *
+<<<<<<< HEAD
  * @return {HasHook} Function that returns whether any handlers are
  *                   attached to a particular hook and optional namespace.
  */
@@ -501,18 +534,45 @@ function createHasHook(hooks, storeKey) {
 
     if ('undefined' !== typeof namespace) {
       return hookName in hooksStore && hooksStore[hookName].handlers.some(function (hook) {
+=======
+ * @return {Function}       Function that returns whether any handlers are
+ *                          attached to a particular hook and optional namespace.
+ */
+function createHasHook(hooks) {
+  /**
+   * Returns whether any handlers are attached for the given hookName and optional namespace.
+   *
+   * @param {string}  hookName  The name of the hook to check for.
+   * @param {?string} namespace Optional. The unique namespace identifying the callback
+   *                                      in the form `vendor/plugin/function`.
+   *
+   * @return {boolean} Whether there are handlers that are attached to the given hook.
+   */
+  return function hasHook(hookName, namespace) {
+    // Use the namespace if provided.
+    if ('undefined' !== typeof namespace) {
+      return hookName in hooks && hooks[hookName].handlers.some(function (hook) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
         return hook.namespace === namespace;
       });
     }
 
+<<<<<<< HEAD
     return hookName in hooksStore;
+=======
+    return hookName in hooks;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   };
 }
 
 /* harmony default export */ var build_module_createHasHook = (createHasHook);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+<<<<<<< HEAD
 var toConsumableArray = __webpack_require__(15);
+=======
+var toConsumableArray = __webpack_require__(17);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/hooks/build-module/createRunHook.js
 
@@ -541,8 +601,13 @@ function createRunHook(hooks, storeKey) {
       };
     }
 
+<<<<<<< HEAD
     hooksStore[hookName].runs++;
     var handlers = hooksStore[hookName].handlers; // The following code is stripped from production builds.
+=======
+    hooks[hookName].runs++;
+    var handlers = hooks[hookName].handlers; // The following code is stripped from production builds.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
     if (false) {}
 

@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["wordcount"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 453);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 483);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,7 +98,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["wordcount"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 453:
+=======
+/***/ 483:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104,8 +112,13 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "count", function() { return /* binding */ count; });
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__(2);
+=======
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__(2);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/wordcount/build-module/defaultSettings.js
 /** @typedef {import('./index').WPWordCountStrategy} WPWordCountStrategy */
@@ -371,7 +384,11 @@ function transposeHTMLEntitiesToCountableChars(settings, text) {
 function loadSettings(type, userSettings) {
   var _settings$l10n$shortc, _settings$l10n;
 
+<<<<<<< HEAD
   var settings = Object(external_lodash_["extend"])({}, defaultSettings, userSettings);
+=======
+  var settings = Object(external_this_lodash_["extend"])({}, defaultSettings, userSettings);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   settings.shortcodes = (_settings$l10n$shortc = (_settings$l10n = settings.l10n) === null || _settings$l10n === void 0 ? void 0 : _settings$l10n.shortcodes) !== null && _settings$l10n$shortc !== void 0 ? _settings$l10n$shortc : [];
 
   if (settings.shortcodes && settings.shortcodes.length) {
@@ -400,7 +417,11 @@ function loadSettings(type, userSettings) {
 function countWords(text, regex, settings) {
   var _text$match$length, _text$match;
 
+<<<<<<< HEAD
   text = Object(external_lodash_["flow"])(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), stripSpaces.bind(null, settings), stripHTMLEntities.bind(null, settings), stripConnectors.bind(null, settings), stripRemovables.bind(null, settings))(text);
+=======
+  text = Object(external_this_lodash_["flow"])(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), stripSpaces.bind(null, settings), stripHTMLEntities.bind(null, settings), stripConnectors.bind(null, settings), stripRemovables.bind(null, settings))(text);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   text = text + '\n';
   return (_text$match$length = (_text$match = text.match(regex)) === null || _text$match === void 0 ? void 0 : _text$match.length) !== null && _text$match$length !== void 0 ? _text$match$length : 0;
 }
@@ -418,7 +439,11 @@ function countWords(text, regex, settings) {
 function countCharacters(text, regex, settings) {
   var _text$match$length2, _text$match2;
 
+<<<<<<< HEAD
   text = Object(external_lodash_["flow"])(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), transposeAstralsToCountableChar.bind(null, settings), stripSpaces.bind(null, settings), transposeHTMLEntitiesToCountableChars.bind(null, settings))(text);
+=======
+  text = Object(external_this_lodash_["flow"])(stripTags.bind(null, settings), stripHTMLComments.bind(null, settings), stripShortcodes.bind(null, settings), transposeAstralsToCountableChar.bind(null, settings), stripSpaces.bind(null, settings), transposeHTMLEntitiesToCountableChars.bind(null, settings))(text);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   text = text + '\n';
   return (_text$match$length2 = (_text$match2 = text.match(regex)) === null || _text$match2 === void 0 ? void 0 : _text$match2.length) !== null && _text$match$length2 !== void 0 ? _text$match$length2 : 0;
 }

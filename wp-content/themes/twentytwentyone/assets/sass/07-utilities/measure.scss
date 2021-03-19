@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Measure
 // - The width of a line of text, in characters, is known as its measure.
 
@@ -20,3 +21,27 @@ section,
 footer {
 	max-width: none;
 }
+=======
+// Measure
+// - The width of a line of text, in characters, is known as its measure.
+
+header *,
+main *,
+footer * {
+	max-width: var(--global--spacing-measure);
+}
+
+html,
+body,
+div,
+header,
+nav,
+article,
+figure,
+hr,
+main,
+section,
+footer {
+	max-width: none;
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

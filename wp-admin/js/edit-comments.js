@@ -804,7 +804,11 @@ window.commentReply = {
 		});
 
 		// Add events.
+<<<<<<< HEAD
 		$('#the-comment-list .column-comment > p').on( 'dblclick', function(){
+=======
+		$('#the-comment-list .column-comment > p').dblclick(function(){
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			commentReply.toggle($(this).parent());
 		});
 
@@ -850,7 +854,11 @@ window.commentReply = {
 	 */
 	toggle : function(el) {
 		if ( 'none' !== $( el ).css( 'display' ) && ( $( '#replyrow' ).parent().is('#com-reply') || window.confirm( __( 'Are you sure you want to edit this comment?\nThe changes you made will be lost.' ) ) ) ) {
+<<<<<<< HEAD
 			$( el ).find( 'button.vim-q' ).trigger( 'click' );
+=======
+			$( el ).find( 'button.vim-q' ).click();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 	},
 
@@ -1135,8 +1143,12 @@ window.commentReply = {
 			updateCountText( 'span.all-count', 1 );
 		}
 
+<<<<<<< HEAD
 		r.data = r.data || '';
 		c = r.data.toString().trim(); // Trim leading whitespaces.
+=======
+		c = $.trim(r.data); // Trim leading whitespaces.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$(c).hide();
 		$('#replyrow').after(c);
 

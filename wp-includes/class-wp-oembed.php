@@ -220,7 +220,11 @@ class WP_oEmbed {
 	 *
 	 * @param string $name      Method to call.
 	 * @param array  $arguments Arguments to pass when calling.
+<<<<<<< HEAD
 	 * @return mixed|false Return value of the callback, false otherwise.
+=======
+	 * @return mixed|bool Return value of the callback, false otherwise.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function __call( $name, $arguments ) {
 		if ( in_array( $name, $this->compat_methods, true ) ) {

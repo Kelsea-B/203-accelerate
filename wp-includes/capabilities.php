@@ -7,8 +7,22 @@
  */
 
 /**
+<<<<<<< HEAD
  * Maps a capability to the primitive capabilities required of the given user to
  * satisfy the capability being checked.
+=======
+ * Maps meta capabilities to primitive capabilities.
+ *
+ * This function also accepts an ID of an object to map against if the capability is a meta capability. Meta
+ * capabilities such as `edit_post` and `edit_user` are capabilities used by this function to map to primitive
+ * capabilities that a user or role has, such as `edit_posts` and `edit_others_posts`.
+ *
+ * Example usage:
+ *
+ *     map_meta_cap( 'edit_posts', $user->ID );
+ *     map_meta_cap( 'edit_post', $user->ID, $post->ID );
+ *     map_meta_cap( 'edit_post_meta', $user->ID, $post->ID, $meta_key );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  *
  * This function also accepts an ID of an object to map against if the capability is a meta capability. Meta
  * capabilities such as `edit_post` and `edit_user` are capabilities used by this function to map to primitive
@@ -24,6 +38,7 @@
  * it just returns what the required capabilities are.
  *
  * @since 2.0.0
+<<<<<<< HEAD
  * @since 4.9.6 Added the `export_others_personal_data`, `erase_others_personal_data`,
  *              and `manage_privacy_options` capabilities.
  * @since 5.1.0 Added the `update_php` capability.
@@ -40,6 +55,17 @@
  * @param int    $user_id User ID.
  * @param mixed  ...$args Optional further parameters, typically starting with an object ID.
  * @return string[] Primitive capabilities required of the user.
+=======
+ * @since 5.3.0 Formalized the existing and already documented `...$args` parameter
+ *              by adding it to the function signature.
+ *
+ * @global array $post_type_meta_caps Used to get post type meta capabilities.
+ *
+ * @param string $cap     Capability name.
+ * @param int    $user_id User ID.
+ * @param mixed  ...$args Optional further parameters, typically starting with an object ID.
+ * @return string[] Actual capabilities for meta capability.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function map_meta_cap( $cap, $user_id, ...$args ) {
 	$caps = array();
@@ -246,10 +272,17 @@ function map_meta_cap( $cap, $user_id, ...$args ) {
 				break;
 			}
 
+<<<<<<< HEAD
 			$status_obj = get_post_status_object( get_post_status( $post ) );
 			if ( ! $status_obj ) {
 				/* translators: 1: Post status, 2: Capability name. */
 				_doing_it_wrong( __FUNCTION__, sprintf( __( 'The post status %1$s is not registered, so it may not be reliable to check the capability "%2$s" against a post with that status.' ), get_post_status( $post ), $cap ), '5.4.0' );
+=======
+			$status_obj = get_post_status_object( $post->post_status );
+			if ( ! $status_obj ) {
+				/* translators: 1: Post status, 2: Capability name. */
+				_doing_it_wrong( __FUNCTION__, sprintf( __( 'The post status %1$s is not registered, so it may not be reliable to check the capability "%2$s" against a post with that status.' ), $post->post_status, $cap ), '5.4.0' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$caps[] = 'edit_others_posts';
 				break;
 			}

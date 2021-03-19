@@ -27,7 +27,11 @@ class WP_Site_Health_Auto_Updates {
 	 */
 	public function run_tests() {
 		$tests = array(
+<<<<<<< HEAD
 			$this->test_constants( 'WP_AUTO_UPDATE_CORE', array( true, 'beta', 'rc', 'development', 'branch-development', 'minor' ) ),
+=======
+			$this->test_constants( 'WP_AUTO_UPDATE_CORE', array( true, 'beta', 'rc', 'minor' ) ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$this->test_wp_version_check_attached(),
 			$this->test_filters_automatic_updater_disabled(),
 			$this->test_wp_automatic_updates_disabled(),
@@ -90,9 +94,13 @@ class WP_Site_Health_Auto_Updates {
 	 * @return array The test results.
 	 */
 	public function test_wp_version_check_attached() {
+<<<<<<< HEAD
 		if ( ( ! is_multisite() || is_main_site() && is_network_admin() )
 			&& ! has_filter( 'wp_version_check', 'wp_version_check' )
 		) {
+=======
+		if ( ! has_filter( 'wp_version_check', 'wp_version_check' ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			return array(
 				'description' => sprintf(
 					/* translators: %s: Name of the filter used. */
@@ -130,7 +138,11 @@ class WP_Site_Health_Auto_Updates {
 	 *
 	 * @since 5.3.0
 	 *
+<<<<<<< HEAD
 	 * @return array|false The test results. False if auto-updates are enabled.
+=======
+	 * @return array|bool The test results. False if auto-updates are enabled.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function test_wp_automatic_updates_disabled() {
 		if ( ! class_exists( 'WP_Automatic_Updater' ) ) {
@@ -154,7 +166,11 @@ class WP_Site_Health_Auto_Updates {
 	 *
 	 * @since 5.2.0
 	 *
+<<<<<<< HEAD
 	 * @return array|false The test results. False if the auto-updates failed.
+=======
+	 * @return array|bool The test results. False if the auto-updates failed.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	function test_if_failed_update() {
 		$failed = get_site_option( 'auto_core_update_failed' );
@@ -304,7 +320,11 @@ class WP_Site_Health_Auto_Updates {
 	 *
 	 * @global WP_Filesystem_Base $wp_filesystem WordPress filesystem subclass.
 	 *
+<<<<<<< HEAD
 	 * @return array|false The test results. False if they're not writeable.
+=======
+	 * @return array|bool The test results. False if they're not writeable.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	function test_all_files_writable() {
 		global $wp_filesystem;
@@ -389,7 +409,11 @@ class WP_Site_Health_Auto_Updates {
 	 *
 	 * @since 5.2.0
 	 *
+<<<<<<< HEAD
 	 * @return array|false The test results. False if it isn't a development version.
+=======
+	 * @return array|bool The test results. False if it isn't a development version.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	function test_accepts_dev_updates() {
 		require ABSPATH . WPINC . '/version.php'; // $wp_version; // x.y.z

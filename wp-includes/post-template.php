@@ -946,8 +946,12 @@ function wp_link_pages( $args = '' ) {
 	 *
 	 * @since 3.0.0
 	 *
+<<<<<<< HEAD
 	 * @param array $parsed_args An array of page link arguments. See wp_link_pages()
 	 *                           for information on accepted arguments.
+=======
+	 * @param array $parsed_args An array of arguments for page links for paginated posts.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	$parsed_args = apply_filters( 'wp_link_pages_args', $parsed_args );
 
@@ -1210,8 +1214,12 @@ function wp_dropdown_pages( $args = '' ) {
 	 * @since 4.4.0 `$parsed_args` and `$pages` added as arguments.
 	 *
 	 * @param string    $output      HTML output for drop down list of pages.
+<<<<<<< HEAD
 	 * @param array     $parsed_args The parsed arguments array. See wp_dropdown_pages()
 	 *                               for information on accepted arguments.
+=======
+	 * @param array     $parsed_args The parsed arguments array.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @param WP_Post[] $pages       Array of the page objects.
 	 */
 	$html = apply_filters( 'wp_dropdown_pages', $output, $parsed_args, $pages );
@@ -1340,8 +1348,12 @@ function wp_list_pages( $args = '' ) {
 	 * @see wp_list_pages()
 	 *
 	 * @param string    $output      HTML output of the pages list.
+<<<<<<< HEAD
 	 * @param array     $parsed_args An array of page-listing arguments. See wp_list_pages()
 	 *                               for information on accepted arguments.
+=======
+	 * @param array     $parsed_args An array of page-listing arguments.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @param WP_Post[] $pages       Array of the page objects.
 	 */
 	$html = apply_filters( 'wp_list_pages', $output, $parsed_args, $pages );
@@ -1651,7 +1663,11 @@ function wp_get_attachment_link( $id = 0, $size = 'thumbnail', $permalink = fals
 	 *                                an array of width and height values in pixels (in that order).
 	 * @param bool         $permalink Whether to add permalink to image. Default false.
 	 * @param bool         $icon      Whether to include an icon.
+<<<<<<< HEAD
 	 * @param string|false $text      If string, will be link text.
+=======
+	 * @param string|bool  $text      If string, will be link text.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @param array|string $attr      Array or string of attributes.
 	 */
 	return apply_filters( 'wp_get_attachment_link', "<a href='" . esc_url( $url ) . "'>$link_text</a>", $id, $size, $permalink, $icon, $text, $attr );
@@ -1755,7 +1771,11 @@ function get_the_password_form( $post = 0 ) {
  * @since 4.2.0 The `$template` parameter was changed to also accept an array of page templates.
  * @since 4.7.0 Now works with any post type, not just pages.
  *
+<<<<<<< HEAD
  * @param string|string[] $template The specific template filename or array of templates to match.
+=======
+ * @param string|array $template The specific template filename or array of templates to match.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return bool True on success, false on failure.
  */
 function is_page_template( $template = '' ) {

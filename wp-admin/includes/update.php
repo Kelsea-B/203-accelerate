@@ -248,6 +248,22 @@ function core_update_footer( $msg = '' ) {
 	require ABSPATH . WPINC . '/version.php';
 
 	$is_development_version = preg_match( '/alpha|beta|RC/', $wp_version );
+<<<<<<< HEAD
+=======
+
+	if ( $is_development_version && 'latest' === $cur->response ) {
+		$cur->response = 'development';
+	}
+
+	switch ( $cur->response ) {
+		case 'development':
+			return sprintf(
+				/* translators: 1: WordPress version number, 2: URL to WordPress Updates screen. */
+				__( 'You are using a development version (%1$s). Cool! Please <a href="%2$s">stay updated</a>.' ),
+				get_bloginfo( 'version', 'display' ),
+				network_admin_url( 'update-core.php' )
+			);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	if ( $is_development_version ) {
 		return sprintf(

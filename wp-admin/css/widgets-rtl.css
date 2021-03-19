@@ -139,7 +139,11 @@
 .media-widget-control .media-widget-preview img {
 	max-width: 100%;
 	vertical-align: middle;
+<<<<<<< HEAD
 	background-image: linear-gradient(-45deg, #c3c4c7 25%, transparent 25%, transparent 75%, #c3c4c7 75%, #c3c4c7), linear-gradient(-45deg, #c3c4c7 25%, transparent 25%, transparent 75%, #c3c4c7 75%, #c3c4c7);
+=======
+	background-image: linear-gradient(-45deg, #c4c4c4 25%, transparent 25%, transparent 75%, #c4c4c4 75%, #c4c4c4), linear-gradient(-45deg, #c4c4c4 25%, transparent 25%, transparent 75%, #c4c4c4 75%, #c4c4c4);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	background-position: 100% 0, 10px 10px;
 	background-size: 20px 20px;
 }
@@ -553,7 +557,11 @@ div#widgets-right .closed .widgets-sortables {
 	background: #f0f0f1;
 	padding: 0 15px;
 	line-height: 3.30769230;
+<<<<<<< HEAD
 	border-right: 1px solid #dcdcde;
+=======
+	border-right: 1px solid #DDD;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #widgets-left .widget-control-edit:hover,

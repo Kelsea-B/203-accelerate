@@ -280,6 +280,44 @@ class WP_REST_Server {
 		 */
 		$this->send_header( 'X-Content-Type-Options', 'nosniff' );
 		$expose_headers = array( 'X-WP-Total', 'X-WP-TotalPages', 'Link' );
+<<<<<<< HEAD
+=======
+
+		/**
+		 * Filters the list of response headers that are exposed to CORS requests.
+		 *
+		 * @since 5.5.0
+		 *
+		 * @param string[] $expose_headers The list of headers to expose.
+		 */
+		$expose_headers = apply_filters( 'rest_exposed_cors_headers', $expose_headers );
+
+		$this->send_header( 'Access-Control-Expose-Headers', implode( ', ', $expose_headers ) );
+
+		$allow_headers = array(
+			'Authorization',
+			'X-WP-Nonce',
+			'Content-Disposition',
+			'Content-MD5',
+			'Content-Type',
+		);
+
+		/**
+		 * Filters the list of request headers that are allowed for CORS requests.
+		 *
+		 * The allowed headers are passed to the browser to specify which
+		 * headers can be passed to the REST API. By default, we allow the
+		 * Content-* headers needed to upload files to the media endpoints.
+		 * As well as the Authorization and Nonce headers for allowing authentication.
+		 *
+		 * @since 5.5.0
+		 *
+		 * @param string[] $allow_headers The list of headers to allow.
+		 */
+		$allow_headers = apply_filters( 'rest_allowed_cors_headers', $allow_headers );
+
+		$this->send_header( 'Access-Control-Allow-Headers', implode( ', ', $allow_headers ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		/**
 		 * Filters the list of response headers that are exposed to REST API CORS requests.
@@ -429,7 +467,11 @@ class WP_REST_Server {
 		 * @since 4.5.0 Applied to embedded responses.
 		 *
 		 * @param WP_HTTP_Response $result  Result to send to the client. Usually a `WP_REST_Response`.
+<<<<<<< HEAD
 		 * @param WP_REST_Server   $server  Server instance.
+=======
+		 * @param WP_REST_Server   $this    Server instance.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param WP_REST_Request  $request Request used to generate the response.
 		 */
 		$result = apply_filters( 'rest_post_dispatch', rest_ensure_response( $result ), $this, $request );
@@ -502,7 +544,11 @@ class WP_REST_Server {
 				);
 
 				$result = $this->error_to_response( $json_error_obj );
+<<<<<<< HEAD
 				$result = wp_json_encode( $result->data );
+=======
+				$result = wp_json_encode( $result->data[0] );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 
 			if ( $jsonp_callback ) {
@@ -986,7 +1032,11 @@ class WP_REST_Server {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Matches a request object to its handler.
+=======
+	 * Matches a request object to it's handler.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *
 	 * @access private
 	 * @since 5.6.0
@@ -1046,9 +1096,15 @@ class WP_REST_Server {
 
 				$request->set_url_params( $args );
 				$request->set_attributes( $handler );
+<<<<<<< HEAD
 
 				$defaults = array();
 
+=======
+
+				$defaults = array();
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				foreach ( $handler['args'] as $arg => $options ) {
 					if ( isset( $options['default'] ) ) {
 						$defaults[ $arg ] = $options['default'];
@@ -1094,8 +1150,12 @@ class WP_REST_Server {
 		 *
 		 * @since 4.7.0
 		 *
+<<<<<<< HEAD
 		 * @param WP_REST_Response|WP_HTTP_Response|WP_Error|mixed $response Result to send to the client.
 		 *                                                                   Usually a WP_REST_Response or WP_Error.
+=======
+		 * @param WP_REST_Response|WP_HTTP_Response|WP_Error|mixed $response Result to send to the client. Usually a WP_REST_Response or WP_Error.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param array                                            $handler  Route handler used for the request.
 		 * @param WP_REST_Request                                  $request  Request used to generate the response.
 		 */
@@ -1118,7 +1178,11 @@ class WP_REST_Server {
 
 		if ( ! is_wp_error( $response ) ) {
 			/**
+<<<<<<< HEAD
 			 * Filters the REST API dispatch request result.
+=======
+			 * Filters the REST dispatch request result.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 *
 			 * Allow plugins to override dispatching the request.
 			 *
@@ -1156,8 +1220,12 @@ class WP_REST_Server {
 		 *
 		 * @since 4.7.0
 		 *
+<<<<<<< HEAD
 		 * @param WP_REST_Response|WP_HTTP_Response|WP_Error|mixed $response Result to send to the client.
 		 *                                                                   Usually a WP_REST_Response or WP_Error.
+=======
+		 * @param WP_REST_Response|WP_HTTP_Response|WP_Error|mixed $response Result to send to the client. Usually a WP_REST_Response or WP_Error.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param array                                            $handler  Route handler used for the request.
 		 * @param WP_REST_Request                                  $request  Request used to generate the response.
 		 */
@@ -1446,9 +1514,13 @@ class WP_REST_Server {
 	 */
 	protected function get_max_batch_size() {
 		/**
+<<<<<<< HEAD
 		 * Filters the maximum number of REST API requests that can be included in a batch.
 		 *
 		 * @since 5.6.0
+=======
+		 * Filters the maximum number of requests that can be included in a batch.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * @param int $max_size The maximum size.
 		 */

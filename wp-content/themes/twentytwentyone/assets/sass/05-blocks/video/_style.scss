@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-video {
 
 	figcaption {
@@ -14,3 +15,21 @@
 	width: 100%;
 	vertical-align: middle;
 }
+=======
+.wp-block-video {
+
+	figcaption {
+		color: var(--global--color-primary);
+		font-size: var(--global--font-size-xs);
+		margin-top: calc(0.5 * var(--global--spacing-unit));
+		margin-bottom: var(--global--spacing-unit);
+		text-align: center;
+	}
+}
+
+* > figure > video {
+	max-width: unset;
+	width: 100%;
+	vertical-align: middle;
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

@@ -153,7 +153,11 @@ abstract class WP_REST_Meta_Fields {
 			 *
 			 * Non-single meta can also be removed by passing an empty array.
 			 */
+<<<<<<< HEAD
 			if ( is_null( $value ) || ( array() === $value && ! $args['single'] ) ) {
+=======
+			if ( is_null( $meta[ $name ] ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$args = $this->get_registered_fields()[ $meta_key ];
 
 				if ( $args['single'] ) {
@@ -176,6 +180,11 @@ abstract class WP_REST_Meta_Fields {
 				continue;
 			}
 
+<<<<<<< HEAD
+=======
+			$value = $meta[ $name ];
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			if ( ! $args['single'] && is_array( $value ) && count( array_filter( $value, 'is_null' ) ) ) {
 				return new WP_Error(
 					'rest_invalid_stored_value',

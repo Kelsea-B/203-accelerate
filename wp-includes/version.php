@@ -13,7 +13,11 @@
  *
  * @global string $wp_version
  */
+<<<<<<< HEAD
 $wp_version = '5.7';
+=======
+$wp_version = '5.6';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /**
  * Holds the WordPress DB revision, increments when changes are made to the WordPress DB schema.

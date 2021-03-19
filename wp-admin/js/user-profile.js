@@ -2,7 +2,7 @@
  * @output wp-admin/js/user-profile.js
  */
 
-/* global ajaxurl, pwsL10n, userProfileL10n */
+/* global ajaxurl, pwsL10n */
 (function($) {
 	var updateLock = false,
 		__ = wp.i18n.__,
@@ -157,7 +157,11 @@
 		var $generateButton,
 			$cancelButton;
 
+<<<<<<< HEAD
 		$pass1Row = $( '.user-pass1-wrap, .user-pass-wrap, .reset-pass-submit' );
+=======
+		$pass1Row = $( '.user-pass1-wrap, .user-pass-wrap' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		// Hide the confirm password field when JavaScript support is enabled.
 		$('.user-pass2-wrap').hide();

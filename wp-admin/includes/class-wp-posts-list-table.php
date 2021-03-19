@@ -1873,6 +1873,7 @@ class WP_Posts_List_Table extends WP_List_Table {
 									<input type="checkbox" name="sticky" value="sticky" />
 									<span class="checkbox-title"><?php _e( 'Make this post sticky' ); ?></span>
 								</label>
+<<<<<<< HEAD
 
 							<?php endif; // $bulk ?>
 
@@ -1883,6 +1884,18 @@ class WP_Posts_List_Table extends WP_List_Table {
 				<?php if ( $bulk && current_theme_supports( 'post-formats' ) && post_type_supports( $screen->post_type, 'post-formats' ) ) : ?>
 					<?php $post_formats = get_theme_support( 'post-formats' ); ?>
 
+=======
+
+							<?php endif; // $bulk ?>
+
+						<?php endif; // 'post' && $can_publish && current_user_can( 'edit_others_posts' ) ?>
+
+					</div>
+
+				<?php if ( $bulk && current_theme_supports( 'post-formats' ) && post_type_supports( $screen->post_type, 'post-formats' ) ) : ?>
+					<?php $post_formats = get_theme_support( 'post-formats' ); ?>
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					<label class="alignleft">
 						<span class="title"><?php _ex( 'Format', 'post format' ); ?></span>
 						<select name="post_format">

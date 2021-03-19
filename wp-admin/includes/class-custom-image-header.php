@@ -791,7 +791,11 @@ endif;
 		}
 
 		if ( file_exists( $file ) ) {
+<<<<<<< HEAD
 			list( $width, $height, $type, $attr ) = wp_getimagesize( $file );
+=======
+			list( $width, $height, $type, $attr ) = @getimagesize( $file );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		} else {
 			$data   = wp_get_attachment_metadata( $attachment_id );
 			$height = isset( $data['height'] ) ? $data['height'] : 0;
@@ -1223,7 +1227,11 @@ endif;
 		$parent_url = wp_get_attachment_url( $parent->ID );
 		$url        = str_replace( wp_basename( $parent_url ), wp_basename( $cropped ), $parent_url );
 
+<<<<<<< HEAD
 		$size       = wp_getimagesize( $cropped );
+=======
+		$size       = @getimagesize( $cropped );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$image_type = ( $size ) ? $size['mime'] : 'image/jpeg';
 
 		$object = array(

@@ -18,7 +18,11 @@ class WP_Application_Passwords {
 	 *
 	 * @since 5.6.0
 	 *
+<<<<<<< HEAD
 	 * @var string
+=======
+	 * @type string
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	const USERMETA_KEY_APPLICATION_PASSWORDS = '_application_passwords';
 
@@ -27,7 +31,11 @@ class WP_Application_Passwords {
 	 *
 	 * @since 5.6.0
 	 *
+<<<<<<< HEAD
 	 * @var string
+=======
+	 * @type string
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	const OPTION_KEY_IN_USE = 'using_application_passwords';
 
@@ -36,7 +44,11 @@ class WP_Application_Passwords {
 	 *
 	 * @since 5.6.0
 	 *
+<<<<<<< HEAD
 	 * @var int
+=======
+	 * @type int
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	const PW_LENGTH = 24;
 
@@ -58,7 +70,10 @@ class WP_Application_Passwords {
 	 * Creates a new application password.
 	 *
 	 * @since 5.6.0
+<<<<<<< HEAD
 	 * @since 5.7.0 Returns WP_Error if application name already exists.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *
 	 * @param int   $user_id  User ID.
 	 * @param array $args     Information about the application password.
@@ -66,6 +81,7 @@ class WP_Application_Passwords {
 	 *                        A WP_Error instance is returned on error.
 	 */
 	public static function create_new_application_password( $user_id, $args = array() ) {
+<<<<<<< HEAD
 		if ( ! empty( $args['name'] ) ) {
 			$args['name'] = sanitize_text_field( $args['name'] );
 		}
@@ -76,6 +92,10 @@ class WP_Application_Passwords {
 
 		if ( self::application_name_exists_for_user( $user_id, $args['name'] ) ) {
 			return new WP_Error( 'application_password_duplicate_name', __( 'Each application name should be unique.' ), array( 'status' => 409 ) );
+=======
+		if ( empty( $args['name'] ) ) {
+			return new WP_Error( 'application_password_empty_name', __( 'An application name is required to create an application password.' ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		$new_password    = wp_generate_password( static::PW_LENGTH, false );
@@ -172,6 +192,7 @@ class WP_Application_Passwords {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks if application name exists for this user.
 	 *
 	 * @since 5.7.0
@@ -193,6 +214,8 @@ class WP_Application_Passwords {
 	}
 
 	/**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * Updates an application password.
 	 *
 	 * @since 5.6.0
@@ -210,10 +233,13 @@ class WP_Application_Passwords {
 				continue;
 			}
 
+<<<<<<< HEAD
 			if ( ! empty( $update['name'] ) ) {
 				$update['name'] = sanitize_text_field( $update['name'] );
 			}
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$save = false;
 
 			if ( ! empty( $update['name'] ) && $item['name'] !== $update['name'] ) {

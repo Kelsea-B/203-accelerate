@@ -501,7 +501,11 @@ window.wp = window.wp || {};
 				dfd  = $.Deferred();
 
 			// If the last argument is a callback, bind it to .done().
+<<<<<<< HEAD
 			if ( typeof ids[ ids.length - 1 ] === 'function' ) {
+=======
+			if ( $.isFunction( ids[ ids.length - 1 ] ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				dfd.done( ids.pop() );
 			}
 

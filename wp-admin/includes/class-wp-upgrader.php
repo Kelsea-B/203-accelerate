@@ -262,7 +262,11 @@ class WP_Upgrader {
 		 * @param bool        $reply      Whether to bail without returning the package.
 		 *                                Default false.
 		 * @param string      $package    The package file name.
+<<<<<<< HEAD
 		 * @param WP_Upgrader $upgrader   The WP_Upgrader instance.
+=======
+		 * @param WP_Upgrader $this       The WP_Upgrader instance.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param array       $hook_extra Extra arguments passed to hooked filters.
 		 */
 		$reply = apply_filters( 'upgrader_pre_download', false, $package, $this, $hook_extra );

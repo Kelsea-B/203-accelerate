@@ -113,12 +113,21 @@ class WP_Term_Query {
 	 *                                                Default 'ASC'.
 	 *     @type bool|int     $hide_empty             Whether to hide terms not assigned to any posts. Accepts
 	 *                                                1|true or 0|false. Default 1|true.
+<<<<<<< HEAD
 	 *     @type int[]|string $include                Array or comma/space-separated string of term IDs to include.
 	 *                                                Default empty array.
 	 *     @type int[]|string $exclude                Array or comma/space-separated string of term IDs to exclude.
 	 *                                                If $include is non-empty, $exclude is ignored.
 	 *                                                Default empty array.
 	 *     @type int[]|string $exclude_tree           Array or comma/space-separated string of term IDs to exclude
+=======
+	 *     @type array|string $include                Array or comma/space-separated string of term IDs to include.
+	 *                                                Default empty array.
+	 *     @type array|string $exclude                Array or comma/space-separated string of term IDs to exclude.
+	 *                                                If $include is non-empty, $exclude is ignored.
+	 *                                                Default empty array.
+	 *     @type array|string $exclude_tree           Array or comma/space-separated string of term IDs to exclude
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *                                                along with all of their descendant terms. If $include is
 	 *                                                non-empty, $exclude_tree is ignored. Default empty array.
 	 *     @type int|string   $number                 Maximum number of terms to return. Accepts ''|0 (all) or any
@@ -728,7 +737,11 @@ class WP_Term_Query {
 		 *
 		 * @param array|null    $terms Return an array of term data to short-circuit WP's term query,
 		 *                             or null to allow WP queries to run normally.
+<<<<<<< HEAD
 		 * @param WP_Term_Query $query The WP_Term_Query instance, passed by reference.
+=======
+		 * @param WP_Term_Query $this  The WP_Term_Query instance, passed by reference.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 */
 		$this->terms = apply_filters_ref_array( 'terms_pre_query', array( $this->terms, &$this ) );
 

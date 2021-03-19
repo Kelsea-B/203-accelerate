@@ -892,6 +892,7 @@ function wp_setup_nav_menu_item( $menu_item ) {
 					$menu_item->url      = '';
 					$original_title      = '';
 					$menu_item->_invalid = true;
+<<<<<<< HEAD
 				}
 
 				if ( '' === $original_title ) {
@@ -899,6 +900,15 @@ function wp_setup_nav_menu_item( $menu_item ) {
 					$original_title = sprintf( __( '#%d (no title)' ), $menu_item->object_id );
 				}
 
+=======
+				}
+
+				if ( '' === $original_title ) {
+					/* translators: %d: ID of a term. */
+					$original_title = sprintf( __( '#%d (no title)' ), $menu_item->object_id );
+				}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$menu_item->title = ( '' === $menu_item->post_title ) ? $original_title : $menu_item->post_title;
 
 			} else {

@@ -29,12 +29,19 @@ function register_core_block_types_from_metadata() {
 		'audio',
 		'button',
 		'buttons',
+<<<<<<< HEAD
+=======
+		'classic',
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		'code',
 		'column',
 		'columns',
 		'embed',
 		'file',
+<<<<<<< HEAD
 		'freeform',
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		'gallery',
 		'group',
 		'heading',

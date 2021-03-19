@@ -73,7 +73,11 @@ themes.view.Appearance = wp.Backbone.View.extend({
 		this.SearchView = options.SearchView ? options.SearchView : themes.view.Search;
 		// Bind to the scroll event and throttle
 		// the results from this.scroller.
+<<<<<<< HEAD
 		this.window.on( 'scroll', _.throttle( this.scroller, 300 ) );
+=======
+		this.window.bind( 'scroll', _.throttle( this.scroller, 300 ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	},
 
 	// Main render control.

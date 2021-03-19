@@ -191,9 +191,15 @@ class WP_Fatal_Error_Handler {
 		$message = sprintf(
 			'<p>%s</p><p><a href="%s">%s</a></p>',
 			$message,
+<<<<<<< HEAD
 			/* translators: Documentation about troubleshooting. */
 			__( 'https://wordpress.org/support/article/faq-troubleshooting/' ),
 			__( 'Learn more about troubleshooting WordPress.' )
+=======
+			/* translators: Documentation explaining debugging in WordPress. */
+			__( 'https://wordpress.org/support/article/debugging-in-wordpress/' ),
+			__( 'Learn more about debugging in WordPress.' )
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		);
 
 		$args = array(

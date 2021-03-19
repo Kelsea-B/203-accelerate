@@ -91,8 +91,11 @@ if ( ! class_exists( 'Plural_Forms', false ) ) :
 		 *
 		 * @since 4.9.0
 		 *
+<<<<<<< HEAD
 		 * @throws Exception If there is a syntax or parsing error with the string.
 		 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param string $str String to parse.
 		 */
 		protected function parse( $str ) {
@@ -252,8 +255,11 @@ if ( ! class_exists( 'Plural_Forms', false ) ) :
 		 *
 		 * @since 4.9.0
 		 *
+<<<<<<< HEAD
 		 * @throws Exception If the plural form value cannot be calculated.
 		 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param int $n Variable "n" to substitute.
 		 * @return int Plural form value.
 		 */

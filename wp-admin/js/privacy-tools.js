@@ -56,7 +56,11 @@ jQuery( document ).ready( function( $ ) {
 		});
 	}
 
+<<<<<<< HEAD
 	$( '.export-personal-data-handle' ).on( 'click', function( event ) {
+=======
+	$( '.export-personal-data-handle' ).click( function( event ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		var $this          = $( this ),
 			$action        = $this.parents( '.export-personal-data' ),
 			$requestRow    = $this.parents( 'tr' ),
@@ -72,7 +76,11 @@ jQuery( document ).ready( function( $ ) {
 
 		$rowActions.addClass( 'processing' );
 
+<<<<<<< HEAD
 		$action.trigger( 'blur' );
+=======
+		$action.blur();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		clearResultsAfterRow( $requestRow );
 		setExportProgress( 0 );
 
@@ -159,7 +167,11 @@ jQuery( document ).ready( function( $ ) {
 		doNextExport( 1, 1 );
 	});
 
+<<<<<<< HEAD
 	$( '.remove-personal-data-handle' ).on( 'click', function( event ) {
+=======
+	$( '.remove-personal-data-handle' ).click( function( event ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		var $this         = $( this ),
 			$action       = $this.parents( '.remove-personal-data' ),
 			$requestRow   = $this.parents( 'tr' ),
@@ -177,7 +189,11 @@ jQuery( document ).ready( function( $ ) {
 
 		$rowActions.addClass( 'processing' );
 
+<<<<<<< HEAD
 		$action.trigger( 'blur' );
+=======
+		$action.blur();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		clearResultsAfterRow( $requestRow );
 		setErasureProgress( 0 );
 
@@ -275,6 +291,10 @@ jQuery( document ).ready( function( $ ) {
 	// Privacy Policy page, copy action.
 	$( document ).on( 'click', function( event ) {
 		var $parent,
+<<<<<<< HEAD
+=======
+			$container,
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			range,
 			$target = $( event.target ),
 			copiedNotice = $target.siblings( '.success' );
@@ -282,9 +302,20 @@ jQuery( document ).ready( function( $ ) {
 		clearTimeout( copiedNoticeTimeout );
 
 		if ( $target.is( 'button.privacy-text-copy' ) ) {
+<<<<<<< HEAD
 			$parent = $target.closest( '.privacy-settings-accordion-panel' );
 
 			if ( $parent.length ) {
+=======
+			$parent = $target.parent().parent();
+			$container = $parent.find( 'div.wp-suggested-text' );
+
+			if ( ! $container.length ) {
+				$container = $parent.find( 'div.policy-text' );
+			}
+
+			if ( $container.length ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				try {
 					var documentPosition = document.documentElement.scrollTop,
 						bodyPosition     = document.body.scrollTop;
@@ -294,15 +325,26 @@ jQuery( document ).ready( function( $ ) {
 
 					// Hide tutorial content to remove from copied content.
 					range = document.createRange();
+<<<<<<< HEAD
 					$parent.addClass( 'hide-privacy-policy-tutorial' );
 
 					// Copy action.
 					range.selectNodeContents( $parent[0] );
+=======
+					$container.addClass( 'hide-privacy-policy-tutorial' );
+
+					// Copy action.
+					range.selectNodeContents( $container[0] );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					window.getSelection().addRange( range );
 					document.execCommand( 'copy' );
 
 					// Reset section.
+<<<<<<< HEAD
 					$parent.removeClass( 'hide-privacy-policy-tutorial' );
+=======
+					$container.removeClass( 'hide-privacy-policy-tutorial' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					window.getSelection().removeAllRanges();
 
 					// Return scroll position - see #49540.
@@ -314,7 +356,11 @@ jQuery( document ).ready( function( $ ) {
 
 					// Display and speak notice to indicate action complete.
 					copiedNotice.addClass( 'visible' );
+<<<<<<< HEAD
 					wp.a11y.speak( __( 'The suggested policy text has been copied to your clipboard.' ) );
+=======
+					wp.a11y.speak( __( 'The section has been copied to your clipboard.' ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 					// Delay notice dismissal.
 					copiedNoticeTimeout = setTimeout( function() {
@@ -324,6 +370,7 @@ jQuery( document ).ready( function( $ ) {
 			}
 		}
 	});
+<<<<<<< HEAD
 
 	// Label handling to focus the create page button on Privacy settings page.
 	$( 'body.options-privacy-php label[for=create-page]' ).on( 'click', function( e ) {
@@ -343,4 +390,6 @@ jQuery( document ).ready( function( $ ) {
 			$( '#' + $( this ).attr( 'aria-controls' ) ).attr( 'hidden', false );
 		}
 	} );
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 });

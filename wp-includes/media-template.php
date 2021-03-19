@@ -1020,7 +1020,11 @@ function wp_print_media_templates() {
 			?>
 			<span class="setting caption">
 				<label for="embed-image-settings-caption" class="name"><?php _e( 'Caption' ); ?></label>
+<<<<<<< HEAD
 				<textarea id="embed-image-settings-caption" data-setting="caption"></textarea>
+=======
+				<textarea id="embed-image-settings-caption" data-setting="caption" />
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			</span>
 		<?php endif; ?>
 

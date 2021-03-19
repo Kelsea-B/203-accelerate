@@ -1147,11 +1147,19 @@ endif;
 if ( ! function_exists( 'check_admin_referer' ) ) :
 	/**
 	 * Ensures intent by verifying that a user was referred from another admin page with the correct security nonce.
+<<<<<<< HEAD
 	 *
 	 * This function ensures the user intends to perform a given action, which helps protect against clickjacking style
 	 * attacks. It verifies intent, not authorisation, therefore it does not verify the user's capabilities. This should
 	 * be performed with `current_user_can()` or similar.
 	 *
+=======
+	 *
+	 * This function ensures the user intends to perform a given action, which helps protect against clickjacking style
+	 * attacks. It verifies intent, not authorisation, therefore it does not verify the user's capabilities. This should
+	 * be performed with `current_user_can()` or similar.
+	 *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * If the nonce value is invalid, the function will exit with an "Are You Sure?" style message.
 	 *
 	 * @since 1.2.0
@@ -1800,9 +1808,15 @@ if ( ! function_exists( 'wp_notify_moderator' ) ) :
 		if ( WP_Http::is_ip_address( $comment->comment_author_IP ) ) {
 			$comment_author_domain = gethostbyaddr( $comment->comment_author_IP );
 		}
+<<<<<<< HEAD
 
 		$comments_waiting = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->comments WHERE comment_approved = '0'" );
 
+=======
+
+		$comments_waiting = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->comments WHERE comment_approved = '0'" );
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		// The blogname option is escaped with esc_html() on the way into the database in sanitize_option().
 		// We want to reverse this for the plain text arena of emails.
 		$blogname        = wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES );

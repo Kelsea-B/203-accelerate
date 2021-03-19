@@ -309,13 +309,22 @@
 
 .ui-button.ui-dialog-titlebar-close:hover,
 .ui-button.ui-dialog-titlebar-close:focus {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .ui-button.ui-dialog-titlebar-close:focus {
 	box-shadow:
+<<<<<<< HEAD
 		0 0 0 1px #4f94d4,
 		0 0 2px 1px rgba(79, 148, 212, 0.8);
+=======
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;

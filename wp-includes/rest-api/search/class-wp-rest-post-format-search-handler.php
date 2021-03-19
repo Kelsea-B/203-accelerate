@@ -46,7 +46,11 @@ class WP_REST_Post_Format_Search_Handler extends WP_REST_Search_Handler {
 		}
 
 		/**
+<<<<<<< HEAD
 		 * Filters the query arguments for a REST API search request.
+=======
+		 * Filters the query arguments for a search request.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * Enables adding extra arguments or setting defaults for a post format search request.
 		 *

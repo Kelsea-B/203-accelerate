@@ -82,12 +82,27 @@ this["wp"] = this["wp"] || {}; this["wp"]["keyboardShortcuts"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 461);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 489);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 11:
+=======
+/***/ 10:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["compose"]; }());
+
+/***/ }),
+
+/***/ 12:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,6 +157,7 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 12:
 /***/ (function(module, exports) {
 
@@ -150,6 +166,9 @@ function _slicedToArray(arr, i) {
 /***/ }),
 
 /***/ 15:
+=======
+/***/ 17:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,7 +177,11 @@ function _slicedToArray(arr, i) {
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+<<<<<<< HEAD
 var arrayLikeToArray = __webpack_require__(24);
+=======
+var arrayLikeToArray = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
@@ -186,21 +209,36 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 17:
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["keycodes"]; }());
+=======
+/***/ 18:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["keycodes"]; }());
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /***/ }),
 
 /***/ 2:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["lodash"]; }());
 
 /***/ }),
 
 /***/ 24:
+=======
+(function() { module.exports = this["lodash"]; }());
+
+/***/ }),
+
+/***/ 27:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -222,7 +260,11 @@ function _arrayLikeToArray(arr, len) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -271,11 +313,19 @@ function _nonIterableRest() {
 /***/ 4:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["wp"]["data"]; }());
 
 /***/ }),
 
 /***/ 41:
+=======
+(function() { module.exports = this["wp"]["data"]; }());
+
+/***/ }),
+
+/***/ 42:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -557,7 +607,11 @@ function isShallowEqual( a, b, fromIndex ) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 461:
+=======
+/***/ 489:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -565,7 +619,10 @@ function isShallowEqual( a, b, fromIndex ) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "store", function() { return /* reexport */ store; });
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 __webpack_require__.d(__webpack_exports__, "useShortcut", function() { return /* reexport */ use_shortcut; });
 
 // NAMESPACE OBJECT: ./node_modules/@wordpress/keyboard-shortcuts/build-module/store/actions.js
@@ -584,14 +641,24 @@ __webpack_require__.d(selectors_namespaceObject, "getShortcutAliases", function(
 __webpack_require__.d(selectors_namespaceObject, "getAllShortcutRawKeyCombinations", function() { return getAllShortcutRawKeyCombinations; });
 __webpack_require__.d(selectors_namespaceObject, "getCategoryShortcuts", function() { return getCategoryShortcuts; });
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","data"]
 var external_wp_data_ = __webpack_require__(4);
+=======
+// EXTERNAL MODULE: external {"this":["wp","data"]}
+var external_this_wp_data_ = __webpack_require__(4);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(5);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__(2);
+=======
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__(2);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/keyboard-shortcuts/build-module/store/reducer.js
 
@@ -627,7 +694,11 @@ function reducer() {
       }));
 
     case 'UNREGISTER_SHORTCUT':
+<<<<<<< HEAD
       return Object(external_lodash_["omit"])(state, action.name);
+=======
+      return Object(external_this_lodash_["omit"])(state, action.name);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   }
 
   return state;
@@ -697,6 +768,7 @@ function unregisterShortcut(name) {
 }
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+<<<<<<< HEAD
 var slicedToArray = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
@@ -707,6 +779,18 @@ var rememo = __webpack_require__(41);
 
 // EXTERNAL MODULE: external ["wp","keycodes"]
 var external_wp_keycodes_ = __webpack_require__(17);
+=======
+var slicedToArray = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/rememo/es/rememo.js
+var rememo = __webpack_require__(42);
+
+// EXTERNAL MODULE: external {"this":["wp","keycodes"]}
+var external_this_wp_keycodes_ = __webpack_require__(18);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/keyboard-shortcuts/build-module/store/selectors.js
 
@@ -743,9 +827,15 @@ var EMPTY_ARRAY = [];
  */
 
 var FORMATTING_METHODS = {
+<<<<<<< HEAD
   display: external_wp_keycodes_["displayShortcut"],
   raw: external_wp_keycodes_["rawShortcut"],
   ariaLabel: external_wp_keycodes_["shortcutAriaLabel"]
+=======
+  display: external_this_wp_keycodes_["displayShortcut"],
+  raw: external_this_wp_keycodes_["rawShortcut"],
+  ariaLabel: external_this_wp_keycodes_["shortcutAriaLabel"]
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * Returns a string representing the key combination.
@@ -827,7 +917,11 @@ function getShortcutAliases(state, name) {
  */
 
 var getAllShortcutRawKeyCombinations = Object(rememo["a" /* default */])(function (state, name) {
+<<<<<<< HEAD
   return Object(external_lodash_["compact"])([getKeyCombinationRepresentation(getShortcutKeyCombination(state, name), 'raw')].concat(Object(toConsumableArray["a" /* default */])(getShortcutAliases(state, name).map(function (combination) {
+=======
+  return Object(external_this_lodash_["compact"])([getKeyCombinationRepresentation(getShortcutKeyCombination(state, name), 'raw')].concat(Object(toConsumableArray["a" /* default */])(getShortcutAliases(state, name).map(function (combination) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
     return getKeyCombinationRepresentation(combination, 'raw');
   }))));
 }, function (state, name) {
@@ -870,6 +964,7 @@ var getCategoryShortcuts = Object(rememo["a" /* default */])(function (state, ca
 
 
 
+<<<<<<< HEAD
 var STORE_NAME = 'core/keyboard-shortcuts';
 /**
  * Store definition for the keyboard shortcuts namespace.
@@ -888,6 +983,16 @@ Object(external_wp_data_["register"])(store);
 
 // EXTERNAL MODULE: external ["wp","compose"]
 var external_wp_compose_ = __webpack_require__(12);
+=======
+/* harmony default export */ var store = (Object(external_this_wp_data_["registerStore"])('core/keyboard-shortcuts', {
+  reducer: store_reducer,
+  actions: actions_namespaceObject,
+  selectors: selectors_namespaceObject
+}));
+
+// EXTERNAL MODULE: external {"this":["wp","compose"]}
+var external_this_wp_compose_ = __webpack_require__(10);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/keyboard-shortcuts/build-module/hooks/use-shortcut.js
 /**
@@ -896,11 +1001,14 @@ var external_wp_compose_ = __webpack_require__(12);
 
 
 /**
+<<<<<<< HEAD
  * Internal dependencies
  */
 
 
 /**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * Attach a keyboard shortcut handler.
  *
  * @param {string} name       Shortcut name.
@@ -909,15 +1017,28 @@ var external_wp_compose_ = __webpack_require__(12);
  */
 
 function useShortcut(name, callback, options) {
+<<<<<<< HEAD
   var shortcuts = Object(external_wp_data_["useSelect"])(function (select) {
     return select(store).getAllShortcutRawKeyCombinations(name);
   }, [name]);
   Object(external_wp_compose_["useKeyboardShortcut"])(shortcuts, callback, options);
+=======
+  var shortcuts = Object(external_this_wp_data_["useSelect"])(function (select) {
+    return select('core/keyboard-shortcuts').getAllShortcutRawKeyCombinations(name);
+  }, [name]);
+  Object(external_this_wp_compose_["useKeyboardShortcut"])(shortcuts, callback, options);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /* harmony default export */ var use_shortcut = (useShortcut);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/keyboard-shortcuts/build-module/index.js
+<<<<<<< HEAD
+=======
+/**
+ * Internal dependencies
+ */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 
 

@@ -309,6 +309,39 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		$args       = apply_filters( "rest_{$this->post_type}_query", $args, $request );
 		$query_args = $this->prepare_items_query( $args, $request );
 
+<<<<<<< HEAD
+=======
+		$taxonomies = wp_list_filter( get_object_taxonomies( $this->post_type, 'objects' ), array( 'show_in_rest' => true ) );
+
+		if ( ! empty( $request['tax_relation'] ) ) {
+			$query_args['tax_query'] = array( 'relation' => $request['tax_relation'] );
+		}
+
+		foreach ( $taxonomies as $taxonomy ) {
+			$base        = ! empty( $taxonomy->rest_base ) ? $taxonomy->rest_base : $taxonomy->name;
+			$tax_exclude = $base . '_exclude';
+
+			if ( ! empty( $request[ $base ] ) ) {
+				$query_args['tax_query'][] = array(
+					'taxonomy'         => $taxonomy->name,
+					'field'            => 'term_id',
+					'terms'            => $request[ $base ],
+					'include_children' => false,
+				);
+			}
+
+			if ( ! empty( $request[ $tax_exclude ] ) ) {
+				$query_args['tax_query'][] = array(
+					'taxonomy'         => $taxonomy->name,
+					'field'            => 'term_id',
+					'terms'            => $request[ $tax_exclude ],
+					'include_children' => false,
+					'operator'         => 'NOT IN',
+				);
+			}
+		}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$posts_query  = new WP_Query();
 		$query_result = $posts_query->query( $query_args );
 
@@ -1712,6 +1745,22 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 
 		if ( rest_is_field_included( 'content', $fields ) ) {
 			$data['content'] = array();
+<<<<<<< HEAD
+=======
+		}
+		if ( rest_is_field_included( 'content.raw', $fields ) ) {
+			$data['content']['raw'] = $post->post_content;
+		}
+		if ( rest_is_field_included( 'content.rendered', $fields ) ) {
+			/** This filter is documented in wp-includes/post-template.php */
+			$data['content']['rendered'] = post_password_required( $post ) ? '' : apply_filters( 'the_content', $post->post_content );
+		}
+		if ( rest_is_field_included( 'content.protected', $fields ) ) {
+			$data['content']['protected'] = (bool) $post->post_password;
+		}
+		if ( rest_is_field_included( 'content.block_version', $fields ) ) {
+			$data['content']['block_version'] = block_version( $post->post_content );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 		if ( rest_is_field_included( 'content.raw', $fields ) ) {
 			$data['content']['raw'] = $post->post_content;
@@ -1731,7 +1780,15 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			/** This filter is documented in wp-includes/post-template.php */
 			$excerpt = apply_filters( 'get_the_excerpt', $post->post_excerpt, $post );
 
+<<<<<<< HEAD
 			/** This filter is documented in wp-includes/post-template.php */
+=======
+		if ( rest_is_field_included( 'excerpt', $fields ) ) {
+			/** This filter is documented in wp-includes/post-template.php */
+			$excerpt = apply_filters( 'get_the_excerpt', $post->post_excerpt, $post );
+
+			/** This filter is documented in wp-includes/post-template.php */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$excerpt = apply_filters( 'the_excerpt', $excerpt );
 
 			$data['excerpt'] = array(
@@ -2771,7 +2828,43 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			'sanitize_callback' => array( $this, 'sanitize_post_statuses' ),
 		);
 
+<<<<<<< HEAD
 		$query_params = $this->prepare_taxonomy_limit_schema( $query_params );
+=======
+		$taxonomies = wp_list_filter( get_object_taxonomies( $this->post_type, 'objects' ), array( 'show_in_rest' => true ) );
+
+		if ( ! empty( $taxonomies ) ) {
+			$query_params['tax_relation'] = array(
+				'description' => __( 'Limit result set based on relationship between multiple taxonomies.' ),
+				'type'        => 'string',
+				'enum'        => array( 'AND', 'OR' ),
+			);
+		}
+
+		foreach ( $taxonomies as $taxonomy ) {
+			$base = ! empty( $taxonomy->rest_base ) ? $taxonomy->rest_base : $taxonomy->name;
+
+			$query_params[ $base ] = array(
+				/* translators: %s: Taxonomy name. */
+				'description' => sprintf( __( 'Limit result set to all items that have the specified term assigned in the %s taxonomy.' ), $base ),
+				'type'        => 'array',
+				'items'       => array(
+					'type' => 'integer',
+				),
+				'default'     => array(),
+			);
+
+			$query_params[ $base . '_exclude' ] = array(
+				/* translators: %s: Taxonomy name. */
+				'description' => sprintf( __( 'Limit result set to all items except those that have the specified term assigned in the %s taxonomy.' ), $base ),
+				'type'        => 'array',
+				'items'       => array(
+					'type' => 'integer',
+				),
+				'default'     => array(),
+			);
+		}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		if ( 'post' === $this->post_type ) {
 			$query_params['sticky'] = array(

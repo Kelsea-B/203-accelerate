@@ -28,14 +28,23 @@ a {
 
 a:hover,
 a:active {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 a:focus {
 	color: #043959;
 	box-shadow:
+<<<<<<< HEAD
 		0 0 0 1px #4f94d4,
 		0 0 2px 1px rgba(79, 148, 212, 0.8);
+=======
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 p {
@@ -103,8 +112,13 @@ p {
 
 .login .button.wp-hide-pw:focus {
 	background: transparent;
+<<<<<<< HEAD
 	border-color: #3582c4;
 	box-shadow: 0 0 0 1px #3582c4;
+=======
+	border-color: #007cba;
+	box-shadow: 0 0 0 1px #007cba;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 }
@@ -136,7 +150,11 @@ p {
 	font-weight: 400;
 	overflow: hidden;
 	background: #fff;
+<<<<<<< HEAD
 	border: 1px solid #c3c4c7;
+=======
+	border: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
@@ -204,8 +222,13 @@ p {
 }
 
 .login h1.admin-email__heading {
+<<<<<<< HEAD
 	border-bottom: 1px #f0f0f1 solid;
 	color: #50575e;
+=======
+	border-bottom: 1px rgb(241, 241, 241) solid;
+	color: rgb(95, 95, 95);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font-weight: normal;
 	padding-bottom: 0.5em;
 	text-align: right;
@@ -297,7 +320,11 @@ p {
 .login #nav a:hover,
 .login #backtoblog a:hover,
 .login h1 a:hover {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .login #nav a:focus,
@@ -334,7 +361,11 @@ p {
 .login form .input,
 .login input[type="text"],
 .login form input[type="checkbox"] {
+<<<<<<< HEAD
 	background: #fff;
+=======
+	background: #fbfbfb;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .js.login-action-rp input[type="text"],

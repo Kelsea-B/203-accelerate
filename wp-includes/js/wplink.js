@@ -54,9 +54,15 @@
 			inputs.queryNoticeTextHint = inputs.queryNotice.find( '.query-notice-hint' );
 
 			// Bind event handlers.
+<<<<<<< HEAD
 			inputs.dialog.on( 'keydown', wpLink.keydown );
 			inputs.dialog.on( 'keyup', wpLink.keyup );
 			inputs.submit.on( 'click', function( event ) {
+=======
+			inputs.dialog.keydown( wpLink.keydown );
+			inputs.dialog.keyup( wpLink.keyup );
+			inputs.submit.click( function( event ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				event.preventDefault();
 				wpLink.update();
 			});
@@ -181,7 +187,11 @@
 
 			if ( isTouch ) {
 				// Close the onscreen keyboard.
+<<<<<<< HEAD
 				inputs.url.trigger( 'focus' ).trigger( 'blur' );
+=======
+				inputs.url.focus().blur();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			} else {
 				/*
 				 * Focus the URL field and highlight its contents.

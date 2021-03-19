@@ -114,7 +114,11 @@ class WP_Links_List_Table extends WP_List_Table {
 				'orderby'         => 'name',
 			);
 
+<<<<<<< HEAD
 			echo '<label class="screen-reader-text" for="cat_id">' . get_taxonomy( 'link_category' )->labels->filter_by_item . '</label>';
+=======
+			echo '<label class="screen-reader-text" for="cat_id">' . __( 'Filter by category' ) . '</label>';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 			wp_dropdown_categories( $dropdown_options );
 

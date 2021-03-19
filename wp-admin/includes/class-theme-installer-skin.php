@@ -65,7 +65,11 @@ class Theme_Installer_Skin extends WP_Upgrader_Skin {
 	 *
 	 * @since 5.5.0
 	 *
+<<<<<<< HEAD
 	 * @param WP_Error $wp_error WP_Error object.
+=======
+	 * @param WP_Error $wp_error WP_Error.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @return bool
 	 */
 	public function hide_process_failed( $wp_error ) {
@@ -360,8 +364,13 @@ class Theme_Installer_Skin extends WP_Upgrader_Skin {
 		);
 
 		/**
+<<<<<<< HEAD
 		 * Filters the list of action links available following a single theme installation failure
 		 * when overwriting is allowed.
+=======
+		 * Filters the list of action links available following a single theme installation
+		 * failure when overwriting is allowed.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * @since 5.5.0
 		 *

@@ -699,11 +699,19 @@ class WP_Query {
 	 *     @type string       $pagename                Page slug.
 	 *     @type string       $perm                    Show posts if user has the appropriate capability.
 	 *     @type string       $ping_status             Ping status.
+<<<<<<< HEAD
 	 *     @type int[]        $post__in                An array of post IDs to retrieve, sticky posts will be included.
 	 *     @type int[]        $post__not_in            An array of post IDs not to retrieve. Note: a string of comma-
 	 *                                                 separated IDs will NOT work.
 	 *     @type string       $post_mime_type          The mime type of the post. Used for 'attachment' post_type.
 	 *     @type string[]     $post_name__in           An array of post slugs that results must match.
+=======
+	 *     @type array        $post__in                An array of post IDs to retrieve, sticky posts will be included.
+	 *     @type array        $post__not_in            An array of post IDs not to retrieve. Note: a string of comma-
+	 *                                                 separated IDs will NOT work.
+	 *     @type string       $post_mime_type          The mime type of the post. Used for 'attachment' post_type.
+	 *     @type array        $post_name__in           An array of post slugs that results must match.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *     @type int          $post_parent             Page ID to retrieve child pages for. Use 0 to only retrieve
 	 *                                                 top-level pages.
 	 *     @type int[]        $post_parent__in         An array containing parent page IDs to query child pages from.
@@ -723,9 +731,15 @@ class WP_Query {
 	 *     @type bool         $sentence                Whether to search by phrase. Default false.
 	 *     @type bool         $suppress_filters        Whether to suppress filters. Default false.
 	 *     @type string       $tag                     Tag slug. Comma-separated (either), Plus-separated (all).
+<<<<<<< HEAD
 	 *     @type int[]        $tag__and                An array of tag IDs (AND in).
 	 *     @type int[]        $tag__in                 An array of tag IDs (OR in).
 	 *     @type int[]        $tag__not_in             An array of tag IDs (NOT in).
+=======
+	 *     @type array        $tag__and                An array of tag IDs (AND in).
+	 *     @type array        $tag__in                 An array of tag IDs (OR in).
+	 *     @type array        $tag__not_in             An array of tag IDs (NOT in).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *     @type int          $tag_id                  Tag id or comma-separated list of IDs.
 	 *     @type string[]     $tag_slug__and           An array of tag slugs (AND in).
 	 *     @type string[]     $tag_slug__in            An array of tag slugs (OR in). unless 'ignore_sticky_posts' is
@@ -1718,7 +1732,11 @@ class WP_Query {
 		 *
 		 * @since 5.5.0
 		 *
+<<<<<<< HEAD
 		 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+		 * @param WP_Query $this The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 */
 		do_action_ref_array( 'set_404', array( $this ) );
 	}
@@ -2563,7 +2581,11 @@ class WP_Query {
 			 * @since 1.5.0
 			 *
 			 * @param string   $where The WHERE clause of the query.
+<<<<<<< HEAD
 			 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+			 * @param WP_Query $this  The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$where = apply_filters_ref_array( 'posts_where', array( $where, &$this ) );
 
@@ -2572,8 +2594,13 @@ class WP_Query {
 			 *
 			 * @since 1.5.0
 			 *
+<<<<<<< HEAD
 			 * @param string   $join  The JOIN clause of the query.
 			 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+			 * @param string   $join The JOIN clause of the query.
+			 * @param WP_Query $this The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$join = apply_filters_ref_array( 'posts_join', array( $join, &$this ) );
 		}
@@ -2614,7 +2641,11 @@ class WP_Query {
 				 * @since 2.2.0
 				 *
 				 * @param string   $cjoin The JOIN clause of the query.
+<<<<<<< HEAD
 				 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+				 * @param WP_Query $this  The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				 */
 				$cjoin = apply_filters_ref_array( 'comment_feed_join', array( $cjoin, &$this ) );
 
@@ -2665,7 +2696,10 @@ class WP_Query {
 
 			$comments = (array) $wpdb->get_results( "SELECT $distinct {$wpdb->comments}.* FROM {$wpdb->comments} $cjoin $cwhere $cgroupby $corderby $climits" );
 			// Convert to WP_Comment.
+<<<<<<< HEAD
 			/** @var WP_Comment[] */
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$this->comments      = array_map( 'get_comment', $comments );
 			$this->comment_count = count( $this->comments );
 
@@ -2699,7 +2733,11 @@ class WP_Query {
 			 * @since 1.5.0
 			 *
 			 * @param string   $where The WHERE clause of the query.
+<<<<<<< HEAD
 			 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+			 * @param WP_Query $this  The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$where = apply_filters_ref_array( 'posts_where_paged', array( $where, &$this ) );
 
@@ -2720,8 +2758,13 @@ class WP_Query {
 			 *
 			 * @since 1.5.0
 			 *
+<<<<<<< HEAD
 			 * @param string   $join  The JOIN clause of the query.
 			 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+			 * @param string   $join The JOIN clause of the query.
+			 * @param WP_Query $this The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$join = apply_filters_ref_array( 'posts_join_paged', array( $join, &$this ) );
 
@@ -2811,7 +2854,11 @@ class WP_Query {
 			 * @since 2.5.0
 			 *
 			 * @param string   $where The WHERE clause of the query.
+<<<<<<< HEAD
 			 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+			 * @param WP_Query $this  The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$where = apply_filters_ref_array( 'posts_where_request', array( $where, &$this ) );
 
@@ -2834,8 +2881,13 @@ class WP_Query {
 			 *
 			 * @since 2.5.0
 			 *
+<<<<<<< HEAD
 			 * @param string   $join  The JOIN clause of the query.
 			 * @param WP_Query $query The WP_Query instance (passed by reference).
+=======
+			 * @param string   $join The JOIN clause of the query.
+			 * @param WP_Query $this The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$join = apply_filters_ref_array( 'posts_join_request', array( $join, &$this ) );
 
@@ -3075,7 +3127,10 @@ class WP_Query {
 			$comments_request = "SELECT {$wpdb->comments}.* FROM {$wpdb->comments} $cjoin $cwhere $cgroupby $corderby $climits";
 			$comments         = $wpdb->get_results( $comments_request );
 			// Convert to WP_Comment.
+<<<<<<< HEAD
 			/** @var WP_Comment[] */
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$this->comments      = array_map( 'get_comment', $comments );
 			$this->comment_count = count( $this->comments );
 		}
@@ -3195,7 +3250,11 @@ class WP_Query {
 			 * @since 1.5.0
 			 *
 			 * @param WP_Post[] $posts Array of post objects.
+<<<<<<< HEAD
 			 * @param WP_Query  $query The WP_Query instance (passed by reference).
+=======
+			 * @param WP_Query  $this  The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$this->posts = apply_filters_ref_array( 'the_posts', array( $this->posts, &$this ) );
 		}
@@ -3253,7 +3312,11 @@ class WP_Query {
 			 * @since 2.1.0
 			 *
 			 * @param string   $found_posts_query The query to run to find the found posts.
+<<<<<<< HEAD
 			 * @param WP_Query $query             The WP_Query instance (passed by reference).
+=======
+			 * @param WP_Query $this              The WP_Query instance (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$found_posts_query = apply_filters_ref_array( 'found_posts_query', array( 'SELECT FOUND_ROWS()', &$this ) );
 
@@ -4330,7 +4393,11 @@ class WP_Query {
 	 * @since 5.2.0
 	 *
 	 * @param WP_Post|object|int $post WP_Post instance or Post ID/object.
+<<<<<<< HEAD
 	 * @return array|false Elements of post or false on failure.
+=======
+	 * @return array|bool Elements of post or false on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function generate_postdata( $post ) {
 

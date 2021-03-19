@@ -1920,7 +1920,11 @@ function remove_accents( $string ) {
 		// Used for locale-specific rules.
 		$locale = get_locale();
 
+<<<<<<< HEAD
 		if ( in_array( $locale, array( 'de_DE', 'de_DE_formal', 'de_CH', 'de_CH_informal', 'de_AT' ), true ) ) {
+=======
+		if ( in_array( $locale, array( 'de_DE', 'de_DE_formal', 'de_CH', 'de_CH_informal' ), true ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$chars['Ä'] = 'Ae';
 			$chars['ä'] = 'ae';
 			$chars['Ö'] = 'Oe';
@@ -2068,6 +2072,7 @@ function sanitize_file_name( $filename ) {
 
 	$filename .= '.' . $extension;
 
+<<<<<<< HEAD
 	/**
 	 * Filters a sanitized filename string.
 	 *
@@ -2076,6 +2081,9 @@ function sanitize_file_name( $filename ) {
 	 * @param string $filename     Sanitized filename.
 	 * @param string $filename_raw The filename prior to sanitization.
 	 */
+=======
+	/** This filter is documented in wp-includes/formatting.php */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	return apply_filters( 'sanitize_file_name', $filename, $filename_raw );
 }
 
@@ -2153,11 +2161,19 @@ function sanitize_key( $key ) {
 
 /**
  * Sanitizes a string into a slug, which can be used in URLs or HTML attributes.
+<<<<<<< HEAD
  *
  * By default, converts accent characters to ASCII characters and further
  * limits the output to alphanumeric characters, underscore (_) and dash (-)
  * through the {@see 'sanitize_title'} filter.
  *
+=======
+ *
+ * By default, converts accent characters to ASCII characters and further
+ * limits the output to alphanumeric characters, underscore (_) and dash (-)
+ * through the {@see 'sanitize_title'} filter.
+ *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * If `$title` is empty and `$fallback_title` is set, the latter will be used.
  *
  * @since 1.0.0
@@ -3061,9 +3077,15 @@ function _split_str_by_whitespace( $string, $goal ) {
  * Callback to add a rel attribute to HTML A element.
  *
  * Will remove already existing string before adding to prevent invalidating (X)HTML.
+<<<<<<< HEAD
  *
  * @since 5.3.0
  *
+=======
+ *
+ * @since 5.3.0
+ *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @param array  $matches Single match.
  * @param string $rel     The rel attribute to add.
  * @return string HTML A element with the added rel attribute.
@@ -3586,7 +3608,11 @@ function iso8601_timezone_to_offset( $timezone ) {
  *
  * @param string $date_string Date and time in ISO 8601 format {@link https://en.wikipedia.org/wiki/ISO_8601}.
  * @param string $timezone    Optional. If set to 'gmt' returns the result in UTC. Default 'user'.
+<<<<<<< HEAD
  * @return string|false The date and time in MySQL DateTime format - Y-m-d H:i:s, or false on failure.
+=======
+ * @return string|bool The date and time in MySQL DateTime format - Y-m-d H:i:s, or false on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function iso8601_to_datetime( $date_string, $timezone = 'user' ) {
 	$timezone    = strtolower( $timezone );
@@ -5016,9 +5042,15 @@ function wp_pre_kses_block_attributes( $string, $allowed_html, $allowed_protocol
  * @since 2.5.0
  * @since 5.3.0 Formalized the existing and already documented `...$args` parameter
  *              by adding it to the function signature.
+<<<<<<< HEAD
  *
  * @link https://www.php.net/sprintf
  *
+=======
+ *
+ * @link https://www.php.net/sprintf
+ *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @param string $pattern The string which formatted args are inserted.
  * @param mixed  ...$args Arguments to be formatted into the $pattern string.
  * @return string The formatted string.
@@ -5515,7 +5547,11 @@ function sanitize_trackback_urls( $to_ping ) {
 }
 
 /**
+<<<<<<< HEAD
  * Adds slashes to a string or recursively adds slashes to strings within an array.
+=======
+ * Add slashes to a string or array of strings, in a recursive manner.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  *
  * This should be used when preparing data for core API that expects slashed data.
  * This should not be used to escape data going directly into an SQL query.
@@ -5523,8 +5559,13 @@ function sanitize_trackback_urls( $to_ping ) {
  * @since 3.6.0
  * @since 5.5.0 Non-string values are left untouched.
  *
+<<<<<<< HEAD
  * @param string|array $value String or array of data to slash.
  * @return string|array Slashed $value.
+=======
+ * @param string|string[] $value String or array of strings to slash.
+ * @return string|string[] Slashed $value.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_slash( $value ) {
 	if ( is_array( $value ) ) {
@@ -5546,8 +5587,13 @@ function wp_slash( $value ) {
  *
  * @since 3.6.0
  *
+<<<<<<< HEAD
  * @param string|array $value String or array of data to unslash.
  * @return string|array Unslashed $value.
+=======
+ * @param string|string[] $value String or array of strings to unslash.
+ * @return string|string[] Unslashed $value
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_unslash( $value ) {
 	return stripslashes_deep( $value );
@@ -5738,7 +5784,11 @@ function _print_emoji_detection_script() {
 		?>
 		<script<?php echo $type_attr; ?>>
 			window._wpemojiSettings = <?php echo wp_json_encode( $settings ); ?>;
+<<<<<<< HEAD
 			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+=======
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		</script>
 		<?php
 	}

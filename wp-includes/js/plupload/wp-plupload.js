@@ -297,7 +297,11 @@ window.wp = window.wp || {};
 				active = true;
 			});
 
+<<<<<<< HEAD
 			dropzone.on('dragleave.wp-uploader, drop.wp-uploader', function() {
+=======
+			dropzone.bind('dragleave.wp-uploader, drop.wp-uploader', function() {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				/*
 				 * Using an instant timer prevents the drag-over class
 				 * from being quickly removed and re-added when elements

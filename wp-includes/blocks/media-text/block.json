@@ -89,7 +89,11 @@
 			"gradients": true,
 			"link": true
 		}
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-media-text-editor",
 	"style": "wp-block-media-text"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

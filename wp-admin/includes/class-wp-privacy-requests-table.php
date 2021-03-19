@@ -484,6 +484,7 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 	 * Default column handler.
 	 *
 	 * @since 4.9.6
+<<<<<<< HEAD
 	 * @since 5.7.0 Added `manage_{$this->screen->id}_custom_column` action.
 	 *
 	 * @param WP_User_Request $item        Item being shown.
@@ -514,6 +515,21 @@ abstract class WP_Privacy_Requests_Table extends WP_List_Table {
 	 */
 	public function column_created_timestamp( $item ) {
 		return $this->get_timestamp_as_date( $item->created_timestamp );
+=======
+	 *
+	 * @param WP_User_Request $item        Item being shown.
+	 * @param string          $column_name Name of column being shown.
+	 * @return string Default column output.
+	 */
+	public function column_default( $item, $column_name ) {
+		$cell_value = $item->$column_name;
+
+		if ( in_array( $column_name, array( 'created_timestamp' ), true ) ) {
+			return $this->get_timestamp_as_date( $cell_value );
+		}
+
+		return $cell_value;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**

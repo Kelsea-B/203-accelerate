@@ -801,8 +801,11 @@ $_old_files = array(
 	// 5.6
 	'wp-includes/js/jquery/ui/position.min.js',
 	'wp-includes/js/jquery/ui/widget.min.js',
+<<<<<<< HEAD
 	// 5.7
 	'wp-includes/blocks/classic/block.json',
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 );
 
 /**
@@ -948,6 +951,7 @@ function update_core( $from, $to ) {
 	}
 
 	$wp_filesystem->chmod( $versions_file, FS_CHMOD_FILE );
+<<<<<<< HEAD
 
 	/*
 	 * `wp_opcache_invalidate()` only exists in WordPress 5.5 or later,
@@ -957,6 +961,8 @@ function update_core( $from, $to ) {
 		wp_opcache_invalidate( $versions_file );
 	}
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	require WP_CONTENT_DIR . '/upgrade/version-current.php';
 	$wp_filesystem->delete( $versions_file );
 
@@ -1233,9 +1239,15 @@ function update_core( $from, $to ) {
 			// If a $development_build or if $introduced version is greater than what the site was previously running.
 			if ( $development_build || version_compare( $introduced_version, $old_wp_version, '>' ) ) {
 				$directory = ( '/' === $file[ strlen( $file ) - 1 ] );
+<<<<<<< HEAD
 
 				list( $type, $filename ) = explode( '/', $file, 2 );
 
+=======
+
+				list( $type, $filename ) = explode( '/', $file, 2 );
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				// Check to see if the bundled items exist before attempting to copy them.
 				if ( ! $wp_filesystem->exists( $from . $distro . 'wp-content/' . $file ) ) {
 					continue;
@@ -1392,10 +1404,14 @@ function _copy_dir( $from, $to, $skip_list = array() ) {
 				}
 			}
 
+<<<<<<< HEAD
 			/*
 			 * `wp_opcache_invalidate()` only exists in WordPress 5.5 or later,
 			 * so don't run it when upgrading from older versions.
 			 */
+=======
+			// `wp_opcache_invalidate()` only exists in WordPress 5.5, so don't run it when upgrading to 5.5.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			if ( function_exists( 'wp_opcache_invalidate' ) ) {
 				wp_opcache_invalidate( $to . $filename );
 			}

@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["plugins"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 464);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 495);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,6 +98,7 @@ this["wp"] = this["wp"] || {}; this["wp"]["plugins"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 12:
 /***/ (function(module, exports) {
 
@@ -102,6 +107,16 @@ this["wp"] = this["wp"] || {}; this["wp"]["plugins"] =
 /***/ }),
 
 /***/ 18:
+=======
+/***/ 10:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["compose"]; }());
+
+/***/ }),
+
+/***/ 16:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -133,11 +148,18 @@ function _getPrototypeOf(o) {
 /***/ 2:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["lodash"]; }());
 
 /***/ }),
 
 /***/ 25:
+=======
+(function() { module.exports = this["lodash"]; }());
+
+/***/ }),
+
+/***/ 21:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -150,7 +172,7 @@ function _classCallCheck(instance, Constructor) {
 
 /***/ }),
 
-/***/ 26:
+/***/ 22:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -173,12 +195,65 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
+/***/ 23:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _classCallCheck; });
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+<<<<<<< HEAD
+/***/ }),
+=======
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _inherits; });
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
+
+/***/ 26:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createClass; });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+<<<<<<< HEAD
+
+/***/ }),
+
 /***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
 /* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(52);
+=======
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
@@ -197,15 +272,26 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 29:
+=======
+/***/ 24:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _possibleConstructorReturn; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
 
 
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(40);
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
+
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 function _possibleConstructorReturn(self, call) {
   if (call && (Object(_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(call) === "object" || typeof call === "function")) {
     return call;
@@ -219,11 +305,19 @@ function _possibleConstructorReturn(self, call) {
 /***/ 33:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["wp"]["hooks"]; }());
 
 /***/ }),
 
 /***/ 42:
+=======
+(function() { module.exports = this["wp"]["hooks"]; }());
+
+/***/ }),
+
+/***/ 40:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -246,10 +340,42 @@ function _typeof(obj) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 464:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+=======
+/***/ 452:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _wordpress_primitives__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * WordPress dependencies
+ */
+
+var plugins = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["SVG"], {
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 24 24"
+}, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_primitives__WEBPACK_IMPORTED_MODULE_1__["Path"], {
+  d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z"
+}));
+/* harmony default export */ __webpack_exports__["a"] = (plugins);
+
+
+/***/ }),
+
+/***/ 495:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -262,6 +388,7 @@ __webpack_require__.d(__webpack_exports__, "getPlugin", function() { return /* r
 __webpack_require__.d(__webpack_exports__, "getPlugins", function() { return /* reexport */ getPlugins; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+<<<<<<< HEAD
 var classCallCheck = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
@@ -276,23 +403,49 @@ var inherits = __webpack_require__(28);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
 var possibleConstructorReturn = __webpack_require__(29);
 
+=======
+var classCallCheck = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
+var createClass = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+var assertThisInitialized = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
+var inherits = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
+var possibleConstructorReturn = __webpack_require__(24);
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__(19);
 
 // EXTERNAL MODULE: external ["wp","element"]
 var external_wp_element_ = __webpack_require__(0);
 
-// EXTERNAL MODULE: external "lodash"
-var external_lodash_ = __webpack_require__(2);
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__(2);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","hooks"]
 var external_wp_hooks_ = __webpack_require__(33);
+=======
+// EXTERNAL MODULE: external {"this":["wp","hooks"]}
+var external_this_wp_hooks_ = __webpack_require__(33);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(8);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","compose"]
 var external_wp_compose_ = __webpack_require__(12);
+=======
+// EXTERNAL MODULE: external {"this":["wp","compose"]}
+var external_this_wp_compose_ = __webpack_require__(10);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/plugins/build-module/components/plugin-context/index.js
 
@@ -337,6 +490,7 @@ var plugin_context_withPluginContext = function withPluginContext(mapContextToPr
 var defineProperty = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+<<<<<<< HEAD
 var esm_typeof = __webpack_require__(42);
 
 // EXTERNAL MODULE: external ["wp","primitives"]
@@ -356,6 +510,12 @@ var plugins = Object(external_wp_element_["createElement"])(external_wp_primitiv
   d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z"
 }));
 /* harmony default export */ var library_plugins = (plugins);
+=======
+var esm_typeof = __webpack_require__(40);
+
+// EXTERNAL MODULE: ./node_modules/@wordpress/icons/build-module/library/plugins.js
+var plugins = __webpack_require__(452);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/plugins/build-module/api/index.js
 
@@ -500,14 +660,18 @@ function registerPlugin(name, settings) {
 
   settings = Object(external_wp_hooks_["applyFilters"])('plugins.registerPlugin', settings, name);
 
-  if (!Object(external_lodash_["isFunction"])(settings.render)) {
+  if (!Object(external_this_lodash_["isFunction"])(settings.render)) {
     console.error('The "render" property must be specified and must be a valid function.');
     return null;
   }
 
   api_plugins[name] = _objectSpread({
     name: name,
+<<<<<<< HEAD
     icon: library_plugins
+=======
+    icon: plugins["a" /* default */]
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   }, settings);
   Object(external_wp_hooks_["doAction"])('plugins.pluginRegistered', settings, name);
   return settings;
@@ -547,7 +711,11 @@ function unregisterPlugin(name) {
 
   var oldPlugin = api_plugins[name];
   delete api_plugins[name];
+<<<<<<< HEAD
   Object(external_wp_hooks_["doAction"])('plugins.pluginUnregistered', oldPlugin, name);
+=======
+  Object(external_this_wp_hooks_["doAction"])('plugins.pluginUnregistered', oldPlugin, name);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   return oldPlugin;
 }
 /**
@@ -657,7 +825,7 @@ var plugin_area_PluginArea = /*#__PURE__*/function (_Component) {
     key: "getCurrentPluginsState",
     value: function getCurrentPluginsState() {
       return {
-        plugins: Object(external_lodash_["map"])(getPlugins(), function (_ref) {
+        plugins: Object(external_this_lodash_["map"])(getPlugins(), function (_ref) {
           var icon = _ref.icon,
               name = _ref.name,
               render = _ref.render;
@@ -695,7 +863,7 @@ var plugin_area_PluginArea = /*#__PURE__*/function (_Component) {
         style: {
           display: 'none'
         }
-      }, Object(external_lodash_["map"])(this.state.plugins, function (_ref2) {
+      }, Object(external_this_lodash_["map"])(this.state.plugins, function (_ref2) {
         var context = _ref2.context,
             Plugin = _ref2.Plugin;
         return Object(external_wp_element_["createElement"])(Provider, {
@@ -723,6 +891,7 @@ var plugin_area_PluginArea = /*#__PURE__*/function (_Component) {
 /***/ }),
 
 /***/ 5:
+<<<<<<< HEAD
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -767,6 +936,36 @@ function _setPrototypeOf(o, p) {
 
 /***/ }),
 
+=======
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["primitives"]; }());
+
+/***/ }),
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ 8:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

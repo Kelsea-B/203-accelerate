@@ -901,7 +901,11 @@ function is_embed() {
 function is_main_query() {
 	if ( 'pre_get_posts' === current_filter() ) {
 		$message = sprintf(
+<<<<<<< HEAD
 			/* translators: 1: pre_get_posts, 2: WP_Query->is_main_query(), 3: is_main_query(), 4: Documentation URL. */
+=======
+			/* translators: 1: pre_get_posts, 2: WP_Query->is_main_query(), 3: is_main_query(), 4: Link to codex is_main_query() page. */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			__( 'In %1$s, use the %2$s method, not the %3$s function. See %4$s.' ),
 			'<code>pre_get_posts</code>',
 			'<code>WP_Query->is_main_query()</code>',

@@ -49,7 +49,11 @@ if ( isset( $_GET['action'] ) ) {
 			if ( isset( $_POST['action'] ) && isset( $_POST['allusers'] ) ) {
 				check_admin_referer( 'bulk-users-network' );
 
+<<<<<<< HEAD
 				$doaction     = $_POST['action'];
+=======
+				$doaction     = -1 != $_POST['action'] ? $_POST['action'] : $_POST['action2'];
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$userfunction = '';
 
 				foreach ( (array) $_POST['allusers'] as $user_id ) {

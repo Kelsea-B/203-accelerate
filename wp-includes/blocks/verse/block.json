@@ -15,10 +15,15 @@
 		}
 	},
 	"supports": {
+<<<<<<< HEAD
 		"anchor": true,
 		"__experimentalFontFamily": true,
 		"fontSize": true
 	},
 	"style": "wp-block-verse",
 	"editorStyle": "wp-block-verse-editor"
+=======
+		"anchor": true
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["viewport"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 458);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 487);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -90,11 +94,26 @@ this["wp"] = this["wp"] || {}; this["wp"]["viewport"] =
 /***/ 0:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["wp"]["element"]; }());
 
 /***/ }),
 
 /***/ 11:
+=======
+(function() { module.exports = this["wp"]["element"]; }());
+
+/***/ }),
+
+/***/ 10:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["compose"]; }());
+
+/***/ }),
+
+/***/ 12:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -149,6 +168,7 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 12:
 /***/ (function(module, exports) {
 
@@ -156,6 +176,8 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ 2:
 /***/ (function(module, exports) {
 
@@ -227,7 +249,75 @@ function _nonIterableRest() {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 458:
+=======
+/***/ 27:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _arrayLikeToArray; });
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+/***/ }),
+
+/***/ 31:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(o, minLen);
+}
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _arrayWithHoles; });
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+/***/ }),
+
+/***/ 39:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _nonIterableRest; });
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["data"]; }());
+
+/***/ }),
+
+/***/ 487:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -235,7 +325,10 @@ function _nonIterableRest() {
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+<<<<<<< HEAD
 __webpack_require__.d(__webpack_exports__, "store", function() { return /* reexport */ store; });
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 __webpack_require__.d(__webpack_exports__, "ifViewportMatches", function() { return /* reexport */ if_viewport_matches; });
 __webpack_require__.d(__webpack_exports__, "withViewportMatch", function() { return /* reexport */ with_viewport_match; });
 
@@ -249,11 +342,16 @@ var selectors_namespaceObject = {};
 __webpack_require__.r(selectors_namespaceObject);
 __webpack_require__.d(selectors_namespaceObject, "isViewportMatch", function() { return isViewportMatch; });
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__(2);
 
 // EXTERNAL MODULE: external ["wp","data"]
 var external_wp_data_ = __webpack_require__(4);
+=======
+// EXTERNAL MODULE: external {"this":["wp","data"]}
+var external_this_wp_data_ = __webpack_require__(4);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/viewport/build-module/store/reducer.js
 /**
@@ -359,9 +457,22 @@ Object(external_wp_data_["register"])(store);
  * WordPress dependencies
  */
 
+<<<<<<< HEAD
 
 /**
  * Internal dependencies
+=======
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/viewport/build-module/listener.js
+/**
+ * External dependencies
+ */
+
+/**
+ * WordPress dependencies
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 
 
@@ -371,11 +482,19 @@ var listener_addDimensionsEventListener = function addDimensionsEventListener(br
    * Callback invoked when media query state should be updated. Is invoked a
    * maximum of one time per call stack.
    */
+<<<<<<< HEAD
   var setIsMatching = Object(external_lodash_["debounce"])(function () {
     var values = Object(external_lodash_["mapValues"])(queries, function (query) {
       return query.matches;
     });
     Object(external_wp_data_["dispatch"])(store).setIsMatching(values);
+=======
+  var setIsMatching = Object(external_this_lodash_["debounce"])(function () {
+    var values = Object(external_this_lodash_["mapValues"])(queries, function (query) {
+      return query.matches;
+    });
+    Object(external_this_wp_data_["dispatch"])('core/viewport').setIsMatching(values);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   }, {
     leading: true
   });
@@ -389,8 +508,13 @@ var listener_addDimensionsEventListener = function addDimensionsEventListener(br
    * @type {Object<string,MediaQueryList>}
    */
 
+<<<<<<< HEAD
   var queries = Object(external_lodash_["reduce"])(breakpoints, function (result, width, name) {
     Object(external_lodash_["forEach"])(operators, function (condition, operator) {
+=======
+  var queries = Object(external_this_lodash_["reduce"])(breakpoints, function (result, width, name) {
+    Object(external_this_lodash_["forEach"])(operators, function (condition, operator) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
       var list = window.matchMedia("(".concat(condition, ": ").concat(width, "px)"));
       list.addListener(setIsMatching);
       var key = [operator, name].join(' ');
@@ -406,17 +530,29 @@ var listener_addDimensionsEventListener = function addDimensionsEventListener(br
 
 /* harmony default export */ var listener = (listener_addDimensionsEventListener);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","compose"]
 var external_wp_compose_ = __webpack_require__(12);
+=======
+// EXTERNAL MODULE: external {"this":["wp","compose"]}
+var external_this_wp_compose_ = __webpack_require__(10);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+<<<<<<< HEAD
 var slicedToArray = __webpack_require__(11);
 
 // EXTERNAL MODULE: external ["wp","element"]
 var external_wp_element_ = __webpack_require__(0);
+=======
+var slicedToArray = __webpack_require__(12);
+
+// EXTERNAL MODULE: external {"this":["wp","element"]}
+var external_this_wp_element_ = __webpack_require__(0);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/viewport/build-module/with-viewport-match.js
 
@@ -458,7 +594,11 @@ var external_wp_element_ = __webpack_require__(0);
 
 var with_viewport_match_withViewportMatch = function withViewportMatch(queries) {
   var useViewPortQueriesResult = function useViewPortQueriesResult() {
+<<<<<<< HEAD
     return Object(external_lodash_["mapValues"])(queries, function (query) {
+=======
+    return Object(external_this_lodash_["mapValues"])(queries, function (query) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
       var _query$split = query.split(' '),
           _query$split2 = Object(slicedToArray["a" /* default */])(_query$split, 2),
           operator = _query$split2[0],
@@ -473,6 +613,7 @@ var with_viewport_match_withViewportMatch = function withViewportMatch(queries) 
       // eslint-disable-next-line react-hooks/rules-of-hooks
 
 
+<<<<<<< HEAD
       return Object(external_wp_compose_["useViewportMatch"])(breakpointName, operator);
     });
   };
@@ -482,6 +623,17 @@ var with_viewport_match_withViewportMatch = function withViewportMatch(queries) 
       var queriesResult = useViewPortQueriesResult();
       return Object(external_wp_element_["createElement"])(WrappedComponent, Object(esm_extends["a" /* default */])({}, props, queriesResult));
     });
+=======
+      return Object(external_this_wp_compose_["useViewportMatch"])(breakpointName, operator);
+    });
+  };
+
+  return Object(external_this_wp_compose_["createHigherOrderComponent"])(function (WrappedComponent) {
+    return Object(external_this_wp_compose_["pure"])(function (props) {
+      var queriesResult = useViewPortQueriesResult();
+      return Object(external_this_wp_element_["createElement"])(WrappedComponent, Object(esm_extends["a" /* default */])({}, props, queriesResult));
+    });
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   }, 'withViewportMatch');
 };
 

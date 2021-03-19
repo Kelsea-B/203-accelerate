@@ -498,10 +498,13 @@ jQuery(document).ready( function($) {
 			changed = ( ! editor.isHidden() && editor.isDirty() );
 		}
 
+<<<<<<< HEAD
 		if ( changed ) {
 			event.preventDefault();
 			// The return string is needed for browser compat.
 			// See https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			return __( 'The changes you made will be lost if you navigate away from this page.' );
 		}
 	}).on( 'unload.edit-post', function( event ) {
@@ -578,7 +581,11 @@ jQuery(document).ready( function($) {
 		}
 
 		// @todo Move to jQuery 1.3+, support for multiple hierarchical taxonomies, see wp-lists.js.
+<<<<<<< HEAD
 		$('a', '#' + taxonomy + '-tabs').on( 'click', function( e ) {
+=======
+		$('a', '#' + taxonomy + '-tabs').click( function( e ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			e.preventDefault();
 			var t = $(this).attr('href');
 			$(this).parent().addClass('tabs').siblings('li').removeClass('tabs');
@@ -600,7 +607,11 @@ jQuery(document).ready( function($) {
 		});
 
 		// On [Enter] submit the taxonomy.
+<<<<<<< HEAD
 		$('#new' + taxonomy).on( 'keypress', function(event){
+=======
+		$('#new' + taxonomy).keypress( function(event){
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			if( 13 === event.keyCode ) {
 				event.preventDefault();
 				$('#' + taxonomy + '-add-submit').trigger( 'click' );
@@ -858,7 +869,11 @@ jQuery(document).ready( function($) {
 		});
 
 		// Set the selected visibility as current.
+<<<<<<< HEAD
 		$postVisibilitySelect.find('.save-post-visibility').on( 'click', function( event ) { // Crazyhorse - multiple OK cancels.
+=======
+		$postVisibilitySelect.find('.save-post-visibility').click( function( event ) { // Crazyhorse - multiple OK cancels.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			var visibilityLabel = '', selectedVisibility = $postVisibilitySelect.find('input:radio:checked').val();
 
 			$postVisibilitySelect.slideUp('fast');
@@ -914,7 +929,11 @@ jQuery(document).ready( function($) {
 		});
 
 		// Save the changed timestamp.
+<<<<<<< HEAD
 		$timestampdiv.find('.save-timestamp').on( 'click', function( event ) { // Crazyhorse - multiple OK cancels.
+=======
+		$timestampdiv.find('.save-timestamp').click( function( event ) { // Crazyhorse - multiple OK cancels.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			if ( updateText() ) {
 				$timestampdiv.slideUp('fast');
 				$timestampdiv.siblings('a.edit-timestamp').show().trigger( 'focus' );
@@ -1026,7 +1045,11 @@ jQuery(document).ready( function($) {
 					buttons.html(buttonsOrig);
 					permalink.html(permalinkOrig);
 					real_slug.val(new_slug);
+<<<<<<< HEAD
 					$( '.edit-slug' ).trigger( 'focus' );
+=======
+					$( '.edit-slug' ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					wp.a11y.speak( __( 'Permalink saved' ) );
 				}
 			);
@@ -1261,7 +1284,11 @@ jQuery(document).ready( function($) {
 		// Clear the selection and move focus back to the trigger.
 		event.clearSelection();
 		// Handle ClipboardJS focus bug, see https://github.com/zenorocha/clipboard.js/issues/680
+<<<<<<< HEAD
 		triggerElement.trigger( 'focus' );
+=======
+		triggerElement.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		// Show success visual feedback.
 		clearTimeout( copyAttachmentURLSuccessTimeout );

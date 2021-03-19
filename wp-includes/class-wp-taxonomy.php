@@ -210,6 +210,7 @@ final class WP_Taxonomy {
 	public $rest_controller_class;
 
 	/**
+<<<<<<< HEAD
 	 * The controller instance for this taxonomy's REST API endpoints.
 	 *
 	 * Lazily computed. Should be accessed using {@see WP_Taxonomy::get_rest_controller()}.
@@ -220,6 +221,8 @@ final class WP_Taxonomy {
 	public $rest_controller;
 
 	/**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * The default term name for this taxonomy. If you pass an array you have
 	 * to set 'name' and optionally 'slug' and 'description'.
 	 *
@@ -229,6 +232,7 @@ final class WP_Taxonomy {
 	public $default_term;
 
 	/**
+<<<<<<< HEAD
 	 * Whether terms in this taxonomy should be sorted in the order they are provided to `wp_set_object_terms()`.
 	 *
 	 * Use this in combination with `'orderby' => 'term_order'` when fetching terms.
@@ -245,6 +249,16 @@ final class WP_Taxonomy {
 	 * @var array|null
 	 */
 	public $args = null;
+=======
+	 * The controller instance for this taxonomy's REST API endpoints.
+	 *
+	 * Lazily computed. Should be accessed using {@see WP_Taxonomy::get_rest_controller()}.
+	 *
+	 * @since 5.5.0
+	 * @var WP_REST_Controller $rest_controller
+	 */
+	public $rest_controller;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	/**
 	 * Whether it is a built-in taxonomy.
@@ -321,8 +335,11 @@ final class WP_Taxonomy {
 			'rest_base'             => false,
 			'rest_controller_class' => false,
 			'default_term'          => null,
+<<<<<<< HEAD
 			'sort'                  => null,
 			'args'                  => null,
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			'_builtin'              => false,
 		);
 

@@ -5,6 +5,7 @@
  * Breakpoints & Media Queries
  */
 /**
+<<<<<<< HEAD
  * SCSS Variables.
  *
  * Please use variables from this sheet to ensure consistency across the UI.
@@ -12,6 +13,8 @@
  * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
  */
 /**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * Colors
  */
 /**
@@ -31,6 +34,7 @@
  * Editor widths.
  */
 /**
+<<<<<<< HEAD
  * Block & Editor UI.
  */
 /**
@@ -39,6 +43,15 @@
 /**
  * React Native specific.
  * These variables do not appear to be used anywhere else.
+=======
+ * Block UI.
+ */
+/**
+ * Border radii.
+ */
+/**
+ * Block paddings.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 /**
  * Breakpoint mixins
@@ -68,6 +81,7 @@
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
+<<<<<<< HEAD
 /**
  * These are default block editor widths in case the theme doesn't provide them.
  */
@@ -97,6 +111,21 @@
   margin-right: 8px;
   padding: 0 6px;
 }
+=======
+:root {
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color-darker-10: #006ba1;
+  --wp-admin-theme-color-darker-20: #005a87; }
+
+.block-editor-format-toolbar__image-container-content {
+  display: flex; }
+  .block-editor-format-toolbar__image-container-content .components-button {
+    align-self: flex-end;
+    height: 30px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding: 0 6px; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 .block-editor-format-toolbar__image-container-value {
   margin: 7px;
@@ -104,6 +133,7 @@
   flex-shrink: 1;
   white-space: nowrap;
   min-width: 150px;
+<<<<<<< HEAD
   max-width: 500px;
 }
 .block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__field {
@@ -112,6 +142,13 @@
 .block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__label {
   display: block;
 }
+=======
+  max-width: 500px; }
+  .block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__field {
+    margin-bottom: 0; }
+  .block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__label {
+    display: block; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 .block-editor-format-toolbar__link-container-content {
   display: flex;
@@ -125,11 +162,17 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 150px;
+<<<<<<< HEAD
   max-width: 500px;
 }
 .block-editor-format-toolbar__link-container-value.has-invalid-link {
   color: #cc1818;
 }
+=======
+  max-width: 500px; }
+  .block-editor-format-toolbar__link-container-value.has-invalid-link {
+    color: #cc1818; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 .components-inline-color__indicator {
   position: absolute;
@@ -139,6 +182,7 @@
   bottom: 6px;
   left: auto;
   right: auto;
+<<<<<<< HEAD
   margin: 0 5px;
 }
 
@@ -148,10 +192,21 @@
 .components-inline-color-popover .components-popover__content .components-color-palette {
   margin-top: 0.6rem;
 }
+=======
+  margin: 0 5px; }
+
+.components-inline-color-popover .components-popover__content > div {
+  padding: 20px 18px; }
+
+.components-inline-color-popover .components-popover__content .components-color-palette {
+  margin-top: 0.6rem; }
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 .components-inline-color-popover .components-popover__content .components-base-control__title {
   display: block;
   margin-bottom: 16px;
   font-weight: 600;
+<<<<<<< HEAD
   color: #191e23;
 }
 .components-inline-color-popover .components-popover__content .component-color-indicator {
@@ -161,11 +216,24 @@
 .format-library-text-color-button {
   position: relative;
 }
+=======
+  color: #191e23; }
+
+.components-inline-color-popover .components-popover__content .component-color-indicator {
+  vertical-align: text-bottom; }
+
+.format-library-text-color-button {
+  position: relative; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 .format-library-text-color-button__indicator {
   height: 4px;
   width: 20px;
   position: absolute;
   bottom: 10px;
+<<<<<<< HEAD
   left: 8px;
 }
+=======
+  left: 8px; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

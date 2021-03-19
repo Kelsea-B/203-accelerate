@@ -169,6 +169,7 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 			if ( is_wp_error( $meta_update ) ) {
 				return $meta_update;
 			}
+<<<<<<< HEAD
 		}
 
 		$attachment    = get_post( $attachment_id );
@@ -178,6 +179,17 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 			return $fields_update;
 		}
 
+=======
+		}
+
+		$attachment    = get_post( $attachment_id );
+		$fields_update = $this->update_additional_fields_for_object( $attachment, $request );
+
+		if ( is_wp_error( $fields_update ) ) {
+			return $fields_update;
+		}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$request->set_param( 'context', 'edit' );
 
 		/**
@@ -448,6 +460,7 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 			);
 		}
 
+<<<<<<< HEAD
 		// The `modifiers` param takes precedence over the older format.
 		if ( isset( $request['modifiers'] ) ) {
 			$modifiers = $request['modifiers'];
@@ -482,6 +495,27 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 					array( 'status' => 400 )
 				);
 			}
+=======
+		// Check if we need to do anything.
+		$rotate = 0;
+		$crop   = false;
+
+		if ( ! empty( $request['rotation'] ) ) {
+			// Rotation direction: clockwise vs. counter clockwise.
+			$rotate = 0 - (int) $request['rotation'];
+		}
+
+		if ( isset( $request['x'], $request['y'], $request['width'], $request['height'] ) ) {
+			$crop = true;
+		}
+
+		if ( ! $rotate && ! $crop ) {
+			return new WP_Error(
+				'rest_image_not_edited',
+				__( 'The image was not edited. Edit the image before applying the changes.' ),
+				array( 'status' => 400 )
+			);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		/*
@@ -504,6 +538,7 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 			);
 		}
 
+<<<<<<< HEAD
 		foreach ( $modifiers as $modifier ) {
 			$args = $modifier['args'];
 			switch ( $modifier['type'] ) {
@@ -547,6 +582,36 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 
 					break;
 
+=======
+		if ( 0 !== $rotate ) {
+			$result = $image_editor->rotate( $rotate );
+
+			if ( is_wp_error( $result ) ) {
+				return new WP_Error(
+					'rest_image_rotation_failed',
+					__( 'Unable to rotate this image.' ),
+					array( 'status' => 500 )
+				);
+			}
+		}
+
+		if ( $crop ) {
+			$size = $image_editor->get_size();
+
+			$crop_x = round( ( $size['width'] * (float) $request['x'] ) / 100.0 );
+			$crop_y = round( ( $size['height'] * (float) $request['y'] ) / 100.0 );
+			$width  = round( ( $size['width'] * (float) $request['width'] ) / 100.0 );
+			$height = round( ( $size['height'] * (float) $request['height'] ) / 100.0 );
+
+			$result = $image_editor->crop( $crop_x, $crop_y, $width, $height );
+
+			if ( is_wp_error( $result ) ) {
+				return new WP_Error(
+					'rest_image_crop_failed',
+					__( 'Unable to crop this image.' ),
+					array( 'status' => 500 )
+				);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		}
 
@@ -1316,6 +1381,7 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 	 */
 	protected function get_edit_media_item_args() {
 		return array(
+<<<<<<< HEAD
 			'src'       => array(
 				'description' => __( 'URL to the edited image file.' ),
 				'type'        => 'string',
@@ -1400,36 +1466,69 @@ class WP_REST_Attachments_Controller extends WP_REST_Posts_Controller {
 			),
 			'rotation'  => array(
 				'description'      => __( 'The amount to rotate the image clockwise in degrees. DEPRECATED: Use `modifiers` instead.' ),
+=======
+			'rotation' => array(
+				'description'      => __( 'The amount to rotate the image clockwise in degrees.' ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'type'             => 'integer',
 				'minimum'          => 0,
 				'exclusiveMinimum' => true,
 				'maximum'          => 360,
 				'exclusiveMaximum' => true,
 			),
+<<<<<<< HEAD
 			'x'         => array(
 				'description' => __( 'As a percentage of the image, the x position to start the crop from. DEPRECATED: Use `modifiers` instead.' ),
+=======
+			'x'        => array(
+				'description' => __( 'As a percentage of the image, the x position to start the crop from.' ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'type'        => 'number',
 				'minimum'     => 0,
 				'maximum'     => 100,
 			),
+<<<<<<< HEAD
 			'y'         => array(
 				'description' => __( 'As a percentage of the image, the y position to start the crop from. DEPRECATED: Use `modifiers` instead.' ),
+=======
+			'y'        => array(
+				'description' => __( 'As a percentage of the image, the y position to start the crop from.' ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'type'        => 'number',
 				'minimum'     => 0,
 				'maximum'     => 100,
 			),
+<<<<<<< HEAD
 			'width'     => array(
 				'description' => __( 'As a percentage of the image, the width to crop the image to. DEPRECATED: Use `modifiers` instead.' ),
+=======
+			'width'    => array(
+				'description' => __( 'As a percentage of the image, the width to crop the image to.' ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'type'        => 'number',
 				'minimum'     => 0,
 				'maximum'     => 100,
 			),
+<<<<<<< HEAD
 			'height'    => array(
 				'description' => __( 'As a percentage of the image, the height to crop the image to. DEPRECATED: Use `modifiers` instead.' ),
+=======
+			'height'   => array(
+				'description' => __( 'As a percentage of the image, the height to crop the image to.' ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'type'        => 'number',
 				'minimum'     => 0,
 				'maximum'     => 100,
 			),
+<<<<<<< HEAD
+=======
+			'src'      => array(
+				'description' => __( 'URL to the edited image file.' ),
+				'type'        => 'string',
+				'format'      => 'uri',
+				'required'    => true,
+			),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		);
 	}
 

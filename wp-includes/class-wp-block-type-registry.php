@@ -34,7 +34,17 @@ final class WP_Block_Type_Registry {
 	 *
 	 * @since 5.0.0
 	 *
+<<<<<<< HEAD
 	 * @see WP_Block_Type::__construct()
+=======
+	 * @param string|WP_Block_Type $name Block type name including namespace, or alternatively
+	 *                                   a complete WP_Block_Type instance. In case a WP_Block_Type
+	 *                                   is provided, the $args parameter will be ignored.
+	 * @param array                $args {
+	 *     Optional. Array of block type arguments. Accepts any public property of `WP_Block_Type`.
+	 *     Any arguments may be defined, however the ones described below are supported by default.
+	 *     Default empty array.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *
 	 * @param string|WP_Block_Type $name Block type name including namespace, or alternatively
 	 *                                   a complete WP_Block_Type instance. In case a WP_Block_Type

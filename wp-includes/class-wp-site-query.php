@@ -318,7 +318,11 @@ class WP_Site_Query {
 		 * @param array|int|null $site_data Return an array of site data to short-circuit WP's site query,
 		 *                                  the site count as an integer if `$this->query_vars['count']` is set,
 		 *                                  or null to run the normal queries.
+<<<<<<< HEAD
 		 * @param WP_Site_Query  $query     The WP_Site_Query instance, passed by reference.
+=======
+		 * @param WP_Site_Query  $this      The WP_Site_Query instance, passed by reference.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 */
 		$site_data = apply_filters_ref_array( 'sites_pre_query', array( $site_data, &$this ) );
 

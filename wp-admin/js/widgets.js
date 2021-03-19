@@ -112,7 +112,11 @@ window.wpWidgets = {
 			$document.triggerHandler( 'wp-pin-menu' );
 		});
 
+<<<<<<< HEAD
 		$(document.body).on('click.widgets-toggle', function(e) {
+=======
+		$(document.body).bind('click.widgets-toggle', function(e) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			var target = $(e.target), css = {},
 				widget, inside, targetWidth, widgetWidth, margin, saveButton, widgetId,
 				toggleBtn = target.closest( '.widget' ).find( '.widget-top button.widget-action' );

@@ -21,7 +21,11 @@ if ( isset( $_GET['page'] ) && ! empty( $_POST ) ) {
 // The privacy policy guide used to be outputted from here. Since WP 5.3 it is in wp-admin/privacy-policy-guide.php.
 if ( isset( $_GET['wp-privacy-policy-guide'] ) ) {
 	require_once dirname( __DIR__ ) . '/wp-load.php';
+<<<<<<< HEAD
 	wp_redirect( admin_url( 'options-privacy.php?tab=policyguide' ), 301 );
+=======
+	wp_redirect( admin_url( 'privacy-policy-guide.php' ), 301 );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	exit;
 } elseif ( isset( $_GET['page'] ) ) {
 	// These were also moved to files in WP 5.3.

@@ -31,7 +31,11 @@ if ( $doaction ) {
 		$doaction       = 'delete';
 	} elseif ( isset( $_REQUEST['delete_comments'] ) ) {
 		$comment_ids = $_REQUEST['delete_comments'];
+<<<<<<< HEAD
 		$doaction    = $_REQUEST['action'];
+=======
+		$doaction    = ( '-1' !== $_REQUEST['action'] ) ? $_REQUEST['action'] : $_REQUEST['action2'];
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	} elseif ( isset( $_REQUEST['ids'] ) ) {
 		$comment_ids = array_map( 'absint', explode( ',', $_REQUEST['ids'] ) );
 	} elseif ( wp_get_referer() ) {

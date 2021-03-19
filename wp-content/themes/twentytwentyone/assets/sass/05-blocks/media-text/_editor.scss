@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-media-text {
 
 	[data-align="full"] & {
@@ -16,3 +17,23 @@
 		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
 	}
 }
+=======
+.wp-block-media-text {
+
+	[data-align="full"] & {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	@include innerblock-margin-clear(".wp-block-media-text__content");
+
+	.wp-block-media-text__content {
+		padding: var(--global--spacing-horizontal);
+	}
+
+	// Block Styles
+	&.is-style-twentytwentyone-border {
+		border: calc(3 * var(--separator--height)) solid var(--global--color-border);
+	}
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

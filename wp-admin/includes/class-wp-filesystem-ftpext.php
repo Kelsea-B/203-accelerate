@@ -636,6 +636,7 @@ class WP_Filesystem_FTPext extends WP_Filesystem_Base {
 					$b['type'] = 'd';
 				} elseif ( $b['islink'] ) {
 					$b['type'] = 'l';
+<<<<<<< HEAD
 				} else {
 					$b['type'] = 'f';
 				}
@@ -654,6 +655,26 @@ class WP_Filesystem_FTPext extends WP_Filesystem_Base {
 					$b['time'] = mktime( $b['hour'], $b['minute'], 0, $b['month'], $b['day'], $b['year'] );
 					$b['name'] = $lucifer[7];
 				} else {
+=======
+				} else {
+					$b['type'] = 'f';
+				}
+
+				$b['perms']  = $lucifer[0];
+				$b['permsn'] = $this->getnumchmodfromh( $b['perms'] );
+				$b['number'] = $lucifer[1];
+				$b['owner']  = $lucifer[2];
+				$b['group']  = $lucifer[3];
+				$b['size']   = $lucifer[4];
+
+				if ( 8 == $lcount ) {
+					sscanf( $lucifer[5], '%d-%d-%d', $b['year'], $b['month'], $b['day'] );
+					sscanf( $lucifer[6], '%d:%d', $b['hour'], $b['minute'] );
+
+					$b['time'] = mktime( $b['hour'], $b['minute'], 0, $b['month'], $b['day'], $b['year'] );
+					$b['name'] = $lucifer[7];
+				} else {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					$b['month'] = $lucifer[5];
 					$b['day']   = $lucifer[6];
 

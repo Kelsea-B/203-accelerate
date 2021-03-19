@@ -11,9 +11,15 @@
  *
  * @since 2.9.0
  *
+<<<<<<< HEAD
  * @param int          $post_id Attachment post ID.
  * @param false|object $msg     Optional. Message to display for image editor updates or errors.
  *                              Default false.
+=======
+ * @param int         $post_id Attachment post ID.
+ * @param bool|object $msg     Optional. Message to display for image editor updates or errors.
+ *                             Default false.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_image_editor( $post_id, $msg = false ) {
 	$nonce     = wp_create_nonce( "image_editor-$post_id" );

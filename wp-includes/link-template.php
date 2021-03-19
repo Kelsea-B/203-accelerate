@@ -218,7 +218,11 @@ function get_permalink( $post = 0, $leavename = false ) {
 
 	if (
 		$permalink &&
+<<<<<<< HEAD
 		! wp_force_plain_post_permalink( $post )
+=======
+		! in_array( $post->post_status, array( 'draft', 'pending', 'auto-draft', 'future', 'trash' ), true )
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	) {
 
 		$category = '';
@@ -329,7 +333,11 @@ function get_post_permalink( $id = 0, $leavename = false, $sample = false ) {
 
 	$slug = $post->post_name;
 
+<<<<<<< HEAD
 	$force_plain_link = wp_force_plain_post_permalink( $post );
+=======
+	$draft_or_pending = get_post_status( $post ) && in_array( get_post_status( $post ), array( 'draft', 'pending', 'auto-draft', 'future' ), true );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	$post_type = get_post_type_object( $post->post_type );
 
@@ -425,7 +433,11 @@ function _get_page_link( $post = false, $leavename = false, $sample = false ) {
 
 	$post = get_post( $post );
 
+<<<<<<< HEAD
 	$force_plain_link = wp_force_plain_post_permalink( $post );
+=======
+	$draft_or_pending = in_array( $post->post_status, array( 'draft', 'pending', 'auto-draft' ), true );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	$link = $wp_rewrite->get_page_permastruct();
 
@@ -469,6 +481,7 @@ function get_attachment_link( $post = null, $leavename = false ) {
 
 	$link = false;
 
+<<<<<<< HEAD
 	$post             = get_post( $post );
 	$force_plain_link = wp_force_plain_post_permalink( $post );
 	$parent_id        = $post->post_parent;
@@ -489,6 +502,15 @@ function get_attachment_link( $post = null, $leavename = false ) {
 	if ( $force_plain_link || ! $parent_valid ) {
 		$link = false;
 	} elseif ( $wp_rewrite->using_permalinks() && $parent ) {
+=======
+	$post   = get_post( $post );
+	$parent = ( $post->post_parent > 0 && $post->post_parent != $post->ID ) ? get_post( $post->post_parent ) : false;
+	if ( $parent && ! in_array( $parent->post_type, get_post_types(), true ) ) {
+		$parent = false;
+	}
+
+	if ( $wp_rewrite->using_permalinks() && $parent ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		if ( 'page' === $parent->post_type ) {
 			$parentlink = _get_page_link( $post->post_parent ); // Ignores page_on_front.
 		} else {
@@ -690,7 +712,11 @@ function get_feed_link( $feed = '' ) {
 
 	$permalink = $wp_rewrite->get_feed_permastruct();
 
+<<<<<<< HEAD
 	if ( $permalink ) {
+=======
+	if ( '' !== $permalink ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		if ( false !== strpos( $feed, 'comments_' ) ) {
 			$feed      = str_replace( 'comments_', '', $feed );
 			$permalink = $wp_rewrite->get_comment_feed_permastruct();
@@ -3253,7 +3279,13 @@ function home_url( $path = '', $scheme = null ) {
  *
  * @since 3.0.0
  *
+<<<<<<< HEAD
  * @param int|null    $blog_id Optional. Site ID. Default null (current site).
+=======
+ * @global string $pagenow
+ *
+ * @param int         $blog_id Optional. Site ID. Default null (current site).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @param string      $path    Optional. Path relative to the home URL. Default empty.
  * @param string|null $scheme  Optional. Scheme to give the home URL context. Accepts
  *                             'http', 'https', 'relative', 'rest', or null. Default null.
@@ -3271,7 +3303,11 @@ function get_home_url( $blog_id = null, $path = '', $scheme = null ) {
 	}
 
 	if ( ! in_array( $scheme, array( 'http', 'https', 'relative' ), true ) ) {
+<<<<<<< HEAD
 		if ( is_ssl() ) {
+=======
+		if ( is_ssl() && ! is_admin() && 'wp-login.php' !== $pagenow ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$scheme = 'https';
 		} else {
 			$scheme = parse_url( $url, PHP_URL_SCHEME );
@@ -3572,9 +3608,15 @@ function network_site_url( $path = '', $scheme = null ) {
  *
  * @since 3.0.0
  *
+<<<<<<< HEAD
  * @param string      $path   Optional. Path relative to the home URL. Default empty.
  * @param string|null $scheme Optional. Scheme to give the home URL context. Accepts
  *                            'http', 'https', or 'relative'. Default null.
+=======
+ * @param string $path   Optional. Path relative to the home URL. Default empty.
+ * @param string $scheme Optional. Scheme to give the home URL context. Accepts
+ *                       'http', 'https', or 'relative'. Default null.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return string Home URL link with optional path appended.
  */
 function network_home_url( $path = '', $scheme = null ) {
@@ -3586,7 +3628,11 @@ function network_home_url( $path = '', $scheme = null ) {
 	$orig_scheme     = $scheme;
 
 	if ( ! in_array( $scheme, array( 'http', 'https', 'relative' ), true ) ) {
+<<<<<<< HEAD
 		$scheme = is_ssl() ? 'https' : 'http';
+=======
+		$scheme = is_ssl() && ! is_admin() ? 'https' : 'http';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	if ( 'relative' === $scheme ) {

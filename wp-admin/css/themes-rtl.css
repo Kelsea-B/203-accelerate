@@ -496,7 +496,11 @@ body.folded .theme-browser ~ .theme-overlay .theme-wrap {
 	background: #f6f7f7;
 	z-index: 30;
 	box-sizing: border-box;
+<<<<<<< HEAD
 	border-top: 1px solid #f0f0f1;
+=======
+	border-top: 1px solid #eee;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .theme-overlay .theme-actions a {
@@ -1058,13 +1062,19 @@ body.folded .theme-browser ~ .theme-overlay .theme-wrap {
 
 .upload-theme .wp-upload-form,
 .upload-plugin .wp-upload-form {
+<<<<<<< HEAD
 	background: #f6f7f7;
 	border: 1px solid #c3c4c7;
+=======
+	background: #fafafa;
+	border: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	padding: 30px;
 	margin: 30px auto;
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
+<<<<<<< HEAD
 }
 
 .upload-theme .wp-upload-form input[type="file"],
@@ -1072,6 +1082,15 @@ body.folded .theme-browser ~ .theme-overlay .theme-wrap {
 	margin-left: 10px;
 }
 
+=======
+}
+
+.upload-theme .wp-upload-form input[type="file"],
+.upload-plugin .wp-upload-form input[type="file"] {
+	margin-left: 10px;
+}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 .upload-theme .install-help,
 .upload-plugin .install-help {
 	color: #50575e; /* #f1f1f1 background */
@@ -1133,8 +1152,13 @@ p.no-themes-local {
 }
 
 .update-from-upload-comparison {
+<<<<<<< HEAD
 	border-top: 1px solid #dcdcde;
 	border-bottom: 1px solid #dcdcde;
+=======
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	text-align: right;
 	margin: 1rem 0 1.4rem;
 	border-collapse: collapse;
@@ -1162,7 +1186,11 @@ p.no-themes-local {
 }
 
 .update-from-upload-comparison td.warning {
+<<<<<<< HEAD
 	color: #d63638;
+=======
+	color: #a00;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .update-from-upload-actions {
@@ -1471,9 +1499,15 @@ body.full-overlay-active {
 	float: right;
 	width: 45px;
 	height: 45px;
+<<<<<<< HEAD
 	background: #f0f0f1;
 	border-left: 1px solid #dcdcde;
 	color: #3c434a;
+=======
+	background: #eee;
+	border-left: 1px solid #ddd;
+	color: #444;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	cursor: pointer;
 	text-decoration: none;
 	transition: color .1s ease-in-out, background .1s ease-in-out;

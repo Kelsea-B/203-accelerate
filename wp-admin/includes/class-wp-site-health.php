@@ -108,7 +108,11 @@ class WP_Site_Health {
 
 			// Don't run https test on development environments.
 			if ( $this->is_development_environment() ) {
+<<<<<<< HEAD
 				unset( $tests['async']['https_status'] );
+=======
+				unset( $tests['direct']['https_status'] );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 
 			foreach ( $tests['direct'] as $test ) {
@@ -726,7 +730,11 @@ class WP_Site_Health {
 				'<p>%s</p>',
 				sprintf(
 					/* translators: %s: The minimum recommended PHP version. */
+<<<<<<< HEAD
 					__( 'PHP is the programming language used to build and maintain WordPress. Newer versions of PHP are created with increased performance in mind, so you may see a positive effect on your site&#8217;s performance. The minimum recommended version of PHP is %s.' ),
+=======
+					__( 'PHP is the programming language used to build and maintain WordPress. Newer versions of PHP are faster and more secure, so staying up to date will help your site&#8217;s overall performance and security. The minimum recommended version of PHP is %s.' ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					$response ? $response['recommended_version'] : ''
 				)
 			),
@@ -1078,6 +1086,7 @@ class WP_Site_Health {
 			$result['label'] = __( 'PHP default timezone is invalid' );
 
 			$result['description'] = sprintf(
+<<<<<<< HEAD
 				'<p>%s</p>',
 				sprintf(
 					/* translators: %s: date_default_timezone_set() */
@@ -1125,6 +1134,55 @@ class WP_Site_Health {
 			$result['description'] = sprintf(
 				'<p>%s</p>',
 				sprintf(
+=======
+				'<p>%s</p>',
+				sprintf(
+					/* translators: %s: date_default_timezone_set() */
+					__( 'PHP default timezone was changed after WordPress loading by a %s function call. This interferes with correct calculations of dates and times.' ),
+					'<code>date_default_timezone_set()</code>'
+				)
+			);
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Test if there's an active PHP session that can affect loopback requests.
+	 *
+	 * @since 5.5.0
+	 *
+	 * @return array The test results.
+	 */
+	public function get_test_php_sessions() {
+		$result = array(
+			'label'       => __( 'No PHP sessions detected' ),
+			'status'      => 'good',
+			'badge'       => array(
+				'label' => __( 'Performance' ),
+				'color' => 'blue',
+			),
+			'description' => sprintf(
+				'<p>%s</p>',
+				sprintf(
+					/* translators: 1: session_start(), 2: session_write_close() */
+					__( 'PHP sessions created by a %1$s function call may interfere with REST API and loopback requests. An active session should be closed by %2$s before making any HTTP requests.' ),
+					'<code>session_start()</code>',
+					'<code>session_write_close()</code>'
+				)
+			),
+			'test'        => 'php_sessions',
+		);
+
+		if ( function_exists( 'session_status' ) && PHP_SESSION_ACTIVE === session_status() ) {
+			$result['status'] = 'critical';
+
+			$result['label'] = __( 'An active PHP session was detected' );
+
+			$result['description'] = sprintf(
+				'<p>%s</p>',
+				sprintf(
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					/* translators: 1: session_start(), 2: session_write_close() */
 					__( 'A PHP session was created by a %1$s function call. This interferes with REST API and loopback requests. The session should be closed by %2$s before making any HTTP requests.' ),
 					'<code>session_start()</code>',
@@ -1516,8 +1574,14 @@ class WP_Site_Health {
 				__( 'An HTTPS connection is a more secure way of browsing the web. Many services now have HTTPS as a requirement. HTTPS allows you to take advantage of new features that can increase site speed, improve search rankings, and gain the trust of your visitors by helping to protect their online privacy.' )
 			),
 			'actions'     => sprintf(
+<<<<<<< HEAD
 				'<p><a href="%s" target="_blank" rel="noopener">%s<span class="screen-reader-text"> %s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
 				esc_url( $default_update_url ),
+=======
+				'<p><a href="%s" target="_blank" rel="noopener">%s <span class="screen-reader-text">%s</span><span aria-hidden="true" class="dashicons dashicons-external"></span></a></p>',
+				/* translators: Documentation explaining HTTPS and why it should be used. */
+				esc_url( __( 'https://wordpress.org/support/article/why-should-i-use-https/' ) ),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				__( 'Learn more about why you should use HTTPS' ),
 				/* translators: Accessibility text. */
 				__( '(opens in a new tab)' )
@@ -1641,9 +1705,15 @@ class WP_Site_Health {
 				$result['description'] = sprintf(
 					'<p>%s</p>',
 					sprintf(
+<<<<<<< HEAD
 						/* translators: %s: URL to Settings > General > WordPress Address. */
 						__( 'Your <a href="%s">WordPress Address</a> is set up to use HTTPS, but the SSL certificate appears to be invalid.' ),
 						esc_url( admin_url( 'options-general.php' ) . '#siteurl' )
+=======
+						/* translators: %s: URL to General Settings screen. */
+						__( 'You are accessing this website using HTTPS, but your <a href="%s">WordPress Address</a> is not set up to use HTTPS by default.' ),
+						esc_url( admin_url( 'options-general.php' ) )
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					)
 				);
 			} else {
@@ -2176,6 +2246,7 @@ class WP_Site_Health {
 				'post_max_size',
 				'upload_max_filesize'
 			);
+<<<<<<< HEAD
 			$result['status'] = 'recommended';
 
 			if ( 0 === wp_convert_hr_to_bytes( $post_max_size ) ) {
@@ -2200,6 +2271,18 @@ class WP_Site_Health {
 				);
 			}
 
+=======
+			$result['status']      = 'recommended';
+			$result['description'] = sprintf(
+				'<p>%s</p>',
+				sprintf(
+					/* translators: 1: post_max_size, 2: upload_max_filesize */
+					__( 'The setting for %1$s is smaller than %2$s, this could cause some problems when trying to upload files.' ),
+					'<code>post_max_size</code>',
+					'<code>upload_max_filesize</code>'
+				)
+			);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			return $result;
 		}
 
@@ -2313,6 +2396,13 @@ class WP_Site_Health {
 					'label' => __( 'MySQL utf8mb4 support' ),
 					'test'  => 'utf8mb4_support',
 				),
+<<<<<<< HEAD
+=======
+				'https_status'              => array(
+					'label' => __( 'HTTPS status' ),
+					'test'  => 'https_status',
+				),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'ssl_support'               => array(
 					'label' => __( 'Secure communication' ),
 					'test'  => 'ssl_support',
@@ -2357,12 +2447,15 @@ class WP_Site_Health {
 					'has_rest'          => true,
 					'async_direct_test' => array( WP_Site_Health::get_instance(), 'get_test_loopback_requests' ),
 				),
+<<<<<<< HEAD
 				'https_status'         => array(
 					'label'             => __( 'HTTPS status' ),
 					'test'              => rest_url( 'wp-site-health/v1/tests/https-status' ),
 					'has_rest'          => true,
 					'async_direct_test' => array( WP_Site_Health::get_instance(), 'get_test_https_status' ),
 				),
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				'authorization_header' => array(
 					'label'     => __( 'Authorization header' ),
 					'test'      => rest_url( 'wp-site-health/v1/tests/authorization-header' ),
@@ -2663,6 +2756,7 @@ class WP_Site_Health {
 
 		$url = site_url( 'wp-cron.php' );
 
+<<<<<<< HEAD
 		/*
 		 * A post request is used for the wp-cron.php loopback test to cause the file
 		 * to finish early without triggering cron jobs. This has two benefits:
@@ -2674,6 +2768,9 @@ class WP_Site_Health {
 		 * enough. See https://core.trac.wordpress.org/ticket/52547
 		 */
 		$r = wp_remote_post( $url, compact( 'body', 'cookies', 'headers', 'timeout', 'sslverify' ) );
+=======
+		$r = wp_remote_get( $url, compact( 'cookies', 'headers', 'timeout', 'sslverify' ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		if ( is_wp_error( $r ) ) {
 			return (object) array(
@@ -2740,7 +2837,11 @@ class WP_Site_Health {
 
 		// Don't run https test on development environments.
 		if ( $this->is_development_environment() ) {
+<<<<<<< HEAD
 			unset( $tests['async']['https_status'] );
+=======
+			unset( $tests['direct']['https_status'] );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		foreach ( $tests['direct'] as $test ) {

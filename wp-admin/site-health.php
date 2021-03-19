@@ -13,8 +13,11 @@ if ( isset( $_GET['tab'] ) && 'debug' === $_GET['tab'] ) {
 
 /** WordPress Administration Bootstrap */
 require_once __DIR__ . '/admin.php';
+<<<<<<< HEAD
 
 wp_reset_vars( array( 'action' ) );
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 $title = __( 'Site Health Status' );
 
@@ -27,6 +30,7 @@ wp_enqueue_script( 'site-health' );
 
 if ( ! class_exists( 'WP_Site_Health' ) ) {
 	require_once ABSPATH . 'wp-admin/includes/class-wp-site-health.php';
+<<<<<<< HEAD
 }
 
 if ( 'update_https' === $action ) {
@@ -44,6 +48,8 @@ if ( 'update_https' === $action ) {
 
 	wp_redirect( add_query_arg( 'https_updated', (int) $result, wp_get_referer() ) );
 	exit;
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 $health_check_site_status = WP_Site_Health::get_instance();
@@ -60,6 +66,7 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 		</h1>
 	</div>
 
+<<<<<<< HEAD
 	<?php
 	if ( isset( $_GET['https_updated'] ) ) {
 		if ( $_GET['https_updated'] ) {
@@ -74,6 +81,8 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 	}
 	?>
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	<div class="health-check-title-section site-health-progress-wrapper loading hide-if-no-js">
 		<div class="site-health-progress">
 			<svg role="img" aria-hidden="true" focusable="false" width="100%" height="100%" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">

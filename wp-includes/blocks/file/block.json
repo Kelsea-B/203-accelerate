@@ -39,7 +39,11 @@
 	"supports": {
 		"anchor": true,
 		"align": true
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-file-editor",
 	"style": "wp-block-file"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

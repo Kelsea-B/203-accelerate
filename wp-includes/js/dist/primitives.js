@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["primitives"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 467);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 496);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -90,6 +94,7 @@ this["wp"] = this["wp"] || {}; this["wp"]["primitives"] =
 /***/ 0:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["wp"]["element"]; }());
 
 /***/ }),
@@ -153,11 +158,22 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ }),
 
 /***/ 13:
+=======
+(function() { module.exports = this["wp"]["element"]; }());
+
+/***/ }),
+
+/***/ 14:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(44);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
@@ -180,7 +196,11 @@ function _objectWithoutProperties(source, excluded) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 44:
+=======
+/***/ 43:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -202,7 +222,11 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 467:
+=======
+/***/ 496:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -228,6 +252,7 @@ __webpack_require__.d(__webpack_exports__, "View", function() { return /* reexpo
 var defineProperty = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+<<<<<<< HEAD
 var objectWithoutProperties = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
@@ -236,6 +261,16 @@ var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: external ["wp","element"]
 var external_wp_element_ = __webpack_require__(0);
+=======
+var objectWithoutProperties = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(9);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: external {"this":["wp","element"]}
+var external_this_wp_element_ = __webpack_require__(0);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/svg/index.js
 
@@ -263,7 +298,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
  */
 
 var svg_Circle = function Circle(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('circle', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('circle', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'g'>} props
@@ -272,7 +311,11 @@ var svg_Circle = function Circle(props) {
  */
 
 var svg_G = function G(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('g', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('g', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'path'>} props
@@ -281,7 +324,11 @@ var svg_G = function G(props) {
  */
 
 var svg_Path = function Path(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('path', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('path', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'polygon'>} props
@@ -290,7 +337,11 @@ var svg_Path = function Path(props) {
  */
 
 var svg_Polygon = function Polygon(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('polygon', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('polygon', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'rect'>} props
@@ -299,7 +350,11 @@ var svg_Polygon = function Polygon(props) {
  */
 
 var svg_Rect = function Rect(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('rect', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('rect', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'defs'>} props
@@ -308,7 +363,11 @@ var svg_Rect = function Rect(props) {
  */
 
 var svg_Defs = function Defs(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('defs', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('defs', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'radialGradient'>} props
@@ -317,7 +376,11 @@ var svg_Defs = function Defs(props) {
  */
 
 var svg_RadialGradient = function RadialGradient(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('radialGradient', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('radialGradient', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'linearGradient'>} props
@@ -326,7 +389,11 @@ var svg_RadialGradient = function RadialGradient(props) {
  */
 
 var svg_LinearGradient = function LinearGradient(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('linearGradient', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('linearGradient', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  * @param {import('react').ComponentPropsWithoutRef<'stop'>} props
@@ -335,7 +402,11 @@ var svg_LinearGradient = function LinearGradient(props) {
  */
 
 var svg_Stop = function Stop(props) {
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])('stop', props);
+=======
+  return Object(external_this_wp_element_["createElement"])('stop', props);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 /**
  *
@@ -361,7 +432,11 @@ var svg_SVG = function SVG(_ref) {
   // eslint-disable-next-line react/forbid-elements
 
 
+<<<<<<< HEAD
   return Object(external_wp_element_["createElement"])("svg", appliedProps);
+=======
+  return Object(external_this_wp_element_["createElement"])("svg", appliedProps);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/primitives/build-module/horizontal-rule/index.js
@@ -402,6 +477,67 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
+<<<<<<< HEAD
+=======
+/***/ }),
+
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ })
 
 /******/ });

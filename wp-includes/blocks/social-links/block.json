@@ -3,6 +3,7 @@
 	"name": "core/social-links",
 	"category": "widgets",
 	"attributes": {
+<<<<<<< HEAD
 		"iconColor": {
 			"type": "string"
 		},
@@ -33,6 +34,15 @@
 		"openInNewTab": "openInNewTab",
 		"iconColorValue": "iconColorValue",
 		"iconBackgroundColorValue": "iconBackgroundColorValue"
+=======
+		"openInNewTab": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"providesContext": {
+		"openInNewTab": "openInNewTab"
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	},
 	"supports": {
 		"align": [
@@ -41,7 +51,11 @@
 			"right"
 		],
 		"anchor": true
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-social-links-editor",
 	"style": "wp-block-social-links"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

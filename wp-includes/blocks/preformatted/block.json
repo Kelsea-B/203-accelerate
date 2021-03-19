@@ -12,8 +12,13 @@
 		}
 	},
 	"supports": {
+<<<<<<< HEAD
 		"anchor": true,
 		"fontSize": true
 	},
 	"style": "wp-block-preformatted"
+=======
+		"anchor": true
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

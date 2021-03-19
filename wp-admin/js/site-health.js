@@ -24,7 +24,11 @@ jQuery( document ).ready( function( $ ) {
 		// Clear the selection and move focus back to the trigger.
 		e.clearSelection();
 		// Handle ClipboardJS focus bug, see https://github.com/zenorocha/clipboard.js/issues/680
+<<<<<<< HEAD
 		triggerElement.trigger( 'focus' );
+=======
+		triggerElement.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		// Show success visual feedback.
 		clearTimeout( successTimeout );

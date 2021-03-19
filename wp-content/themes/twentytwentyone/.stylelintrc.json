@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
 	"extends": [
 		"stylelint-config-wordpress/scss"
@@ -13,3 +14,20 @@
 		"no-descending-specificity": null
 	}
 }
+=======
+{
+	"extends": [
+		"stylelint-config-wordpress/scss"
+	],
+	"rules": {
+		"selector-class-pattern": null,
+		"font-weight-notation": null,
+		"selector-type-no-unknown": null,
+		"max-line-length": null,
+		"at-rule-empty-line-before": null,
+		"selector-pseudo-element-colon-notation": null,
+		"number-leading-zero": null,
+		"no-descending-specificity": null
+	}
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

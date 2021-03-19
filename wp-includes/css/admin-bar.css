@@ -470,8 +470,13 @@ html:lang(he-il) .rtl #wpadminbar * {
 	width: auto;
 	height: 16px;
 	padding: 0;
+<<<<<<< HEAD
 	border: 1px solid #8c8f94;
 	background: #f0f0f1;
+=======
+	border: 1px solid #82878c;
+	background: #eee;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	line-height: 1.84615384;
 	vertical-align: middle;
 	margin: -4px 0 0 6px;
@@ -939,7 +944,11 @@ html:lang(he-il) .rtl #wpadminbar * {
 		height: auto;
 		font-size: 16px;
 		line-height: 1.5;
+<<<<<<< HEAD
 		color: #f0f0f1;
+=======
+		color: #eee;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	#wpadminbar #wp-admin-bar-user-info a {
@@ -980,7 +989,6 @@ html:lang(he-il) .rtl #wpadminbar * {
 		to 100% viewport width at responsive sizes. */
 	#wpadminbar .ab-top-menu > .menupop > .ab-sub-wrapper {
 		min-width: -webkit-fit-content;
-		min-width: -moz-fit-content;
 		min-width: fit-content;
 	}
 

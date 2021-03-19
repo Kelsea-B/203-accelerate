@@ -17,13 +17,21 @@
 		}
 	},
 	"usesContext": [
+<<<<<<< HEAD
 		"openInNewTab",
 		"iconColorValue",
 		"iconBackgroundColorValue"
+=======
+		"openInNewTab"
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	],
 	"supports": {
 		"reusable": false,
 		"html": false
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-social-link-editor"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

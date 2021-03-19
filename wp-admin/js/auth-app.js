@@ -15,7 +15,11 @@
 			rejectUrl: authApp.reject
 		};
 
+<<<<<<< HEAD
 	$approveBtn.on( 'click', function( e ) {
+=======
+	$approveBtn.click( function( e ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		var name = $appNameField.val(),
 			appId = $( 'input[name="app_id"]', $form ).val();
 
@@ -26,7 +30,11 @@
 		}
 
 		if ( 0 === name.length ) {
+<<<<<<< HEAD
 			$appNameField.trigger( 'focus' );
+=======
+			$appNameField.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			return;
 		}
 
@@ -62,9 +70,12 @@
 			/**
 			 * Fires when an Authorize Application Password request has been successfully approved.
 			 *
+<<<<<<< HEAD
 			 * In most cases, this should be used in combination with the {@see 'wp_authorize_application_password_form_approved_no_js'}
 			 * action to ensure that both the JS and no-JS variants are handled.
 			 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 * @since 5.6.0
 			 *
 			 * @param {Object} response          The response from the REST API.
@@ -98,11 +109,19 @@
 					.append( '<p>' + wp.i18n.__( 'Be sure to save this in a safe location. You will not be able to retrieve it.' ) + '</p>' );
 
 				// We're using .text() to write the variables to avoid any chance of XSS.
+<<<<<<< HEAD
 				$( 'strong', $notice ).text( response.name );
 				$( 'input', $notice ).val( response.password );
 
 				$form.replaceWith( $notice );
 				$notice.trigger( 'focus' );
+=======
+				$( 'strong', $notice ).text( name );
+				$( 'input', $notice ).val( response.password );
+
+				$form.replaceWith( $notice );
+				$notice.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		} ).fail( function( jqXHR, textStatus, errorThrown ) {
 			var errorMessage = errorThrown,
@@ -129,18 +148,29 @@
 			 * Fires when an Authorize Application Password request encountered an error when trying to approve the request.
 			 *
 			 * @since 5.6.0
+<<<<<<< HEAD
 			 * @since 5.6.1 Corrected action name and signature.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 *
 			 * @param {Object|null} error       The error from the REST API. May be null if the server did not send proper JSON.
 			 * @param {string}      textStatus  The status of the request.
 			 * @param {string}      errorThrown The error message associated with the response status code.
 			 * @param {jqXHR}       jqXHR       The underlying jqXHR object that made the request.
 			 */
+<<<<<<< HEAD
 			wp.hooks.doAction( 'wp_application_passwords_approve_app_request_error', error, textStatus, errorThrown, jqXHR );
 		} );
 	} );
 
 	$rejectBtn.on( 'click', function( e ) {
+=======
+			wp.hooks.doAction( 'wp_application_passwords_approve_app_request_success', error, textStatus, jqXHR );
+		} );
+	} );
+
+	$rejectBtn.click( function( e ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		e.preventDefault();
 
 		/**

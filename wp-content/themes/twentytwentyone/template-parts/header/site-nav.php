@@ -4,7 +4,11 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty_One
+<<<<<<< HEAD
  * @since 1.0.0
+=======
+ * @since Twenty Twenty-One 1.0
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 
 ?>

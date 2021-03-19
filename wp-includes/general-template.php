@@ -247,7 +247,10 @@ function get_search_form( $args = array() ) {
 	 * @link https://core.trac.wordpress.org/ticket/19321
 	 *
 	 * @param array $args The array of arguments for building the search form.
+<<<<<<< HEAD
 	 *                    See get_search_form() for information on accepted arguments.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	do_action( 'pre_get_search_form', $args );
 
@@ -297,7 +300,10 @@ function get_search_form( $args = array() ) {
 	 * @param string $format The type of markup to use in the search form.
 	 *                       Accepts 'html5', 'xhtml'.
 	 * @param array  $args   The array of arguments for building the search form.
+<<<<<<< HEAD
 	 *                       See get_search_form() for information on accepted arguments.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	$format = apply_filters( 'search_form_format', $format, $args );
 
@@ -346,7 +352,10 @@ function get_search_form( $args = array() ) {
 	 *
 	 * @param string $form The search form HTML output.
 	 * @param array  $args The array of arguments for building the search form.
+<<<<<<< HEAD
 	 *                     See get_search_form() for information on accepted arguments.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	$result = apply_filters( 'get_search_form', $form, $args );
 
@@ -3193,6 +3202,42 @@ function wlwmanifest_link() {
 /**
  * Displays a referrer strict-origin-when-cross-origin meta tag.
  *
+<<<<<<< HEAD
+=======
+ * @see wp_no_robots()
+ *
+ * @since 2.1.0
+ */
+function noindex() {
+	// If the blog is not public, tell robots to go away.
+	if ( '0' == get_option( 'blog_public' ) ) {
+		wp_no_robots();
+	}
+}
+
+/**
+ * Display a noindex meta tag.
+ *
+ * Outputs a noindex meta tag that tells web robots not to index the page content.
+ * Typical usage is as a {@see 'wp_head'} callback. add_action( 'wp_head', 'wp_no_robots' );
+ *
+ * @since 3.3.0
+ * @since 5.3.0 Echo "noindex,nofollow" if search engine visibility is discouraged.
+ */
+function wp_no_robots() {
+	if ( get_option( 'blog_public' ) ) {
+		echo "<meta name='robots' content='noindex,follow' />\n";
+		return;
+	}
+
+	echo "<meta name='robots' content='noindex,nofollow' />\n";
+}
+
+/**
+ * Display a noindex,noarchive meta tag and referrer origin-when-cross-origin meta tag.
+ *
+ * Outputs a noindex,noarchive meta tag that tells web robots not to index or cache the page content.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * Outputs a referrer origin-when-cross-origin meta tag that tells the browser not to send the full
  * url as a referrer to other sites when cross-origin assets are loaded.
  *
@@ -4319,6 +4364,7 @@ function paginate_links( $args = '' ) {
 			break;
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Filters the HTML output of paginated links for archives.
 	 *
@@ -4330,6 +4376,8 @@ function paginate_links( $args = '' ) {
 	 */
 	$r = apply_filters( 'paginate_links_output', $r, $args );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	return $r;
 }
 

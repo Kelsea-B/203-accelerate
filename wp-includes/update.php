@@ -136,10 +136,15 @@ function wp_version_check( $extra_stats = array(), $force_check = false ) {
 		$post_body = array_merge( $post_body, $extra_stats );
 	}
 
+<<<<<<< HEAD
 	// Allow for WP_AUTO_UPDATE_CORE to specify beta/RC/development releases.
 	if ( defined( 'WP_AUTO_UPDATE_CORE' )
 		&& in_array( WP_AUTO_UPDATE_CORE, array( 'beta', 'rc', 'development', 'branch-development' ), true )
 	) {
+=======
+	// Allow for WP_AUTO_UPDATE_CORE to specify beta/RC releases.
+	if ( defined( 'WP_AUTO_UPDATE_CORE' ) && in_array( WP_AUTO_UPDATE_CORE, array( 'beta', 'rc' ), true ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$query['channel'] = WP_AUTO_UPDATE_CORE;
 	}
 

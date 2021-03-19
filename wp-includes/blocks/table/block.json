@@ -125,8 +125,13 @@
 	"supports": {
 		"anchor": true,
 		"align": true,
+<<<<<<< HEAD
 		"__experimentalSelector": ".wp-block-table > table"
 	},
 	"editorStyle": "wp-block-table-editor",
 	"style": "wp-block-table"
+=======
+		"__experimentalSelector": ".wp-block-button > table"
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

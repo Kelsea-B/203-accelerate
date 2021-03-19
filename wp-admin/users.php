@@ -216,6 +216,7 @@ switch ( $wp_list_table->current_action() ) {
 		);
 		wp_redirect( $redirect );
 		exit;
+<<<<<<< HEAD
 
 	case 'resetpassword':
 		check_admin_referer( 'bulk-users' );
@@ -256,6 +257,8 @@ switch ( $wp_list_table->current_action() ) {
 		);
 		wp_redirect( $redirect );
 		exit;
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	case 'delete':
 		if ( is_multisite() ) {
@@ -551,6 +554,7 @@ switch ( $wp_list_table->current_action() ) {
 							),
 							__( 'Edit user' )
 						);
+<<<<<<< HEAD
 					}
 
 					$messages[] = '<div id="message" class="updated notice is-dismissible"><p>' . $message . '</p></div>';
@@ -564,6 +568,11 @@ switch ( $wp_list_table->current_action() ) {
 						$message = _n( 'Password reset links sent to %s user.', 'Password reset links sent to %s users.', $reset_count );
 					}
 					$messages[] = '<div id="message" class="updated notice is-dismissible"><p>' . sprintf( $message, number_format_i18n( $reset_count ) ) . '</p></div>';
+=======
+					}
+
+					$messages[] = '<div id="message" class="updated notice is-dismissible"><p>' . $message . '</p></div>';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					break;
 				case 'promote':
 					$messages[] = '<div id="message" class="updated notice is-dismissible"><p>' . __( 'Changed roles.' ) . '</p></div>';

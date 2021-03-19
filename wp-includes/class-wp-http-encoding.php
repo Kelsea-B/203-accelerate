@@ -27,7 +27,11 @@ class WP_Http_Encoding {
 	 * @param int    $level    Optional. Compression level, 9 is highest. Default 9.
 	 * @param string $supports Optional, not used. When implemented it will choose
 	 *                         the right compression based on what the server supports.
+<<<<<<< HEAD
 	 * @return string|false Compressed string on success, false on failure.
+=======
+	 * @return string|false False on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public static function compress( $raw, $level = 9, $supports = null ) {
 		return gzdeflate( $raw, $level );
@@ -45,7 +49,11 @@ class WP_Http_Encoding {
 	 *
 	 * @param string $compressed String to decompress.
 	 * @param int    $length     The optional length of the compressed data.
+<<<<<<< HEAD
 	 * @return string|false Decompressed string on success, false on failure.
+=======
+	 * @return string|bool False on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public static function decompress( $compressed, $length = null ) {
 

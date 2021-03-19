@@ -513,8 +513,12 @@ class WP_Customize_Setting {
 	 *
 	 * @since 3.4.0
 	 *
+<<<<<<< HEAD
 	 * @return void|false Void on success, false if cap check fails
 	 *                    or value isn't set or is invalid.
+=======
+	 * @return void|false False if cap check fails or value isn't set or is invalid.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	final public function save() {
 		$value = $this->post_value();

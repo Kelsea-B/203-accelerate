@@ -82,7 +82,11 @@
 
 .mce-window-head .mce-close:hover .mce-i-remove:before,
 .mce-window-head .mce-close:focus .mce-i-remove:before {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .mce-window-head .mce-close:focus .mce-i-remove,
@@ -819,7 +823,11 @@ div.mce-menu .mce-menu-item-sep,
 }
 
 .mce-toolbar .mce-ico {
+<<<<<<< HEAD
 	color: #50575e;
+=======
+	color: #555d66;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	line-height: 1;
 	width: 20px;
 	height: 20px;
@@ -830,7 +838,11 @@ div.mce-menu .mce-menu-item-sep,
 }
 
 .qt-dfw {
+<<<<<<< HEAD
 	color: #50575e;
+=======
+	color: #555d66;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	line-height: 1;
 	width: 28px;
 	height: 26px;
@@ -1443,14 +1455,23 @@ i.mce-i-wp_code:before {
 
 #wp-link-close:hover,
 #wp-link-close:focus {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #wp-link-close:focus {
 	outline: none;
 	box-shadow:
+<<<<<<< HEAD
 		0 0 0 1px #4f94d4,
 		0 0 2px 1px rgba(79, 148, 212, 0.8);
+=======
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 	outline-offset: -2px;

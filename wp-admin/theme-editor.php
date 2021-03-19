@@ -315,7 +315,11 @@ else :
 					<span class="spinner"></span>
 				</p>
 			<?php else : ?>
+<<<<<<< HEAD
 				<p>
+=======
+				<p><em>
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					<?php
 					printf(
 						/* translators: %s: Documentation URL. */
@@ -323,7 +327,11 @@ else :
 						__( 'https://wordpress.org/support/article/changing-file-permissions/' )
 					);
 					?>
+<<<<<<< HEAD
 				</p>
+=======
+				</em></p>
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			<?php endif; ?>
 		</div>
 

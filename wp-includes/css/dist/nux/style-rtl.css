@@ -5,6 +5,7 @@
  * Breakpoints & Media Queries
  */
 /**
+<<<<<<< HEAD
  * SCSS Variables.
  *
  * Please use variables from this sheet to ensure consistency across the UI.
@@ -12,6 +13,8 @@
  * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
  */
 /**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * Colors
  */
 /**
@@ -31,6 +34,7 @@
  * Editor widths.
  */
 /**
+<<<<<<< HEAD
  * Block & Editor UI.
  */
 /**
@@ -39,6 +43,15 @@
 /**
  * React Native specific.
  * These variables do not appear to be used anywhere else.
+=======
+ * Block UI.
+ */
+/**
+ * Border radii.
+ */
+/**
+ * Block paddings.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 /**
  * Breakpoint mixins
@@ -68,6 +81,7 @@
 /**
  * Reset the WP Admin page styles for Gutenberg-like pages.
  */
+<<<<<<< HEAD
 /**
  * These are default block editor widths in case the theme doesn't provide them.
  */
@@ -82,6 +96,12 @@
     --wp-admin-border-width-focus: 1.5px;
   }
 }
+=======
+:root {
+  --wp-admin-theme-color: #007cba;
+  --wp-admin-theme-color-darker-10: #006ba1;
+  --wp-admin-theme-color-darker-20: #005a87; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 .nux-dot-tip::before, .nux-dot-tip::after {
   border-radius: 100%;
@@ -113,6 +133,7 @@
   }
 }
 .nux-dot-tip .components-popover__content {
+<<<<<<< HEAD
   width: 350px;
 }
 .nux-dot-tip .components-popover__content > div {
@@ -179,3 +200,64 @@
 .nux-dot-tip.components-popover.edit-post-more-menu__content:not([data-y-axis=middle])[data-y-axis=left] .components-popover__content {
   margin-right: -12px;
 }
+=======
+  width: 350px; }
+  .nux-dot-tip .components-popover__content > div {
+    padding: 20px 18px; }
+  @media (min-width: 600px) {
+    .nux-dot-tip .components-popover__content {
+      width: 450px; } }
+  .nux-dot-tip .components-popover__content .nux-dot-tip__disable {
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+.nux-dot-tip[data-y-axis="top"] {
+  margin-top: -4px; }
+
+.nux-dot-tip[data-y-axis="bottom"] {
+  margin-top: 4px; }
+
+.nux-dot-tip[data-y-axis="middle"][data-y-axis="left"] {
+  margin-right: -4px; }
+
+.nux-dot-tip[data-y-axis="middle"][data-y-axis="right"] {
+  margin-right: 4px; }
+
+.nux-dot-tip[data-y-axis="top"] .components-popover__content {
+  margin-bottom: 20px; }
+
+.nux-dot-tip[data-y-axis="bottom"] .components-popover__content {
+  margin-top: 20px; }
+
+.nux-dot-tip[data-y-axis="middle"][data-y-axis="left"] .components-popover__content {
+  margin-left: 20px; }
+
+.nux-dot-tip[data-y-axis="middle"][data-y-axis="right"] .components-popover__content {
+  margin-right: 20px; }
+
+.nux-dot-tip[data-y-axis="left"], .nux-dot-tip[data-y-axis="center"], .nux-dot-tip[data-y-axis="right"] {
+  z-index: 1000001; }
+  @media (max-width: 600px) {
+    .nux-dot-tip[data-y-axis="left"] .components-popover__content, .nux-dot-tip[data-y-axis="center"] .components-popover__content, .nux-dot-tip[data-y-axis="right"] .components-popover__content {
+      -ms-grid-row-align: end;
+          align-self: end;
+      right: 5px;
+      margin: 20px 0 0 0;
+      max-width: none !important;
+      position: fixed;
+      left: 5px;
+      width: auto; } }
+
+.nux-dot-tip.components-popover:not([data-y-axis="middle"])[data-y-axis="right"] .components-popover__content {
+  margin-left: 0; }
+
+.nux-dot-tip.components-popover:not([data-y-axis="middle"])[data-y-axis="left"] .components-popover__content {
+  margin-right: 0; }
+
+.nux-dot-tip.components-popover.edit-post-more-menu__content:not([data-y-axis="middle"])[data-y-axis="right"] .components-popover__content {
+  margin-left: -12px; }
+
+.nux-dot-tip.components-popover.edit-post-more-menu__content:not([data-y-axis="middle"])[data-y-axis="left"] .components-popover__content {
+  margin-right: -12px; }
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

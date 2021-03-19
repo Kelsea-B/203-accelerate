@@ -248,9 +248,14 @@ function get_the_category_list( $separator = '', $parents = '', $post_id = false
  * @since 1.2.0
  * @since 2.7.0 The `$post` parameter was added.
  *
+<<<<<<< HEAD
  * @param int|string|int[]|string[] $category Category ID, name, slug, or array of such
  *                                            to check against.
  * @param int|object                $post     Optional. Post to check instead of the current post.
+=======
+ * @param int|string|array $category Category ID, name or slug, or array of said.
+ * @param int|object       $post     Optional. Post to check instead of the current post.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return bool True if the current post is in any of the given categories.
  */
 function in_category( $category, $post = null ) {
@@ -486,12 +491,20 @@ function wp_dropdown_categories( $args = '' ) {
  *     Array of optional arguments. See get_categories(), get_terms(), and WP_Term_Query::__construct()
  *     for information on additional accepted arguments.
  *
+<<<<<<< HEAD
  *     @type int|int[]    $current_category      ID of category, or array of IDs of categories, that should get the
+=======
+ *     @type int|array    $current_category      ID of category, or array of IDs of categories, that should get the
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  *                                               'current-cat' class. Default 0.
  *     @type int          $depth                 Category depth. Used for tab indentation. Default 0.
  *     @type bool|int     $echo                  Whether to echo or return the generated markup. Accepts 0, 1, or their
  *                                               bool equivalents. Default 1.
+<<<<<<< HEAD
  *     @type int[]|string $exclude               Array or comma/space-separated string of term IDs to exclude.
+=======
+ *     @type array|string $exclude               Array or comma/space-separated string of term IDs to exclude.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  *                                               If `$hierarchical` is true, descendants of `$exclude` terms will also
  *                                               be excluded; see `$exclude_tree`. See get_terms().
  *                                               Default empty string.
@@ -697,8 +710,13 @@ function wp_list_categories( $args = '' ) {
  *                             associated with the taxonomy.
  *     @type bool   $echo      Whether or not to echo the return value. Default true.
  * }
+<<<<<<< HEAD
  * @return void|string|string[] Void if 'echo' argument is true, or on failure. Otherwise, tag cloud
  *                              as a string or an array, depending on 'format' argument.
+=======
+ * @return void|string|array Void if 'echo' argument is true, or on failure. Otherwise, tag cloud
+ *                           as a string or an array, depending on 'format' argument.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_tag_cloud( $args = '' ) {
 	$defaults = array(
@@ -758,9 +776,14 @@ function wp_tag_cloud( $args = '' ) {
 	 *
 	 * @since 2.3.0
 	 *
+<<<<<<< HEAD
 	 * @param string|string[] $return Tag cloud as a string or an array, depending on 'format' argument.
 	 * @param array           $args   An array of tag cloud arguments. See wp_tag_cloud()
 	 *                                for information on accepted arguments.
+=======
+	 * @param string|array $return Tag cloud as a string or an array, depending on 'format' argument.
+	 * @param array        $args   An array of tag cloud arguments.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	$return = apply_filters( 'wp_tag_cloud', $return, $args );
 

@@ -176,7 +176,10 @@ add_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'shortcode_unautop' );
 add_filter( 'the_content', 'prepend_attachment' );
 add_filter( 'the_content', 'wp_filter_content_tags' );
+<<<<<<< HEAD
 add_filter( 'the_content', 'wp_replace_insecure_home_url' );
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 add_filter( 'the_excerpt', 'wptexturize' );
 add_filter( 'the_excerpt', 'convert_smilies' );
@@ -184,7 +187,10 @@ add_filter( 'the_excerpt', 'convert_chars' );
 add_filter( 'the_excerpt', 'wpautop' );
 add_filter( 'the_excerpt', 'shortcode_unautop' );
 add_filter( 'the_excerpt', 'wp_filter_content_tags' );
+<<<<<<< HEAD
 add_filter( 'the_excerpt', 'wp_replace_insecure_home_url' );
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 add_filter( 'get_the_excerpt', 'wp_trim_excerpt', 10, 2 );
 
 add_filter( 'the_post_thumbnail_caption', 'wptexturize' );
@@ -211,11 +217,16 @@ add_filter( 'widget_text_content', 'convert_smilies', 20 );
 add_filter( 'widget_text_content', 'wpautop' );
 add_filter( 'widget_text_content', 'shortcode_unautop' );
 add_filter( 'widget_text_content', 'wp_filter_content_tags' );
+<<<<<<< HEAD
 add_filter( 'widget_text_content', 'wp_replace_insecure_home_url' );
 add_filter( 'widget_text_content', 'do_shortcode', 11 ); // Runs after wpautop(); note that $post global will be null when shortcodes run.
 
 add_filter( 'wp_get_custom_css', 'wp_replace_insecure_home_url' );
 
+=======
+add_filter( 'widget_text_content', 'do_shortcode', 11 ); // Runs after wpautop(); note that $post global will be null when shortcodes run.
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 // RSS filters.
 add_filter( 'the_title_rss', 'strip_tags' );
 add_filter( 'the_title_rss', 'ent2ncr', 8 );
@@ -236,12 +247,15 @@ add_filter( 'the_guid', 'esc_url' );
 // Email filters.
 add_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 
+<<<<<<< HEAD
 // Robots filters.
 add_filter( 'wp_robots', 'wp_robots_noindex' );
 add_filter( 'wp_robots', 'wp_robots_noindex_embeds' );
 add_filter( 'wp_robots', 'wp_robots_noindex_search' );
 add_filter( 'wp_robots', 'wp_robots_max_image_preview_large' );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 // Mark site as no longer fresh.
 foreach ( array( 'publish_post', 'publish_page', 'wp_ajax_save-widget', 'wp_ajax_widgets-order', 'customize_save_after' ) as $action ) {
 	add_action( $action, '_delete_option_fresh_site', 0 );
@@ -288,7 +302,11 @@ add_action( 'auth_cookie_bad_username', 'rest_cookie_collect_status' );
 add_action( 'auth_cookie_bad_hash', 'rest_cookie_collect_status' );
 add_action( 'auth_cookie_valid', 'rest_cookie_collect_status' );
 add_action( 'application_password_failed_authentication', 'rest_application_password_collect_status' );
+<<<<<<< HEAD
 add_action( 'application_password_did_authenticate', 'rest_application_password_collect_status', 10, 2 );
+=======
+add_action( 'application_password_did_authenticate', 'rest_application_password_collect_status' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 add_filter( 'rest_authentication_errors', 'rest_application_password_check_errors', 90 );
 add_filter( 'rest_authentication_errors', 'rest_cookie_check_errors', 100 );
 
@@ -326,7 +344,10 @@ if ( isset( $_GET['replytocom'] ) ) {
 }
 
 // Login actions.
+<<<<<<< HEAD
 add_action( 'login_head', 'wp_robots', 1 );
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 add_filter( 'login_head', 'wp_resource_hints', 8 );
 add_action( 'login_head', 'wp_print_head_scripts', 9 );
 add_action( 'login_head', 'print_admin_styles', 9 );
@@ -349,6 +370,7 @@ if ( ! defined( 'DOING_CRON' ) ) {
 	add_action( 'init', 'wp_cron' );
 }
 
+<<<<<<< HEAD
 // HTTPS detection.
 add_action( 'init', 'wp_schedule_https_detection' );
 add_action( 'wp_https_detection', 'wp_update_https_detection_errors' );
@@ -357,6 +379,8 @@ add_filter( 'cron_request', 'wp_cron_conditionally_prevent_sslverify', 9999 );
 // HTTPS migration.
 add_action( 'update_option_home', 'wp_update_https_migration_required', 10, 2 );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 // 2 Actions 2 Furious.
 add_action( 'do_feed_rdf', 'do_feed_rdf', 10, 0 );
 add_action( 'do_feed_rss', 'do_feed_rss', 10, 0 );

@@ -1,6 +1,10 @@
 WordPress - Web publishing software
 
+<<<<<<< HEAD
 Copyright 2011-2021 by the contributors
+=======
+Copyright 2011-2020 by the contributors
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

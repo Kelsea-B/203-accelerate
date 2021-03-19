@@ -407,7 +407,11 @@ class WP_Network {
 		 *
 		 * @since 3.9.0
 		 *
+<<<<<<< HEAD
 		 * @param null|false|WP_Network $network  Network value to return by path. Default null
+=======
+		 * @param null|bool|WP_Network $network  Network value to return by path. Default null
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *                                       to continue retrieving the network.
 		 * @param string               $domain   The requested domain.
 		 * @param string               $path     The requested path, in full.

@@ -242,7 +242,11 @@ table.diff .diff-addedline ins {
 
 table.diff .diff-deletedline {
 	position: relative;
+<<<<<<< HEAD
 	background-color: #fcf0f1;
+=======
+	background-color: #ffe9e9;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 table.diff .diff-deletedline del {
@@ -251,7 +255,27 @@ table.diff .diff-deletedline del {
 
 table.diff .diff-addedline {
 	position: relative;
+<<<<<<< HEAD
 	background-color: #edfaef;
+}
+
+table.diff .diff-deletedline .dashicons,
+table.diff .diff-addedline .dashicons {
+	position: absolute;
+	top: 0.85714286em;
+	left: 0.5em;
+	width: 1em;
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
+}
+
+table.diff .diff-addedline .dashicons {
+	/* Compensate the vertically non-centered plus glyph. */
+	top: 0.92857143em;
+=======
+	background-color: #e9ffe9;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 table.diff .diff-deletedline .dashicons,

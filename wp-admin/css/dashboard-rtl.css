@@ -56,13 +56,21 @@
 }
 
 #dashboard-widgets .postbox-container .empty-container {
+<<<<<<< HEAD
 	outline: 3px dashed #c3c4c7;
+=======
+	outline: 3px dashed #b4b9be;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	height: 250px;
 }
 
 /* Only highlight drop zones when dragging and only in the 2 columns layout. */
 .is-dragging-metaboxes #dashboard-widgets .meta-box-sortables {
+<<<<<<< HEAD
 	outline: 3px dashed #646970;
+=======
+	outline: 3px dashed #606a73;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Prevent margin on the child from collapsing with margin on the parent. */
 	display: flow-root;
 }
@@ -77,7 +85,11 @@
 	transform: translateY( -50% );
 	padding: 0 2em;
 	text-align: center;
+<<<<<<< HEAD
 	color: #646970;
+=======
+	color: #606a73;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font-size: 16px;
 	line-height: 1.5;
 	display: none;
@@ -117,7 +129,11 @@
 	overflow: auto;
 	margin: 16px 0;
 	padding: 23px 10px 0;
+<<<<<<< HEAD
 	border: 1px solid #c3c4c7;
+=======
+	border: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 	background: #fff;
 	font-size: 13px;
@@ -231,7 +247,11 @@
 #dashboard_right_now li a:before,
 #dashboard_right_now li span:before,
 #dashboard_right_now .search-engines-info:before {
+<<<<<<< HEAD
 	color: #646970;
+=======
+	color: #606a73;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font: normal 20px/1 dashicons;
 	speak: never;
 	display: inline-block;
@@ -384,6 +404,10 @@
 	text-decoration: underline;
 }
 
+#dashboard-widgets .community-events li.event-none a {
+	text-decoration: underline;
+}
+
 .community-events-form label {
 	display: inline-block;
 	vertical-align: top;
@@ -452,7 +476,11 @@
 }
 
 .event-icon:before {
+<<<<<<< HEAD
 	color: #646970;
+=======
+	color: #606a73;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font-size: 18px;
 }
 .event-meetup .event-icon:before {
@@ -1088,6 +1116,10 @@ a.rsswidget {
 
 #dashboard_php_nag.php-insecure .dashicons-warning {
 	color: #d63638;
+}
+
+#dashboard_php_nag h2 {
+	display: inline-block;
 }
 
 #dashboard_php_nag h2 {

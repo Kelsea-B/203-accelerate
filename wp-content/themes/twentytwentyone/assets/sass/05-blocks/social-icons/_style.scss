@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-social-links {
 
 	a:focus {
@@ -16,3 +17,23 @@
 
 	}
 }
+=======
+.wp-block-social-links {
+
+	a:focus {
+		color: var(--global--color-primary);
+	}
+
+	&.is-style-twentytwentyone-social-icons-color {
+
+		a {
+			color: var(--global--color-primary);
+		}
+
+		.wp-social-link {
+			background: none;
+		}
+
+	}
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

@@ -105,7 +105,10 @@ function wp_default_packages_vendor( $scripts ) {
 		'wp-polyfill-url'             => '3.6.4',
 		'wp-polyfill-dom-rect'        => '3.42.0',
 		'wp-polyfill-element-closest' => '2.0.2',
+<<<<<<< HEAD
 		'wp-polyfill-object-fit'      => '2.3.4',
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		'wp-polyfill'                 => '7.4.4',
 	);
 
@@ -1092,6 +1095,7 @@ function wp_default_scripts( $scripts ) {
 
 	$scripts->add( 'user-profile', "/wp-admin/js/user-profile$suffix.js", array( 'jquery', 'password-strength-meter', 'wp-util' ), false, 1 );
 	$scripts->set_translations( 'user-profile' );
+<<<<<<< HEAD
 	$user_id = isset( $_GET['user_id'] ) ? (int) $_GET['user_id'] : 0;
 	did_action( 'init' ) && $scripts->localize(
 		'user-profile',
@@ -1101,6 +1105,8 @@ function wp_default_scripts( $scripts ) {
 			'nonce'   => wp_create_nonce( 'reset-password-for-' . $user_id ),
 		)
 	);
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	$scripts->add( 'language-chooser', "/wp-admin/js/language-chooser$suffix.js", array( 'jquery' ), false, 1 );
 
@@ -1312,7 +1318,11 @@ function wp_default_scripts( $scripts ) {
 		$scripts->add( 'plugin-install', "/wp-admin/js/plugin-install$suffix.js", array( 'jquery', 'jquery-ui-core', 'thickbox' ), false, 1 );
 		$scripts->set_translations( 'plugin-install' );
 
+<<<<<<< HEAD
 		$scripts->add( 'site-health', "/wp-admin/js/site-health$suffix.js", array( 'clipboard', 'jquery', 'wp-util', 'wp-a11y', 'wp-api-request', 'wp-url', 'wp-i18n', 'wp-hooks' ), false, 1 );
+=======
+		$scripts->add( 'site-health', "/wp-admin/js/site-health$suffix.js", array( 'clipboard', 'jquery', 'wp-util', 'wp-a11y', 'wp-api-request', 'wp-url' ), false, 1 );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$scripts->set_translations( 'site-health' );
 
 		$scripts->add( 'privacy-tools', "/wp-admin/js/privacy-tools$suffix.js", array( 'jquery', 'wp-a11y' ), false, 1 );
@@ -1488,7 +1498,11 @@ function wp_default_styles( $styles ) {
 	$styles->add( 'colors-fresh', false, array( 'wp-admin', 'buttons' ) ); // Old handle.
 	$styles->add( 'open-sans', $open_sans_font_url ); // No longer used in core as of 4.6.
 
+<<<<<<< HEAD
 	// Noto Serif is no longer used by core, but may be relied upon by themes and plugins.
+=======
+	// Packages styles.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	$fonts_url = '';
 
 	/*
@@ -2123,11 +2137,19 @@ function _print_styles() {
 
 		$concat       = str_split( $concat, 128 );
 		$concatenated = '';
+<<<<<<< HEAD
 
 		foreach ( $concat as $key => $chunk ) {
 			$concatenated .= "&load%5Bchunk_{$key}%5D={$chunk}";
 		}
 
+=======
+
+		foreach ( $concat as $key => $chunk ) {
+			$concatenated .= "&load%5Bchunk_{$key}%5D={$chunk}";
+		}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$href = $wp_styles->base_url . "/wp-admin/load-styles.php?c={$zip}&dir={$dir}" . $concatenated . '&ver=' . $ver;
 		echo "<link rel='stylesheet' href='" . esc_attr( $href ) . "'{$type_attr} media='all' />\n";
 
@@ -2332,6 +2354,7 @@ function wp_enqueue_editor_block_directory_assets() {
 	wp_enqueue_script( 'wp-block-directory' );
 	wp_enqueue_style( 'wp-block-directory' );
 }
+<<<<<<< HEAD
 
 /**
  * Sanitizes an attributes array into an attributes string to be placed inside a `<script>` tag.
@@ -2452,3 +2475,5 @@ function wp_get_inline_script_tag( $javascript, $attributes = array() ) {
 function wp_print_inline_script_tag( $javascript, $attributes = array() ) {
 	echo wp_get_inline_script_tag( $javascript, $attributes );
 }
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

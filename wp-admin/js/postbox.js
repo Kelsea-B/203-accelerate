@@ -127,7 +127,11 @@
 				}
 
 				postbox.prevAll( '.postbox:visible' ).eq( 0 ).before( postbox );
+<<<<<<< HEAD
 				button.trigger( 'focus' );
+=======
+				button.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				postboxes.updateOrderButtonsProperties();
 				postboxes.save_order( postboxes.page );
 			}
@@ -141,7 +145,11 @@
 				}
 
 				postbox.nextAll( '.postbox:visible' ).eq( 0 ).after( postbox );
+<<<<<<< HEAD
 				button.trigger( 'focus' );
+=======
+				button.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				postboxes.updateOrderButtonsProperties();
 				postboxes.save_order( postboxes.page );
 			}

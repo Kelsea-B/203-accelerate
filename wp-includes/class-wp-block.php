@@ -241,6 +241,7 @@ class WP_Block {
 		 * @param string $block_content The block content about to be appended.
 		 * @param array  $block         The full block, including name and attributes.
 		 */
+<<<<<<< HEAD
 		$block_content = apply_filters( 'render_block', $block_content, $this->parsed_block );
 
 		/**
@@ -257,6 +258,9 @@ class WP_Block {
 		$block_content = apply_filters( "render_block_{$this->name}", $block_content, $this->parsed_block );
 
 		return $block_content;
+=======
+		return apply_filters( 'render_block', $block_content, $this->parsed_block );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 }

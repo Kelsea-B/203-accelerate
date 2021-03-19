@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-audio {
 
 	audio:focus {
@@ -5,3 +6,12 @@
 		outline: 2px solid var(--global--color-primary);
 	}
 }
+=======
+.wp-block-audio {
+
+	audio:focus {
+		outline-offset: 5px;
+		outline: 2px solid var(--global--color-primary);
+	}
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

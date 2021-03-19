@@ -41,7 +41,11 @@
 
 .media-frame a:hover,
 .media-frame a:active {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .media-frame a:focus {
@@ -95,9 +99,15 @@
 .media-frame select {
 	box-shadow: 0 0 0 transparent;
 	border-radius: 4px;
+<<<<<<< HEAD
 	border: 1px solid #8c8f94;
 	background-color: #fff;
 	color: #2c3338;
+=======
+	border: 1px solid #7e8993;
+	background-color: #fff;
+	color: #32373c;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 }
@@ -134,8 +144,13 @@
 .media-frame input[type="url"]:focus,
 .media-frame textarea:focus,
 .media-frame select:focus {
+<<<<<<< HEAD
 	border-color: #3582c4;
 	box-shadow: 0 0 0 1px #3582c4;
+=======
+	border-color: #007cba;
+	box-shadow: 0 0 0 1px #007cba;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	outline: 2px solid transparent;
 }
 
@@ -236,6 +251,7 @@
 
 .media-modal-close:hover,
 .media-modal-close:active {
+<<<<<<< HEAD
 	color: #135e96;
 }
 
@@ -243,6 +259,15 @@
 	color: #135e96;
 	border-color: #4f94d4;
 	box-shadow: 0 0 3px rgba(34, 113, 177, 0.8);
+=======
+	color: #006799;
+}
+
+.media-modal-close:focus {
+	color: #006799;
+	border-color: #5b9dd9;
+	box-shadow: 0 0 3px rgba(0, 115, 170, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 }
@@ -310,7 +335,11 @@
 	bottom: -47px;
 	height: auto;
 	overflow: visible;
+<<<<<<< HEAD
 	border-top: 1px solid #dcdcde;
+=======
+	border-top: 1px solid #ddd;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .media-toolbar-primary {
@@ -479,6 +508,32 @@
 	color: #008a20;
 }
 
+.media-sidebar .checkbox-label-inline {
+	font-size: 12px;
+}
+
+.media-sidebar .copy-to-clipboard-container,
+.attachment-details .copy-to-clipboard-container {
+	flex-wrap: wrap;
+	margin-top: 10px;
+	margin-left: calc( 35% - 1px );
+	padding-top: 10px;
+}
+
+/* Needs high specificity. */
+.attachment-details .attachment-info .copy-to-clipboard-container {
+	float: none;
+}
+
+.media-sidebar .copy-to-clipboard-container .success,
+.attachment-details .copy-to-clipboard-container .success {
+	padding: 0;
+	min-height: 0;
+	line-height: 2.18181818;
+	text-align: left;
+	color: #40860a;
+}
+
 .compat-item label span {
 	text-align: right;
 }
@@ -604,7 +659,11 @@
 	bottom: 0;
 	margin: 0;
 	padding: 50px 0 10px;
+<<<<<<< HEAD
 	background: #f6f7f7;
+=======
+	background: #f3f3f3;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #c3c4c7;
@@ -624,7 +683,11 @@
 	font-size: 14px;
 	line-height: 1.28571428;
 	background: transparent;
+<<<<<<< HEAD
 	color: #2271b1;
+=======
+	color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	text-align: left;
 	text-decoration: none;
 	cursor: pointer;
@@ -635,7 +698,11 @@
 }
 
 .media-menu .media-menu-item:active {
+<<<<<<< HEAD
 	color: #2271b1;
+=======
+	color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	outline: none;
 }
 
@@ -647,9 +714,15 @@
 
 .media-menu .media-menu-item:focus {
 	box-shadow:
+<<<<<<< HEAD
 		0 0 0 1px #4f94d4,
 		0 0 2px 1px rgba(79, 148, 212, 0.8);
 	color: #043959;
+=======
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, 0.8);
+	color: #124964;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 1px solid transparent;
 }
@@ -692,19 +765,33 @@
 
 .media-router .media-menu-item:hover,
 .media-router .media-menu-item:active {
+<<<<<<< HEAD
 	color: #2271b1;
+=======
+	color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .media-router .active,
 .media-router .active:hover {
+<<<<<<< HEAD
 	color: #1d2327;
+=======
+	color: #23282d;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .media-router .media-menu-item:focus {
 	box-shadow:
+<<<<<<< HEAD
 		0 0 0 1px #4f94d4,
 		0 0 2px 1px rgba(79, 148, 212, 0.8);
 	color: #043959;
+=======
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, 0.8);
+	color: #124964;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 1px solid transparent;
 }
@@ -810,6 +897,7 @@
 	font-size: 22px;
 	line-height: 2.27272727;
 	margin: 0;
+<<<<<<< HEAD
 }
 
 .media-frame-menu-heading,
@@ -834,6 +922,32 @@
 	left: -9999px;
 }
 
+=======
+}
+
+.media-frame-menu-heading,
+.media-attachments-filter-heading {
+	position: absolute;
+	left: 20px;
+	top: 22px;
+	margin: 0;
+	font-size: 13px;
+	line-height: 1;
+	/* Above the media-frame-menu. */
+	z-index: 151;
+}
+
+.media-attachments-filter-heading {
+	top: 10px;
+	left: 16px;
+}
+
+.mode-grid .media-attachments-filter-heading {
+	top: 0;
+	left: -9999px;
+}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 .mode-grid .media-frame-actions-heading {
 	display: none;
 }
@@ -1262,7 +1376,11 @@
 	margin-top: 16px;
 	line-height: 1.38461538;
 	font-size: 13px;
+<<<<<<< HEAD
 	color: #646970;
+=======
+	color: #666;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .attachments-browser .no-media {
@@ -1373,9 +1491,19 @@
 	color: #646970;
 }
 
+<<<<<<< HEAD
 .errors.media-uploader-status .upload-dismiss-errors:hover::before,
 .errors.media-uploader-status .upload-dismiss-errors:focus::before {
 	color: #d63638;
+=======
+.uploader-inline .errors.media-uploader-status .upload-dismiss-errors::before {
+	color: #606a73;
+}
+
+.errors.media-uploader-status .upload-dismiss-errors:hover::before,
+.errors.media-uploader-status .upload-dismiss-errors:focus::before {
+	color: #c00;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .upload-errors .upload-error {
@@ -1388,7 +1516,11 @@
 
 .uploader-inline .upload-errors .upload-error {
 	padding: 12px 30px;
+<<<<<<< HEAD
 	background-color: #fcf0f1;
+=======
+	background-color: #fbeaea;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: none;
 }
 
@@ -1425,12 +1557,20 @@
 .wp-editor-wrap .uploader-editor {
 	position: absolute;
 	z-index: 99998; /* under the toolbar */
+<<<<<<< HEAD
 	background: rgba(140, 143, 148, 0.9);
+=======
+	background: rgba(150, 150, 150, 0.9);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .uploader-window,
 .wp-editor-wrap .uploader-editor.droppable {
+<<<<<<< HEAD
 	background: rgba(10, 75, 120, 0.9);
+=======
+	background: rgba(0, 86, 132, 0.9);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .uploader-window-content,
@@ -1590,14 +1730,23 @@
 	padding: 1px 8px;
 	margin: 1px 8px 1px -8px;
 	line-height: 1.4;
+<<<<<<< HEAD
 	border-right: 1px solid #dcdcde;
 	color: #2271b1;
+=======
+	border-right: 1px solid #ddd;
+	color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	text-decoration: none;
 }
 
 .media-selection .button-link:hover,
 .media-selection .button-link:focus {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .media-selection .button-link:last-child {
@@ -1758,8 +1907,13 @@
 	min-height: 60px;
 	margin-bottom: 16px;
 	line-height: 1.5;
+<<<<<<< HEAD
 	color: #646970;
 	border-bottom: 1px solid #dcdcde;
+=======
+	color: #666;
+	border-bottom: 1px solid #ddd;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	padding-bottom: 11px;
 }
 
@@ -1905,8 +2059,13 @@
 }
 
 .media-modal .imgedit-wrap .imgedit-settings {
+<<<<<<< HEAD
 	background: #f6f7f7;
 	border-left: 1px solid #dcdcde;
+=======
+	background: #f3f3f3;
+	border-left: 1px solid #ddd;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	padding: 20px 16px 0;
 	position: absolute;
 	top: 0;
@@ -2326,6 +2485,7 @@
 	display: inline-block;
 	font-size: 13px;
 	line-height: 1.84615384;
+<<<<<<< HEAD
 	color: #646970;
 }
 
@@ -2334,6 +2494,16 @@
 	width: 200px; /* Back-compat for pre-5.3 */
 }
 
+=======
+	color: #666;
+}
+
+.media-embed .setting span {
+	display: block; /* Back-compat for pre-5.3 */
+	width: 200px; /* Back-compat for pre-5.3 */
+}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 .image-details .embed-media-settings .setting span, /* Back-compat for pre-5.3 */
 .image-details .embed-media-settings .setting .name {
 	float: left;

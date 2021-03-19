@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-spacer {
 	display: block;
 	// Remove vertical margins
@@ -11,3 +12,18 @@
 		}
 	}
 }
+=======
+.wp-block-spacer {
+	display: block;
+	// Remove vertical margins
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+
+	@include media(mobile-only) {
+
+		&[style] {
+			height: var(--global--spacing-unit) !important;
+		}
+	}
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

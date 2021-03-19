@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["deprecated"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 428);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 450);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,7 +98,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["deprecated"] =
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 428:
+=======
+/***/ 450:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -22,14 +22,23 @@ a {
 
 a:hover,
 a:active {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 a:focus {
 	color: #043959;
 	box-shadow:
+<<<<<<< HEAD
 		0 0 0 1px #4f94d4,
 		0 0 2px 1px rgba(79, 148, 212, 0.8);
+=======
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 h1, h2 {
@@ -88,7 +97,11 @@ label {
 	background-size: 84px;
 	background-position: center top;
 	background-repeat: no-repeat;
+<<<<<<< HEAD
 	color: #3c434a; /* same as login.css */
+=======
+	color: #444; /* same as login.css */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.3em;
@@ -308,21 +321,35 @@ body.language-chooser {
 	padding: 8px;
 	width: 100%;
 	display: block;
+<<<<<<< HEAD
 	border: 1px solid #dcdcde;
 	background: #fff;
 	color: #2c3338;
+=======
+	border: 1px solid #ddd;
+	background: #fff;
+	color: #32373c;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	font-size: 16px;
 	font-family: Arial, sans-serif;
 	font-weight: 400;
 }
 
 .language-chooser select:focus {
+<<<<<<< HEAD
 	color: #2c3338;
+=======
+	color: #32373c;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .language-chooser select option:hover,
 .language-chooser select option:focus {
+<<<<<<< HEAD
 	color: #0a4b78;
+=======
+	color: #016087;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .language-chooser p {

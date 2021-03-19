@@ -211,7 +211,11 @@ $allowed_options = apply_filters_deprecated(
 	'whitelist_options',
 	array( $allowed_options ),
 	'5.5.0',
+<<<<<<< HEAD
 	'allowed_options',
+=======
+	'apply_filters_deprecated',
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	__( 'Please consider writing more inclusive code.' )
 );
 

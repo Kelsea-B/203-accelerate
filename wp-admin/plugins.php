@@ -641,9 +641,13 @@ if ( isset( $_GET['error'] ) ) :
 	<div id="message" class="error"><p><?php echo $errmsg; ?></p>
 	<?php
 
+<<<<<<< HEAD
 	if ( ! isset( $_GET['main'] ) && ! isset( $_GET['charsout'] )
 		&& isset( $_GET['_error_nonce'] ) && wp_verify_nonce( $_GET['_error_nonce'], 'plugin-activation-error_' . $plugin )
 	) {
+=======
+	if ( ! isset( $_GET['main'] ) && ! isset( $_GET['charsout'] ) && wp_verify_nonce( $_GET['_error_nonce'], 'plugin-activation-error_' . $plugin ) ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$iframe_url = add_query_arg(
 			array(
 				'action'   => 'error_scrape',

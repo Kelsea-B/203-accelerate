@@ -123,14 +123,24 @@
 
 .iris-picker .ui-square-handle:focus,
 .iris-picker .iris-strip .ui-slider-handle:focus {
+<<<<<<< HEAD
 	border-color: #3582c4;
 	border-style: solid;
 	box-shadow: 0 0 0 1px #3582c4;
+=======
+	border-color: #007cba;
+	border-style: solid;
+	box-shadow: 0 0 0 1px #007cba;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	outline: 2px solid transparent;
 }
 
 .iris-picker .iris-palette:focus {
+<<<<<<< HEAD
 	box-shadow: 0 0 0 2px #3582c4;
+=======
+	box-shadow: 0 0 0 2px #007cba;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 @media screen and (max-width: 782px) {

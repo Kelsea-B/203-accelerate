@@ -82,12 +82,20 @@ this["wp"] = this["wp"] || {}; this["wp"]["autop"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 295);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 300);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 11:
+=======
+/***/ 12:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,7 +150,11 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 24:
+=======
+/***/ 27:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -159,14 +171,22 @@ function _arrayLikeToArray(arr, len) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 295:
+=======
+/***/ 300:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "autop", function() { return autop; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removep", function() { return removep; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 
 /**
@@ -580,7 +600,11 @@ function removep(html) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;

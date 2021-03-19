@@ -77,6 +77,7 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has read access for the item, otherwise WP_Error object.
 	 */
 	public function get_items_permissions_check( $request ) {
+<<<<<<< HEAD
 		if ( current_user_can( 'switch_themes' ) || current_user_can( 'manage_network_themes' ) ) {
 			return true;
 		}
@@ -132,6 +133,12 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 			return true;
 		}
 
+=======
+		if ( current_user_can( 'edit_posts' ) ) {
+			return true;
+		}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		foreach ( get_post_types( array( 'show_in_rest' => true ), 'objects' ) as $post_type ) {
 			if ( current_user_can( $post_type->cap->edit_posts ) ) {
 				return true;
@@ -139,6 +146,7 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 		}
 
 		return new WP_Error(
+<<<<<<< HEAD
 			'rest_cannot_view_active_theme',
 			__( 'Sorry, you are not allowed to view the active theme.' ),
 			array( 'status' => rest_authorization_required_code() )
@@ -165,6 +173,12 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 		$data = $this->prepare_item_for_response( $wp_theme, $request );
 
 		return rest_ensure_response( $data );
+=======
+			'rest_user_cannot_view',
+			__( 'Sorry, you are not allowed to view themes.' ),
+			array( 'status' => rest_authorization_required_code() )
+		);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -253,6 +267,7 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 			'tags'        => 'Tags',
 			'theme_uri'   => 'ThemeURI',
 		);
+<<<<<<< HEAD
 
 		foreach ( $rich_field_mappings as $field => $header ) {
 			if ( rest_is_field_included( "{$field}.raw", $fields ) ) {
@@ -286,6 +301,36 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 					continue;
 				}
 
+=======
+
+		foreach ( $rich_field_mappings as $field => $header ) {
+			if ( rest_is_field_included( "{$field}.raw", $fields ) ) {
+				$data[ $field ]['raw'] = $theme->display( $header, false, true );
+			}
+
+			if ( rest_is_field_included( "{$field}.rendered", $fields ) ) {
+				$data[ $field ]['rendered'] = $theme->display( $header );
+			}
+		}
+
+		if ( rest_is_field_included( 'theme_supports', $fields ) ) {
+			foreach ( get_registered_theme_features() as $feature => $config ) {
+				if ( ! is_array( $config['show_in_rest'] ) ) {
+					continue;
+				}
+
+				$name = $config['show_in_rest']['name'];
+
+				if ( ! rest_is_field_included( "theme_supports.{$name}", $fields ) ) {
+					continue;
+				}
+
+				if ( ! current_theme_supports( $feature ) ) {
+					$data['theme_supports'][ $name ] = $config['show_in_rest']['schema']['default'];
+					continue;
+				}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$support = get_theme_support( $feature );
 
 				if ( isset( $config['show_in_rest']['prepare_callback'] ) ) {
@@ -324,6 +369,7 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Prepares links for the request.
 	 *
 	 * @since 5.7.0
@@ -357,6 +403,8 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 	}
 
 	/**
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * Prepares the theme support value for inclusion in the REST API response.
 	 *
 	 * @since 5.5.0
@@ -443,6 +491,7 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 				'description'    => array(
 					'description' => __( 'A description of the theme.' ),
 					'type'        => 'object',
+<<<<<<< HEAD
 					'readonly'    => true,
 					'properties'  => array(
 						'raw'      => array(
@@ -492,6 +541,57 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 					'readonly'    => true,
 					'properties'  => array(
 						'raw'      => array(
+=======
+					'readonly'    => true,
+					'properties'  => array(
+						'raw'      => array(
+							'description' => __( 'The theme description, as found in the theme header.' ),
+							'type'        => 'string',
+						),
+						'rendered' => array(
+							'description' => __( 'The theme description, transformed for display.' ),
+							'type'        => 'string',
+						),
+					),
+				),
+				'name'           => array(
+					'description' => __( 'The name of the theme.' ),
+					'type'        => 'object',
+					'readonly'    => true,
+					'properties'  => array(
+						'raw'      => array(
+							'description' => __( 'The theme name, as found in the theme header.' ),
+							'type'        => 'string',
+						),
+						'rendered' => array(
+							'description' => __( 'The theme name, transformed for display.' ),
+							'type'        => 'string',
+						),
+					),
+				),
+				'requires_php'   => array(
+					'description' => __( 'The minimum PHP version required for the theme to work.' ),
+					'type'        => 'string',
+					'readonly'    => true,
+				),
+				'requires_wp'    => array(
+					'description' => __( 'The minimum WordPress version required for the theme to work.' ),
+					'type'        => 'string',
+					'readonly'    => true,
+				),
+				'screenshot'     => array(
+					'description' => __( 'The theme\'s screenshot URL.' ),
+					'type'        => 'string',
+					'format'      => 'uri',
+					'readonly'    => true,
+				),
+				'tags'           => array(
+					'description' => __( 'Tags indicating styles and features of the theme.' ),
+					'type'        => 'object',
+					'readonly'    => true,
+					'properties'  => array(
+						'raw'      => array(
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 							'description' => __( 'The theme tags, as found in the theme header.' ),
 							'type'        => 'array',
 							'items'       => array(
@@ -537,11 +637,14 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 					'type'        => 'string',
 					'readonly'    => true,
 				),
+<<<<<<< HEAD
 				'status'         => array(
 					'description' => __( 'A named status for the theme.' ),
 					'type'        => 'string',
 					'enum'        => array( 'inactive', 'active' ),
 				),
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			),
 		);
 
@@ -580,7 +683,11 @@ class WP_REST_Themes_Controller extends WP_REST_Controller {
 		);
 
 		/**
+<<<<<<< HEAD
 		 * Filters REST API collection parameters for the themes controller.
+=======
+		 * Filters collection parameters for the themes controller.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * @since 5.0.0
 		 *

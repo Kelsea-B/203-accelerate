@@ -822,7 +822,11 @@ class WP_Meta_Query {
 		 *
 		 * @since 4.1.0
 		 *
+<<<<<<< HEAD
 		 * @param string|false  $alias        Table alias, or false if none was found.
+=======
+		 * @param string|bool   $alias        Table alias, or false if none was found.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 * @param array         $clause       First-order query clause.
 		 * @param array         $parent_query Parent of $clause.
 		 * @param WP_Meta_Query $this         WP_Meta_Query object.

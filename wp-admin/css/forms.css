@@ -53,9 +53,15 @@ select,
 textarea {
 	box-shadow: 0 0 0 transparent;
 	border-radius: 4px;
+<<<<<<< HEAD
 	border: 1px solid #8c8f94;
 	background-color: #fff;
 	color: #2c3338;
+=======
+	border: 1px solid #7e8993;
+	background-color: #fff;
+	color: #32373c;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 input[type="text"],
@@ -101,8 +107,13 @@ input[type="checkbox"]:focus,
 input[type="radio"]:focus,
 select:focus,
 textarea:focus {
+<<<<<<< HEAD
 	border-color: #2271b1;
 	box-shadow: 0 0 0 1px #2271b1;
+=======
+	border-color: #007cba;
+	box-shadow: 0 0 0 1px #007cba;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 }
@@ -115,7 +126,11 @@ input[type="url"] {
 
 input[type="checkbox"],
 input[type="radio"] {
+<<<<<<< HEAD
 	border: 1px solid #8c8f94;
+=======
+	border: 1px solid #7e8993;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	border-radius: 4px;
 	background: #fff;
 	color: #50575e;
@@ -142,7 +157,11 @@ input[type="radio"]:checked + label:before {
 
 .wp-core-ui input[type="reset"]:hover,
 .wp-core-ui input[type="reset"]:active {
+<<<<<<< HEAD
 	color: #135e96;
+=======
+	color: #006799;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 td > input[type="checkbox"],
@@ -179,7 +198,11 @@ input[type="radio"]:checked::before {
 
 input[type="checkbox"]:checked::before {
 	/* Use the "Yes" SVG Dashicon */
+<<<<<<< HEAD
 	content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%233582c4%27%2F%3E%3C%2Fsvg%3E");
+=======
+	content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%231e8cbe%27%2F%3E%3C%2Fsvg%3E");
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	margin: -0.1875rem 0 0 -0.25rem;
 	height: 1.3125rem;
 	width: 1.3125rem;
@@ -191,7 +214,11 @@ input[type="radio"]:checked::before {
 	width: 0.5rem; /* 8px */
 	height: 0.5rem; /* 8px */
 	margin: 0.1875rem; /* 3px */
+<<<<<<< HEAD
 	background-color: #3582c4;
+=======
+	background-color: #1e8cbe;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* 16px not sure if still necessary, comes from the MP6 redesign in r26072 */
 	line-height: 1.14285714;
 }
@@ -244,8 +271,13 @@ textarea[readonly] {
 .form-invalid.form-required input:focus,
 .form-invalid.form-required select,
 .form-invalid.form-required select:focus {
+<<<<<<< HEAD
 	border-color: #d63638 !important;
 	box-shadow: 0 0 2px rgba(214, 54, 56, 0.8);
+=======
+	border-color: #dc3232 !important;
+	box-shadow: 0 0 2px rgba(204, 0, 0, 0.8);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .form-table .form-required.form-invalid td:after {
@@ -313,8 +345,13 @@ input[type="radio"].disabled:checked:before {
 .wp-core-ui select {
 	font-size: 14px;
 	line-height: 2; /* 28px */
+<<<<<<< HEAD
 	color: #2c3338;
 	border-color: #8c8f94;
+=======
+	color: #32373c;
+	border-color: #7e8993;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: none;
 	border-radius: 3px;
 	padding: 0 24px 0 8px;
@@ -329,6 +366,7 @@ input[type="radio"].disabled:checked:before {
 }
 
 .wp-core-ui select:hover {
+<<<<<<< HEAD
 	color: #2271b1;
 }
 
@@ -340,14 +378,33 @@ input[type="radio"].disabled:checked:before {
 
 .wp-core-ui select:active {
 	border-color: #8c8f94;
+=======
+	color: #007cba;
+}
+
+.wp-core-ui select:focus {
+	border-color: #007cba;
+	color: #016087;
+	box-shadow: 0 0 0 1px #007cba;
+}
+
+.wp-core-ui select:active {
+	border-color: #999;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: none;
 }
 
 .wp-core-ui select.disabled,
 .wp-core-ui select:disabled {
+<<<<<<< HEAD
 	color: #a7aaad;
 	border-color: #dcdcde;
 	background-color: #f6f7f7;
+=======
+	color: #a0a5aa;
+	border-color: #ddd;
+	background-color: #f7f7f7;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* The SVG is arrow-down-alt2 from Dashicons. */
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23a0a5aa%22%2F%3E%3C%2Fsvg%3E');
 	box-shadow: none;
@@ -360,12 +417,17 @@ input[type="radio"].disabled:checked:before {
 /* This ruleset overrides the color change on :focus thus needs to be after select:focus. */
 .wp-core-ui select:-moz-focusring {
 	color: transparent;
+<<<<<<< HEAD
 	text-shadow: 0 0 0 #0a4b78;
+=======
+	text-shadow: 0 0 0 #016087;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /* Remove background focus style from IE11 while keeping focus style available on option elements. */
 .wp-core-ui select::-ms-value {
 	background: transparent;
+<<<<<<< HEAD
 	color: #50575e;
 }
 
@@ -375,11 +437,26 @@ input[type="radio"].disabled:checked:before {
 
 .wp-core-ui select:focus::-ms-value {
 	color: #0a4b78;
+=======
+	color: #555;
+}
+
+.wp-core-ui select:hover::-ms-value {
+	color: #007cba;
+}
+
+.wp-core-ui select:focus::-ms-value {
+	color: #016087;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .wp-core-ui select.disabled::-ms-value,
 .wp-core-ui select:disabled::-ms-value {
+<<<<<<< HEAD
 	color: #a7aaad;
+=======
+	color: #a0a5aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /* Hide the native down arrow for select element on IE. */
@@ -490,6 +567,7 @@ input[type="number"].tiny-text {
 #doaction2,
 #post-query-submit {
 	margin: 0 8px 0 0;
+<<<<<<< HEAD
 }
 
 /* @since 5.7.0 secondary bulk action controls require JS. */
@@ -500,6 +578,8 @@ input[type="number"].tiny-text {
 .no-js select#new_role2,
 .no-js input#changeit2 {
 	display: none;
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .tablenav .actions select {
@@ -558,9 +638,15 @@ fieldset label,
 }
 
 #pass-strength-result {
+<<<<<<< HEAD
 	background-color: #f0f0f1;
 	border: 1px solid #dcdcde;
 	color: #1d2327;
+=======
+	background-color: #eee;
+	border: 1px solid #ddd;
+	color: #23282d;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	margin: -1px 1px 5px;
 	padding: 3px 5px;
 	text-align: center;
@@ -875,7 +961,10 @@ table.form-table td .updated p {
 .create-application-password p.submit {
 	margin-bottom: 0;
 	padding-bottom: 0;
+<<<<<<< HEAD
 	display: block;
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 #application-passwords-section .notice {
@@ -892,7 +981,11 @@ table.form-table td .updated p {
 }
 
 .authorize-application-php .form-wrap p {
+<<<<<<< HEAD
 	display: block;
+=======
+	display: block !important;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /*------------------------------------------------------------------------------
@@ -926,7 +1019,11 @@ table.form-table td .updated p {
 	padding: 0.7em 2em 1em;
 	min-width: 255px;
 	max-width: 520px;
+<<<<<<< HEAD
 	border: 1px solid #c3c4c7;
+=======
+	border: 1px solid #ccd0d4;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 	background: #fff;
 	box-sizing: border-box;
@@ -1265,7 +1362,11 @@ table.form-table td .updated p {
 }
 
 .privacy_requests .row-actions {
+<<<<<<< HEAD
 	color: #787c82;
+=======
+	color: #72777c;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 .privacy_requests .row-actions.processing {

@@ -177,8 +177,13 @@ if ( isset( $_GET['action'] ) ) {
 			break;
 
 		case 'allblogs':
+<<<<<<< HEAD
 			if ( isset( $_POST['action'] ) && isset( $_POST['allblogs'] ) ) {
 				$doaction = $_POST['action'];
+=======
+			if ( ( isset( $_POST['action'] ) || isset( $_POST['action2'] ) ) && isset( $_POST['allblogs'] ) ) {
+				$doaction = -1 != $_POST['action'] ? $_POST['action'] : $_POST['action2'];
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 				foreach ( (array) $_POST['allblogs'] as $key => $val ) {
 					if ( '0' != $val && get_network()->site_id != $val ) {

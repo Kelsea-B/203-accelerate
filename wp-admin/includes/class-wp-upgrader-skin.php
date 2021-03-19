@@ -267,7 +267,11 @@ class WP_Upgrader_Skin {
 	 *
 	 * @since 5.5.0
 	 *
+<<<<<<< HEAD
 	 * @param WP_Error $wp_error WP_Error object.
+=======
+	 * @param WP_Error $wp_error WP_Error
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @return bool
 	 */
 	public function hide_process_failed( $wp_error ) {

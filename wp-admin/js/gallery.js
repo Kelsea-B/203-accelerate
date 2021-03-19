@@ -88,7 +88,11 @@ jQuery(document).ready(function($) {
 	}
 });
 
+<<<<<<< HEAD
 jQuery(window).on( 'unload', function () { window.tinymce = window.tinyMCE = window.wpgallery = null; } ); // Cleanup.
+=======
+jQuery(window).unload( function () { window.tinymce = window.tinyMCE = window.wpgallery = null; } ); // Cleanup.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /* gallery settings */
 window.tinymce = null;

@@ -32,7 +32,11 @@ window.wp = window.wp || {};
 		 * @return {number} The password strength score.
 		 */
 		meter : function( password1, disallowedList, password2 ) {
+<<<<<<< HEAD
 			if ( ! Array.isArray( disallowedList ) )
+=======
+			if ( ! $.isArray( disallowedList ) )
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				disallowedList = [ disallowedList.toString() ];
 
 			if (password1 != password2 && password2 && password2.length > 0)

@@ -472,8 +472,11 @@
 			$card.removeClass( 'plugin-card-update-failed' ).find( '.notice.notice-error' ).remove();
 		}
 
+<<<<<<< HEAD
 		$adminBarUpdates.addClass( 'spin' );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		if ( $message.html() !== __( 'Updating...' ) ) {
 			$message.data( 'originaltext', $message.html() );
 		}
@@ -525,8 +528,11 @@
 				.addClass( 'button-disabled updated-message' );
 		}
 
+<<<<<<< HEAD
 		$adminBarUpdates.removeClass( 'spin' );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$updateMessage
 			.attr(
 				'aria-label',
@@ -1215,7 +1221,11 @@
 
 			// Focus on Customize button after updating.
 			if ( isModalOpen ) {
+<<<<<<< HEAD
 				$( '.load-customize:visible' ).trigger( 'focus' );
+=======
+				$( '.load-customize:visible' ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$( '.theme-info .theme-autoupdate' ).find( '.auto-update-time' ).empty();
 			} else {
 				$theme.find( '.load-customize' ).trigger( 'focus' );
@@ -1561,7 +1571,11 @@
 				if ( -1 !== _.indexOf( themes.disabled, response.slug ) ) {
 					themes.disabled = _.without( themes.disabled, response.slug );
 					if ( themes.disabled.length ) {
+<<<<<<< HEAD
 						$views.find( '.disabled .count' ).text( '(' + themes.disabled.length + ')' );
+=======
+						$views.find( '.disabled .count' ).text( '(' + themes.disabled.length + ')' );						
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					} else {
 						$views.find( '.disabled' ).remove();
 					}
@@ -1575,7 +1589,11 @@
 						$views.find( '.auto-update-enabled' ).remove();
 					}
 				}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				if ( -1 !== _.indexOf( themes['auto-update-disabled'], response.slug ) ) {
 					themes['auto-update-disabled'] = _.without( themes['auto-update-disabled'], response.slug );
 					if ( themes['auto-update-disabled'].length ) {

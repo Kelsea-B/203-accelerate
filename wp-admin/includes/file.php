@@ -725,6 +725,7 @@ function validate_file_to_edit( $file, $allowed_files = array() ) {
  *
  * @param string[]       $file      Reference to a single element of `$_FILES`.
  *                                  Call the function once for each uploaded file.
+<<<<<<< HEAD
  * @param array|false    $overrides {
  *     An array of override parameters for this file, or boolean false if none are provided.
  *
@@ -739,6 +740,10 @@ function validate_file_to_edit( $file, $allowed_files = array() ) {
  *     @type bool     $test_type                Whether to test that the mime type of the file is as expected.
  *     @type string[] $mimes                    Array of allowed mime types keyed by their file extension regex.
  * }
+=======
+ * @param string[]|false $overrides An associative array of names => values
+ *                                  to override default variables. Default false.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @param string         $time      Time formatted in 'yyyy/mm'.
  * @param string         $action    Expected value for `$_POST['action']`.
  * @return string[] On success, returns an associative array of file attributes.
@@ -769,6 +774,7 @@ function _wp_handle_upload( &$file, $overrides, $time, $action ) {
 	 */
 	$file = apply_filters( "{$action}_prefilter", $file );
 
+<<<<<<< HEAD
 	/**
 	 * Filters the override parameters for a file before it is uploaded to WordPress.
 	 *
@@ -786,6 +792,8 @@ function _wp_handle_upload( &$file, $overrides, $time, $action ) {
 	 */
 	$overrides = apply_filters( "{$action}_overrides", $overrides, $file );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	// You may define your own function and pass the name in $overrides['upload_error_handler'].
 	$upload_error_handler = 'wp_handle_upload_error';
 	if ( isset( $overrides['upload_error_handler'] ) ) {
@@ -998,11 +1006,19 @@ function _wp_handle_upload( &$file, $overrides, $time, $action ) {
  *
  * @see _wp_handle_upload()
  *
+<<<<<<< HEAD
  * @param array       $file      Reference to a single element of `$_FILES`.
  *                               Call the function once for each uploaded file.
  * @param array|false $overrides Optional. An associative array of names => values
  *                               to override default variables. Default false.
  * @param string      $time      Optional. Time formatted in 'yyyy/mm'. Default null.
+=======
+ * @param array      $file      Reference to a single element of `$_FILES`.
+ *                              Call the function once for each uploaded file.
+ * @param array|bool $overrides Optional. An associative array of names => values
+ *                              to override default variables. Default false.
+ * @param string     $time      Optional. Time formatted in 'yyyy/mm'. Default null.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return array On success, returns an associative array of file attributes.
  *               On failure, returns `$overrides['upload_error_handler']( &$file, $message )`
  *               or `array( 'error' => $message )`.
@@ -1029,11 +1045,19 @@ function wp_handle_upload( &$file, $overrides = false, $time = null ) {
  *
  * @see _wp_handle_upload()
  *
+<<<<<<< HEAD
  * @param array       $file      Reference to a single element of `$_FILES`.
  *                               Call the function once for each uploaded file.
  * @param array|false $overrides Optional. An associative array of names => values
  *                               to override default variables. Default false.
  * @param string      $time      Optional. Time formatted in 'yyyy/mm'. Default null.
+=======
+ * @param array      $file      Reference to a single element of `$_FILES`.
+ *                              Call the function once for each uploaded file.
+ * @param array|bool $overrides Optional. An associative array of names => values
+ *                              to override default variables. Default false.
+ * @param string     $time      Optional. Time formatted in 'yyyy/mm'. Default null.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return array On success, returns an associative array of file attributes.
  *               On failure, returns `$overrides['upload_error_handler']( &$file, $message )`
  *               or `array( 'error' => $message )`.
@@ -1255,7 +1279,11 @@ function verify_file_md5( $filename, $expected_md5 ) {
  *
  * @param string       $filename            The file to validate.
  * @param string|array $signatures          A Signature provided for the file.
+<<<<<<< HEAD
  * @param string|false $filename_for_errors Optional. A friendly filename for errors.
+=======
+ * @param string       $filename_for_errors A friendly filename for errors. Optional.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @return bool|WP_Error True on success, false if verification not attempted,
  *                       or WP_Error describing an error condition.
  */
@@ -2339,6 +2367,7 @@ function wp_print_request_filesystem_credentials_modal() {
 
 /**
  * Attempts to clear the opcode cache for an individual PHP file.
+<<<<<<< HEAD
  *
  * This function can be called safely without having to check the file extension
  * or availability of the OPcache extension.
@@ -2349,6 +2378,18 @@ function wp_print_request_filesystem_credentials_modal() {
  *
  * @link https://www.php.net/manual/en/function.opcache-invalidate.php
  *
+=======
+ *
+ * This function can be called safely without having to check the file extension
+ * or availability of the OPcache extension.
+ *
+ * Whether or not invalidation is possible is cached to improve performance.
+ *
+ * @since 5.5.0
+ *
+ * @link https://www.php.net/manual/en/function.opcache-invalidate.php
+ *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @param string $filepath Path to the file, including extension, for which the opcode cache is to be cleared.
  * @param bool   $force    Invalidate even if the modification time is not newer than the file in cache.
  *                         Default false.

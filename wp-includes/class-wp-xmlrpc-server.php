@@ -286,8 +286,13 @@ class wp_xmlrpc_server extends IXR_Server {
 			 *
 			 * @since 3.5.0
 			 *
+<<<<<<< HEAD
 			 * @param IXR_Error $error The XML-RPC error message.
 			 * @param WP_Error  $user  WP_Error object.
+=======
+			 * @param string   $error The XML-RPC error message.
+			 * @param WP_Error $user  WP_Error object.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 */
 			$this->error = apply_filters( 'xmlrpc_login_error', $this->error, $user );
 			return false;
@@ -769,7 +774,11 @@ class wp_xmlrpc_server extends IXR_Server {
 		}
 
 		if ( in_array( 'menu', $fields, true ) ) {
+<<<<<<< HEAD
 			$_taxonomy['show_in_menu'] = (bool) $taxonomy->show_in_menu;
+=======
+			$_taxonomy['show_in_menu'] = (bool) $_taxonomy->show_in_menu;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		if ( in_array( 'object_type', $fields, true ) ) {

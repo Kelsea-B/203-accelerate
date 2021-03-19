@@ -159,7 +159,11 @@ class WP_User_Query {
 	 *     @type string       $search              Search keyword. Searches for possible string matches on columns.
 	 *                                             When `$search_columns` is left empty, it tries to determine which
 	 *                                             column to search in based on search string. Default empty.
+<<<<<<< HEAD
 	 *     @type string[]     $search_columns      Array of column names to be searched. Accepts 'ID', 'user_login',
+=======
+	 *     @type array        $search_columns      Array of column names to be searched. Accepts 'ID', 'user_login',
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *                                             'user_email', 'user_url', 'user_nicename', 'display_name'.
 	 *                                             Default empty array.
 	 *     @type string|array $orderby             Field(s) to sort the retrieved users by. May be a single value,
@@ -224,7 +228,11 @@ class WP_User_Query {
 		 *
 		 * @since 4.0.0
 		 *
+<<<<<<< HEAD
 		 * @param WP_User_Query $query Current instance of WP_User_Query (passed by reference).
+=======
+		 * @param WP_User_Query $this Current instance of WP_User_Query (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 */
 		do_action_ref_array( 'pre_get_users', array( &$this ) );
 
@@ -575,7 +583,11 @@ class WP_User_Query {
 		 *
 		 * @since 3.1.0
 		 *
+<<<<<<< HEAD
 		 * @param WP_User_Query $query Current instance of WP_User_Query (passed by reference).
+=======
+		 * @param WP_User_Query $this Current instance of WP_User_Query (passed by reference).
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 */
 		do_action_ref_array( 'pre_user_query', array( &$this ) );
 	}

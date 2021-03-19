@@ -166,7 +166,11 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		)
 	);
 
+<<<<<<< HEAD
 	// Add documentation link.
+=======
+	// Add Codex link.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	$wp_admin_bar->add_node(
 		array(
 			'parent' => 'wp-logo-external',

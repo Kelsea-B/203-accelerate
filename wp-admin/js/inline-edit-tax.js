@@ -47,7 +47,11 @@ window.inlineEditTax = {
 		 *
 		 * @param {Object} e The keyup event that has been triggered.
 		 */
+<<<<<<< HEAD
 		row.on( 'keyup', function( e ) {
+=======
+		row.keyup( function( e ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			// 27 = [Escape].
 			if ( e.which === 27 ) {
 				return inlineEditTax.revert();
@@ -71,7 +75,11 @@ window.inlineEditTax = {
 		/**
 		 * Saves the inline edits when pressing Enter inside the inline editor.
 		 */
+<<<<<<< HEAD
 		$( 'input, select', row ).on( 'keydown', function( e ) {
+=======
+		$( 'input, select', row ).keydown( function( e ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			// 13 = [Enter].
 			if ( e.which === 13 ) {
 				return inlineEditTax.save( this );
@@ -223,7 +231,11 @@ window.inlineEditTax = {
 							// Move focus back to the Quick Edit button.
 							row.find( '.editinline' )
 								.attr( 'aria-expanded', 'false' )
+<<<<<<< HEAD
 								.trigger( 'focus' );
+=======
+								.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 							wp.a11y.speak( wp.i18n.__( 'Changes saved.' ) );
 						});
 

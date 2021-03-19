@@ -11,6 +11,10 @@
 		"customClassName": false,
 		"html": false,
 		"inserter": false
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-editor"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

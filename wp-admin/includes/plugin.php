@@ -1151,6 +1151,7 @@ function validate_plugin_requirements( $plugin ) {
 
 	$compatible_wp  = is_wp_version_compatible( $requirements['requires'] );
 	$compatible_php = is_php_version_compatible( $requirements['requires_php'] );
+<<<<<<< HEAD
 
 	$php_update_message = '</p><p>' . sprintf(
 		/* translators: %s: URL to Update PHP page. */
@@ -1160,6 +1161,17 @@ function validate_plugin_requirements( $plugin ) {
 
 	$annotation = wp_get_update_php_annotation();
 
+=======
+
+	$php_update_message = '</p><p>' . sprintf(
+		/* translators: %s: URL to Update PHP page. */
+		__( '<a href="%s">Learn more about updating PHP</a>.' ),
+		esc_url( wp_get_update_php_url() )
+	);
+
+	$annotation = wp_get_update_php_annotation();
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	if ( $annotation ) {
 		$php_update_message .= '</p><p><em>' . $annotation . '</em>';
 	}

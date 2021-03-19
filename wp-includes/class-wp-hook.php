@@ -192,11 +192,17 @@ final class WP_Hook implements Iterator, ArrayAccess {
 	 *
 	 * @since 4.7.0
 	 *
+<<<<<<< HEAD
 	 * @param string         $tag               Optional. The name of the filter hook. Default empty.
 	 * @param callable|false $function_to_check Optional. The callback to check for. Default false.
 	 * @return bool|int If `$function_to_check` is omitted, returns boolean for whether the hook has
 	 *                  anything registered. When checking a specific function, the priority of that
 	 *                  hook is returned, or false if the function is not attached.
+=======
+	 * @param string        $tag               Optional. The name of the filter hook. Default empty.
+	 * @param callable|bool $function_to_check Optional. The callback to check for. Default false.
+	 * @return bool|int The priority of that hook is returned, or false if the function is not attached.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function has_filter( $tag = '', $function_to_check = false ) {
 		if ( false === $function_to_check ) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-code code {
 	font-size: var(--global--font-size-xs);
 	white-space: pre !important;
@@ -12,3 +13,19 @@
 	padding: var(--global--spacing-unit);
 	color: currentColor;
 }
+=======
+.wp-block-code code {
+	font-size: var(--global--font-size-xs);
+	white-space: pre !important;
+	overflow-x: auto;
+}
+
+.wp-block-code {
+	border-color: var(--global--color-border);
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0.1rem;
+	padding: var(--global--spacing-unit);
+	color: currentColor;
+}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

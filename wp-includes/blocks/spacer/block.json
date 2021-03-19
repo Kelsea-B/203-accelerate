@@ -10,7 +10,11 @@
 	},
 	"supports": {
 		"anchor": true
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-spacer-editor",
 	"style": "wp-block-spacer"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

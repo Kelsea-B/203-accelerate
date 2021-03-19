@@ -82,18 +82,33 @@ this["wp"] = this["wp"] || {}; this["wp"]["a11y"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 465);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 492);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
 
 /***/ 1:
+<<<<<<< HEAD
+=======
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["i18n"]; }());
+
+/***/ }),
+
+/***/ 275:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["i18n"]; }());
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 271:
 /***/ (function(module, exports) {
 
@@ -102,6 +117,9 @@ this["wp"] = this["wp"] || {}; this["wp"]["a11y"] =
 /***/ }),
 
 /***/ 465:
+=======
+/***/ 492:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -112,6 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, "setup", function() { return /* binding */ setup; });
 __webpack_require__.d(__webpack_exports__, "speak", function() { return /* binding */ speak; });
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external ["wp","domReady"]
 var external_wp_domReady_ = __webpack_require__(271);
 var external_wp_domReady_default = /*#__PURE__*/__webpack_require__.n(external_wp_domReady_);
@@ -124,6 +143,20 @@ var external_wp_i18n_ = __webpack_require__(1);
  * WordPress dependencies
  */
 
+=======
+// EXTERNAL MODULE: external {"this":["wp","domReady"]}
+var external_this_wp_domReady_ = __webpack_require__(275);
+var external_this_wp_domReady_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_domReady_);
+
+// EXTERNAL MODULE: external {"this":["wp","i18n"]}
+var external_this_wp_i18n_ = __webpack_require__(1);
+
+// CONCATENATED MODULE: ./node_modules/@wordpress/a11y/build-module/add-intro-text.js
+/**
+ * WordPress dependencies
+ */
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /**
  * Build the explanatory text to be placed before the aria live regions.
  *
@@ -137,7 +170,11 @@ function addIntroText() {
   var introText = document.createElement('p');
   introText.id = 'a11y-speak-intro-text';
   introText.className = 'a11y-speak-intro-text';
+<<<<<<< HEAD
   introText.textContent = Object(external_wp_i18n_["__"])('Notifications');
+=======
+  introText.textContent = Object(external_this_wp_i18n_["__"])('Notifications');
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   introText.setAttribute('style', 'position: absolute;' + 'margin: -1px;' + 'padding: 0;' + 'height: 1px;' + 'width: 1px;' + 'overflow: hidden;' + 'clip: rect(1px, 1px, 1px, 1px);' + '-webkit-clip-path: inset(50%);' + 'clip-path: inset(50%);' + 'border: 0;' + 'word-wrap: normal !important;');
   introText.setAttribute('hidden', 'hidden');
   var _document = document,
@@ -265,7 +302,11 @@ function setup() {
  * Run setup on domReady.
  */
 
+<<<<<<< HEAD
 external_wp_domReady_default()(setup);
+=======
+external_this_wp_domReady_default()(setup);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /**
  * Allows you to easily announce dynamic interface updates to screen readers using ARIA live regions.
  * This module is inspired by the `speak` function in `wp-a11y.js`.

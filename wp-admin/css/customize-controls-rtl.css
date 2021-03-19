@@ -287,7 +287,11 @@ body.trashing #publish-settings {
 
 #customize-control-changeset_preview_link input {
 	line-height: 2.85714286; /* 40px */
+<<<<<<< HEAD
 	border-top: 1px solid #dcdcde;
+=======
+	border-top: 1px solid #ddd;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	border-right: none;
 	border-left: none;
 	text-indent: -999px;
@@ -841,8 +845,13 @@ h3.customize-section-title {
 .customize-controls-preview-toggle:focus,
 .customize-controls-preview-toggle:hover {
 	background: #fff;
+<<<<<<< HEAD
 	color: #2271b1;
 	border-top-color: #2271b1;
+=======
+	color: #0073aa;
+	border-top-color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: none;
 	/* Only visible in Windows High Contrast mode */
 	outline: 1px solid transparent;
@@ -858,9 +867,15 @@ h3.customize-section-title {
 .customize-panel-back:focus,
 .customize-section-back:hover,
 .customize-section-back:focus {
+<<<<<<< HEAD
 	color: #2271b1;
 	background: #f6f7f7;
 	border-right-color: #2271b1;
+=======
+	color: #0073aa;
+	background: #f3f3f5;
+	border-right-color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	box-shadow: none;
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
@@ -1394,10 +1409,17 @@ p.customize-section-description {
 }
 
 .customize-control .attachment-media-view .button-add-media:focus {
+<<<<<<< HEAD
 	background-color: #fff;
 	border-color: #3582c4;
 	border-style: solid;
 	box-shadow: 0 0 0 1px #3582c4;
+=======
+	background-color: #fbfbfc;
+	border-color: #007cba;
+	border-style: solid;
+	box-shadow: 0 0 0 1px #007cba;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	/* Only visible in Windows High Contrast mode */
 	outline: 2px solid transparent;
 }
@@ -2213,9 +2235,15 @@ p.customize-section-description {
 
 	.wp-customizer .showing-themes .control-panel-themes .customize-themes-mobile-back:hover,
 	.wp-customizer .showing-themes .control-panel-themes .customize-themes-mobile-back:focus {
+<<<<<<< HEAD
 		color: #2271b1;
 		background: #f6f7f7;
 		border-right-color: #2271b1;
+=======
+		color: #0073aa;
+		background: #f3f3f5;
+		border-right-color: #0073aa;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		box-shadow: none;
 		/* Only visible in Windows High Contrast mode */
 		outline: 2px solid transparent;

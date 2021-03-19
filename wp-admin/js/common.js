@@ -1093,11 +1093,19 @@ $document.ready( function() {
 		$( '.notice.is-dismissible' ).each( function() {
 			var $el = $( this ),
 				$button = $( '<button type="button" class="notice-dismiss"><span class="screen-reader-text"></span></button>' );
+<<<<<<< HEAD
 
 			if ( $el.find( '.notice-dismiss' ).length ) {
 				return;
 			}
 
+=======
+
+			if ( $el.find( '.notice-dismiss' ).length ) {
+				return;
+			}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			// Ensure plain text.
 			$button.find( '.screen-reader-text' ).text( __( 'Dismiss this notice.' ) );
 			$button.on( 'click.wp-dismiss-notice', function( event ) {

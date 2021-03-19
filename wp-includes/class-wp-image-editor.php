@@ -93,7 +93,11 @@ abstract class WP_Image_Editor {
 	 * @param int|null $max_w Image width.
 	 * @param int|null $max_h Image height.
 	 * @param bool     $crop
+<<<<<<< HEAD
 	 * @return true|WP_Error
+=======
+	 * @return bool|WP_Error
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	abstract public function resize( $max_w, $max_h, $crop = false );
 

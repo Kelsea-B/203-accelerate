@@ -283,7 +283,11 @@ class Core_Upgrader extends WP_Upgrader {
 		$upgrade_minor = get_site_option( 'auto_update_core_minor', 'enabled' ) === 'enabled';
 		$upgrade_major = get_site_option( 'auto_update_core_major', 'unset' ) === 'enabled';
 
+<<<<<<< HEAD
 		// WP_AUTO_UPDATE_CORE = true (all), 'beta', 'rc', 'development', 'branch-development', 'minor', false.
+=======
+		// WP_AUTO_UPDATE_CORE = true (all), 'beta', 'rc', 'minor', false.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		if ( defined( 'WP_AUTO_UPDATE_CORE' ) ) {
 			if ( false === WP_AUTO_UPDATE_CORE ) {
 				// Defaults to turned off, unless a filter allows it.
@@ -291,7 +295,12 @@ class Core_Upgrader extends WP_Upgrader {
 				$upgrade_minor = false;
 				$upgrade_major = false;
 			} elseif ( true === WP_AUTO_UPDATE_CORE
+<<<<<<< HEAD
 				|| in_array( WP_AUTO_UPDATE_CORE, array( 'beta', 'rc', 'development', 'branch-development' ), true )
+=======
+				|| 'beta' === WP_AUTO_UPDATE_CORE
+				|| 'rc' === WP_AUTO_UPDATE_CORE
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			) {
 				// ALL updates for core.
 				$upgrade_dev   = true;

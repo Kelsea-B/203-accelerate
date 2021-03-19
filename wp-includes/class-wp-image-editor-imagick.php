@@ -252,7 +252,11 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 	 * @param int|null $max_w Image width.
 	 * @param int|null $max_h Image height.
 	 * @param bool     $crop
+<<<<<<< HEAD
 	 * @return true|WP_Error
+=======
+	 * @return bool|WP_Error
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function resize( $max_w, $max_h, $crop = false ) {
 		if ( ( $this->size['width'] == $max_w ) && ( $this->size['height'] == $max_h ) ) {
@@ -691,12 +695,21 @@ class WP_Image_Editor_Imagick extends WP_Image_Editor {
 		} catch ( Exception $e ) {
 			return new WP_Error( 'image_save_error', $e->getMessage(), $filename );
 		}
+<<<<<<< HEAD
 
 		$write_image_result = $this->write_image( $this->image, $filename );
 		if ( is_wp_error( $write_image_result ) ) {
 			return $write_image_result;
 		}
 
+=======
+
+		$write_image_result = $this->write_image( $this->image, $filename );
+		if ( is_wp_error( $write_image_result ) ) {
+			return $write_image_result;
+		}
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		try {
 			// Reset original format.
 			$this->image->setImageFormat( $orig_format );

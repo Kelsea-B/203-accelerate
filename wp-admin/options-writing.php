@@ -205,7 +205,11 @@ if ( apply_filters( 'enable_update_services_configuration', true ) ) {
 	<p><label for="ping_sites">
 		<?php
 		printf(
+<<<<<<< HEAD
 			/* translators: %s: Documentation URL. */
+=======
+			/* translators: %s: Codex URL. */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			__( 'When you publish a new post, WordPress automatically notifies the following site update services. For more about this, see <a href="%s">Update Services</a> on the Codex. Separate multiple service URLs with line breaks.' ),
 			__( 'https://wordpress.org/support/article/update-services/' )
 		);
@@ -219,7 +223,11 @@ if ( apply_filters( 'enable_update_services_configuration', true ) ) {
 	<p>
 		<?php
 		printf(
+<<<<<<< HEAD
 			/* translators: 1: Documentation URL, 2: URL to Reading Settings screen. */
+=======
+			/* translators: 1: Codex URL, 2: URL to Reading Settings screen. */
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			__( 'WordPress is not notifying any <a href="%1$s">Update Services</a> because of your site&#8217;s <a href="%2$s">visibility settings</a>.' ),
 			__( 'https://wordpress.org/support/article/update-services/' ),
 			'options-reading.php'

@@ -50,7 +50,11 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 *
+<<<<<<< HEAD
 	 * @return true|WP_Error True if the request has permission, WP_Error object otherwise.
+=======
+	 * @return WP_Error|bool True if the request has permission, WP_Error object otherwise.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function get_items_permissions_check( $request ) {
 		if ( ! current_user_can( 'install_plugins' ) || ! current_user_can( 'activate_plugins' ) ) {
@@ -71,7 +75,11 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 *
+<<<<<<< HEAD
 	 * @return WP_REST_Response|WP_Error Response object on success, or WP_Error object on failure.
+=======
+	 * @return WP_Error|WP_REST_Response Response object on success, or WP_Error object on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function get_items( $request ) {
 		require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
@@ -115,7 +123,11 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 	 * @param array           $plugin  The plugin metadata.
 	 * @param WP_REST_Request $request Request object.
 	 *
+<<<<<<< HEAD
 	 * @return WP_REST_Response|WP_Error Response object on success, or WP_Error object on failure.
+=======
+	 * @return WP_Error|WP_REST_Response Response object on success, or WP_Error object on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 */
 	public function prepare_item_for_response( $plugin, $request ) {
 		// There might be multiple blocks in a plugin. Only the first block is mapped.
@@ -313,7 +325,11 @@ class WP_REST_Block_Directory_Controller extends WP_REST_Controller {
 		unset( $query_params['search'] );
 
 		/**
+<<<<<<< HEAD
 		 * Filters REST API collection parameters for the block directory controller.
+=======
+		 * Filters collection parameters for the block directory controller.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * @since 5.5.0
 		 *

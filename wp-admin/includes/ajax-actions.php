@@ -5406,6 +5406,7 @@ function wp_ajax_toggle_auto_updates() {
 
 	wp_send_json_success();
 }
+<<<<<<< HEAD
 
 /**
  * Ajax handler sends a password reset link.
@@ -5436,3 +5437,5 @@ function wp_ajax_send_password_reset() {
 		wp_send_json_error( $results->get_error_message() );
 	}
 }
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

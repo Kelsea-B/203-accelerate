@@ -160,6 +160,7 @@ wp.svgPainter = ( function( $, window, document, undefined ) {
 					painter.paintElement( $element, 'base' );
 
 					// Set hover callbacks.
+<<<<<<< HEAD
 					$menuitem.on( 'mouseenter', function() {
 						painter.paintElement( $element, 'focus' );
 					} ).on( 'mouseleave', function() {
@@ -168,6 +169,19 @@ wp.svgPainter = ( function( $, window, document, undefined ) {
 							painter.paintElement( $element, 'base' );
 						}, 100 );
 					} );
+=======
+					$menuitem.hover(
+						function() {
+							painter.paintElement( $element, 'focus' );
+						},
+						function() {
+							// Match the delay from hoverIntent.
+							window.setTimeout( function() {
+								painter.paintElement( $element, 'base' );
+							}, 100 );
+						}
+					);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				}
 			});
 		},

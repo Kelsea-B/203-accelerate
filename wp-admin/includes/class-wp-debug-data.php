@@ -48,6 +48,7 @@ class WP_Debug_Data {
 		$core_updates           = get_core_updates();
 		$core_update_needed     = '';
 
+<<<<<<< HEAD
 		if ( is_array( $core_updates ) ) {
 			foreach ( $core_updates as $core => $update ) {
 				if ( 'upgrade' === $update->response ) {
@@ -56,6 +57,14 @@ class WP_Debug_Data {
 				} else {
 					$core_update_needed = '';
 				}
+=======
+		foreach ( $core_updates as $core => $update ) {
+			if ( 'upgrade' === $update->response ) {
+				/* translators: %s: Latest WordPress version number. */
+				$core_update_needed = ' ' . sprintf( __( '(Latest version: %s)' ), $update->version );
+			} else {
+				$core_update_needed = '';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		}
 

@@ -984,13 +984,21 @@ if ( 'none' === $active_signup ) {
 				if ( 'blog' === $active_signup || 'all' === $active_signup ) {
 					printf(
 						/* translators: %s: Site address. */
+<<<<<<< HEAD
 						'<p>' . __( 'The site you were looking for, %s, does not exist, but you can create it now!' ) . '</p>',
+=======
+						'<p><em>' . __( 'The site you were looking for, %s, does not exist, but you can create it now!' ) . '</em></p>',
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 						'<strong>' . $newblog . '</strong>'
 					);
 				} else {
 					printf(
 						/* translators: %s: Site address. */
+<<<<<<< HEAD
 						'<p>' . __( 'The site you were looking for, %s, does not exist.' ) . '</p>',
+=======
+						'<p><em>' . __( 'The site you were looking for, %s, does not exist.' ) . '</em></p>',
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 						'<strong>' . $newblog . '</strong>'
 					);
 				}

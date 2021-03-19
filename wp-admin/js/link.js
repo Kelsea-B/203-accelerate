@@ -8,7 +8,11 @@ jQuery(document).ready( function($) {
 
 	var newCat, noSyncChecks = false, syncChecks, catAddAfter;
 
+<<<<<<< HEAD
 	$('#link_name').trigger( 'focus' );
+=======
+	$('#link_name').focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	// Postboxes.
 	postboxes.add_postbox_toggles('link');
 

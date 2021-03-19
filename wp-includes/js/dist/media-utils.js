@@ -82,7 +82,11 @@ this["wp"] = this["wp"] || {}; this["wp"]["mediaUtils"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 466);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 494);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -90,18 +94,30 @@ this["wp"] = this["wp"] || {}; this["wp"]["mediaUtils"] =
 /***/ 0:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["wp"]["element"]; }());
+=======
+(function() { module.exports = this["wp"]["element"]; }());
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /***/ }),
 
 /***/ 1:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["wp"]["i18n"]; }());
 
 /***/ }),
 
 /***/ 11:
+=======
+(function() { module.exports = this["wp"]["i18n"]; }());
+
+/***/ }),
+
+/***/ 12:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -156,7 +172,26 @@ function _slicedToArray(arr, i) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 15:
+=======
+/***/ 16:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _assertThisInitialized; });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+
+/***/ 17:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -165,7 +200,11 @@ function _slicedToArray(arr, i) {
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+<<<<<<< HEAD
 var arrayLikeToArray = __webpack_require__(24);
+=======
+var arrayLikeToArray = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
@@ -193,6 +232,7 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 16:
 /***/ (function(module, exports) {
 
@@ -215,6 +255,8 @@ function _assertThisInitialized(self) {
 
 /***/ }),
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ 19:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -232,6 +274,7 @@ function _getPrototypeOf(o) {
 /***/ 2:
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 (function() { module.exports = window["lodash"]; }());
 
 /***/ }),
@@ -254,6 +297,20 @@ function _arrayLikeToArray(arr, len) {
 /***/ }),
 
 /***/ 25:
+=======
+(function() { module.exports = this["lodash"]; }());
+
+/***/ }),
+
+/***/ 20:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["regeneratorRuntime"]; }());
+
+/***/ }),
+
+/***/ 21:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -266,7 +323,11 @@ function _classCallCheck(instance, Constructor) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 26:
+=======
+/***/ 22:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -289,12 +350,33 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
 /* harmony import */ var _babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(52);
+=======
+/***/ 23:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _inherits; });
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
@@ -308,18 +390,31 @@ function _inherits(subClass, superClass) {
       configurable: true
     }
   });
+<<<<<<< HEAD
   if (superClass) Object(_babel_runtime_helpers_esm_setPrototypeOf__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(subClass, superClass);
+=======
+  if (superClass) _setPrototypeOf(subClass, superClass);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 29:
+=======
+/***/ 24:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _possibleConstructorReturn; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(42);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(40);
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 
 function _possibleConstructorReturn(self, call) {
@@ -332,12 +427,36 @@ function _possibleConstructorReturn(self, call) {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ 27:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _arrayLikeToArray; });
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+/***/ }),
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ 31:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -383,7 +502,11 @@ function _nonIterableRest() {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 42:
+=======
+/***/ 40:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -406,6 +529,7 @@ function _typeof(obj) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 43:
 /***/ (function(module, exports) {
 
@@ -414,6 +538,66 @@ function _typeof(obj) {
 /***/ }),
 
 /***/ 466:
+=======
+/***/ 41:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["blob"]; }());
+
+/***/ }),
+
+/***/ 45:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _asyncToGenerator; });
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+/***/ }),
+
+/***/ 47:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["apiFetch"]; }());
+
+/***/ }),
+
+/***/ 494:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -425,6 +609,7 @@ __webpack_require__.d(__webpack_exports__, "MediaUpload", function() { return /*
 __webpack_require__.d(__webpack_exports__, "uploadMedia", function() { return /* reexport */ uploadMedia; });
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+<<<<<<< HEAD
 var classCallCheck = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
@@ -438,10 +623,26 @@ var inherits = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
 var possibleConstructorReturn = __webpack_require__(29);
+=======
+var classCallCheck = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
+var createClass = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+var assertThisInitialized = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
+var inherits = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
+var possibleConstructorReturn = __webpack_require__(24);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__(19);
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external "lodash"
 var external_lodash_ = __webpack_require__(2);
 
@@ -450,6 +651,16 @@ var external_wp_element_ = __webpack_require__(0);
 
 // EXTERNAL MODULE: external ["wp","i18n"]
 var external_wp_i18n_ = __webpack_require__(1);
+=======
+// EXTERNAL MODULE: external {"this":"lodash"}
+var external_this_lodash_ = __webpack_require__(2);
+
+// EXTERNAL MODULE: external {"this":["wp","element"]}
+var external_this_wp_element_ = __webpack_require__(0);
+
+// EXTERNAL MODULE: external {"this":["wp","i18n"]}
+var external_this_wp_i18n_ = __webpack_require__(1);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/media-utils/build-module/components/media-upload/index.js
 
@@ -612,7 +823,11 @@ var media_upload_getGalleryDetailsMediaFrame = function getGalleryDetailsMediaFr
         filterable: 'uploaded',
         multiple: 'add',
         editable: false,
+<<<<<<< HEAD
         library: wp.media.query(Object(external_lodash_["defaults"])({
+=======
+        library: wp.media.query(Object(external_this_lodash_["defaults"])({
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
           type: 'image'
         }, this.options.library))
       }), new wp.media.controller.EditImage({
@@ -632,7 +847,11 @@ var media_upload_getGalleryDetailsMediaFrame = function getGalleryDetailsMediaFr
 
 var media_upload_slimImageObject = function slimImageObject(img) {
   var attrSet = ['sizes', 'mime', 'type', 'subtype', 'id', 'url', 'alt', 'link', 'caption'];
+<<<<<<< HEAD
   return Object(external_lodash_["pick"])(img, attrSet);
+=======
+  return Object(external_this_lodash_["pick"])(img, attrSet);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 };
 
 var getAttachmentsCollection = function getAttachmentsCollection(ids) {
@@ -663,7 +882,11 @@ var media_upload_MediaUpload = /*#__PURE__*/function (_Component) {
         _ref$multiple = _ref.multiple,
         multiple = _ref$multiple === void 0 ? false : _ref$multiple,
         _ref$title = _ref.title,
+<<<<<<< HEAD
         title = _ref$title === void 0 ? Object(external_wp_i18n_["__"])('Select or Upload Media') : _ref$title;
+=======
+        title = _ref$title === void 0 ? Object(external_this_wp_i18n_["__"])('Select or Upload Media') : _ref$title;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
     Object(classCallCheck["a" /* default */])(this, MediaUpload);
 
@@ -841,13 +1064,21 @@ var media_upload_MediaUpload = /*#__PURE__*/function (_Component) {
 
       if (!this.props.gallery) {
         var selection = this.frame.state().get('selection');
+<<<<<<< HEAD
         Object(external_lodash_["castArray"])(this.props.value).forEach(function (id) {
+=======
+        Object(external_this_lodash_["castArray"])(this.props.value).forEach(function (id) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
           selection.add(wp.media.attachment(id));
         });
       } // load the images so they are available in the media modal.
 
 
+<<<<<<< HEAD
       getAttachmentsCollection(Object(external_lodash_["castArray"])(this.props.value)).more();
+=======
+      getAttachmentsCollection(Object(external_this_lodash_["castArray"])(this.props.value)).more();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
     }
   }, {
     key: "onClose",
@@ -894,21 +1125,32 @@ var media_upload_MediaUpload = /*#__PURE__*/function (_Component) {
   }]);
 
   return MediaUpload;
+<<<<<<< HEAD
 }(external_wp_element_["Component"]);
+=======
+}(external_this_wp_element_["Component"]);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /* harmony default export */ var media_upload = (media_upload_MediaUpload);
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/media-utils/build-module/components/index.js
 
 
+<<<<<<< HEAD
 // EXTERNAL MODULE: external "regeneratorRuntime"
 var external_regeneratorRuntime_ = __webpack_require__(16);
 var external_regeneratorRuntime_default = /*#__PURE__*/__webpack_require__.n(external_regeneratorRuntime_);
+=======
+// EXTERNAL MODULE: external {"this":"regeneratorRuntime"}
+var external_this_regeneratorRuntime_ = __webpack_require__(20);
+var external_this_regeneratorRuntime_default = /*#__PURE__*/__webpack_require__.n(external_this_regeneratorRuntime_);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
+<<<<<<< HEAD
 var asyncToGenerator = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
@@ -923,6 +1165,22 @@ var external_wp_apiFetch_default = /*#__PURE__*/__webpack_require__.n(external_w
 
 // EXTERNAL MODULE: external ["wp","blob"]
 var external_wp_blob_ = __webpack_require__(43);
+=======
+var asyncToGenerator = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__(12);
+
+// EXTERNAL MODULE: external {"this":["wp","apiFetch"]}
+var external_this_wp_apiFetch_ = __webpack_require__(47);
+var external_this_wp_apiFetch_default = /*#__PURE__*/__webpack_require__.n(external_this_wp_apiFetch_);
+
+// EXTERNAL MODULE: external {"this":["wp","blob"]}
+var external_this_wp_blob_ = __webpack_require__(41);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 // CONCATENATED MODULE: ./node_modules/@wordpress/media-utils/build-module/utils/upload-media.js
 
@@ -972,13 +1230,21 @@ function getMimeTypesArray(wpMimeTypesObject) {
     return wpMimeTypesObject;
   }
 
+<<<<<<< HEAD
   return Object(external_lodash_["flatMap"])(wpMimeTypesObject, function (mime, extensionsString) {
+=======
+  return Object(external_this_lodash_["flatMap"])(wpMimeTypesObject, function (mime, extensionsString) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
     var _mime$split = mime.split('/'),
         _mime$split2 = Object(slicedToArray["a" /* default */])(_mime$split, 1),
         type = _mime$split2[0];
 
     var extensions = extensionsString.split('|');
+<<<<<<< HEAD
     return [mime].concat(Object(toConsumableArray["a" /* default */])(Object(external_lodash_["map"])(extensions, function (extension) {
+=======
+    return [mime].concat(Object(toConsumableArray["a" /* default */])(Object(external_this_lodash_["map"])(extensions, function (extension) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
       return "".concat(type, "/").concat(extension);
     })));
   });
@@ -1010,6 +1276,7 @@ function uploadMedia(_x) {
  */
 
 function _uploadMedia() {
+<<<<<<< HEAD
   _uploadMedia = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_regeneratorRuntime_default.a.mark(function _callee(_ref) {
     var allowedTypes, _ref$additionalData, additionalData, filesList, maxUploadFileSize, _ref$onError, onError, onFileChange, _ref$wpAllowedMimeTyp, wpAllowedMimeTypes, files, filesSet, setAndUpdateFiles, isAllowedType, allowedMimeTypesForUser, isAllowedMimeTypeForUser, triggerError, validFiles, _iterator, _step, _mediaFile, idx, mediaFile, savedMedia, mediaObject, message;
 
@@ -1018,14 +1285,30 @@ function _uploadMedia() {
         switch (_context.prev = _context.next) {
           case 0:
             allowedTypes = _ref.allowedTypes, _ref$additionalData = _ref.additionalData, additionalData = _ref$additionalData === void 0 ? {} : _ref$additionalData, filesList = _ref.filesList, maxUploadFileSize = _ref.maxUploadFileSize, _ref$onError = _ref.onError, onError = _ref$onError === void 0 ? external_lodash_["noop"] : _ref$onError, onFileChange = _ref.onFileChange, _ref$wpAllowedMimeTyp = _ref.wpAllowedMimeTypes, wpAllowedMimeTypes = _ref$wpAllowedMimeTyp === void 0 ? null : _ref$wpAllowedMimeTyp;
+=======
+  _uploadMedia = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/external_this_regeneratorRuntime_default.a.mark(function _callee(_ref) {
+    var allowedTypes, _ref$additionalData, additionalData, filesList, maxUploadFileSize, _ref$onError, onError, onFileChange, _ref$wpAllowedMimeTyp, wpAllowedMimeTypes, files, filesSet, setAndUpdateFiles, isAllowedType, allowedMimeTypesForUser, isAllowedMimeTypeForUser, triggerError, validFiles, _iterator, _step, _mediaFile, idx, mediaFile, savedMedia, mediaObject, message;
+
+    return external_this_regeneratorRuntime_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            allowedTypes = _ref.allowedTypes, _ref$additionalData = _ref.additionalData, additionalData = _ref$additionalData === void 0 ? {} : _ref$additionalData, filesList = _ref.filesList, maxUploadFileSize = _ref.maxUploadFileSize, _ref$onError = _ref.onError, onError = _ref$onError === void 0 ? external_this_lodash_["noop"] : _ref$onError, onFileChange = _ref.onFileChange, _ref$wpAllowedMimeTyp = _ref.wpAllowedMimeTypes, wpAllowedMimeTypes = _ref$wpAllowedMimeTyp === void 0 ? null : _ref$wpAllowedMimeTyp;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
             // Cast filesList to array
             files = Object(toConsumableArray["a" /* default */])(filesList);
             filesSet = [];
 
             setAndUpdateFiles = function setAndUpdateFiles(idx, value) {
+<<<<<<< HEAD
               Object(external_wp_blob_["revokeBlobURL"])(Object(external_lodash_["get"])(filesSet, [idx, 'url']));
               filesSet[idx] = value;
               onFileChange(Object(external_lodash_["compact"])(filesSet));
+=======
+              Object(external_this_wp_blob_["revokeBlobURL"])(Object(external_this_lodash_["get"])(filesSet, [idx, 'url']));
+              filesSet[idx] = value;
+              onFileChange(Object(external_this_lodash_["compact"])(filesSet));
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
             }; // Allowed type specified by consumer
 
 
@@ -1034,14 +1317,24 @@ function _uploadMedia() {
                 return true;
               }
 
+<<<<<<< HEAD
               return Object(external_lodash_["some"])(allowedTypes, function (allowedType) {
                 // If a complete mimetype is specified verify if it matches exactly the mime type of the file.
                 if (Object(external_lodash_["includes"])(allowedType, '/')) {
+=======
+              return Object(external_this_lodash_["some"])(allowedTypes, function (allowedType) {
+                // If a complete mimetype is specified verify if it matches exactly the mime type of the file.
+                if (Object(external_this_lodash_["includes"])(allowedType, '/')) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
                   return allowedType === fileType;
                 } // Otherwise a general mime type is used and we should verify if the file mimetype starts with it.
 
 
+<<<<<<< HEAD
                 return Object(external_lodash_["startsWith"])(fileType, "".concat(allowedType, "/"));
+=======
+                return Object(external_this_lodash_["startsWith"])(fileType, "".concat(allowedType, "/"));
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
               });
             }; // Allowed types for the current WP_User
 
@@ -1049,12 +1342,20 @@ function _uploadMedia() {
             allowedMimeTypesForUser = getMimeTypesArray(wpAllowedMimeTypes);
 
             isAllowedMimeTypeForUser = function isAllowedMimeTypeForUser(fileType) {
+<<<<<<< HEAD
               return Object(external_lodash_["includes"])(allowedMimeTypesForUser, fileType);
+=======
+              return Object(external_this_lodash_["includes"])(allowedMimeTypesForUser, fileType);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
             }; // Build the error message including the filename
 
 
             triggerError = function triggerError(error) {
+<<<<<<< HEAD
               error.message = [Object(external_wp_element_["createElement"])("strong", {
+=======
+              error.message = [Object(external_this_wp_element_["createElement"])("strong", {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
                 key: "filename"
               }, error.file.name), ': ', error.message];
               onError(error);
@@ -1081,7 +1382,11 @@ function _uploadMedia() {
 
             triggerError({
               code: 'MIME_TYPE_NOT_ALLOWED_FOR_USER',
+<<<<<<< HEAD
               message: Object(external_wp_i18n_["__"])('Sorry, this file type is not permitted for security reasons.'),
+=======
+              message: Object(external_this_wp_i18n_["__"])('Sorry, this file type is not permitted for security reasons.'),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
               file: _mediaFile
             });
             return _context.abrupt("continue", 29);
@@ -1094,7 +1399,11 @@ function _uploadMedia() {
 
             triggerError({
               code: 'MIME_TYPE_NOT_SUPPORTED',
+<<<<<<< HEAD
               message: Object(external_wp_i18n_["__"])('Sorry, this file type is not supported here.'),
+=======
+              message: Object(external_this_wp_i18n_["__"])('Sorry, this file type is not supported here.'),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
               file: _mediaFile
             });
             return _context.abrupt("continue", 29);
@@ -1107,7 +1416,11 @@ function _uploadMedia() {
 
             triggerError({
               code: 'SIZE_ABOVE_LIMIT',
+<<<<<<< HEAD
               message: Object(external_wp_i18n_["__"])('This file exceeds the maximum upload size for this site.'),
+=======
+              message: Object(external_this_wp_i18n_["__"])('This file exceeds the maximum upload size for this site.'),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
               file: _mediaFile
             });
             return _context.abrupt("continue", 29);
@@ -1120,7 +1433,11 @@ function _uploadMedia() {
 
             triggerError({
               code: 'EMPTY_FILE',
+<<<<<<< HEAD
               message: Object(external_wp_i18n_["__"])('This file is empty.'),
+=======
+              message: Object(external_this_wp_i18n_["__"])('This file is empty.'),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
               file: _mediaFile
             });
             return _context.abrupt("continue", 29);
@@ -1130,7 +1447,11 @@ function _uploadMedia() {
             // with final file from media gallery when upload is `done` below
 
             filesSet.push({
+<<<<<<< HEAD
               url: Object(external_wp_blob_["createBlobURL"])(_mediaFile)
+=======
+              url: Object(external_this_wp_blob_["createBlobURL"])(_mediaFile)
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
             });
             onFileChange(filesSet);
 
@@ -1171,9 +1492,15 @@ function _uploadMedia() {
 
           case 45:
             savedMedia = _context.sent;
+<<<<<<< HEAD
             mediaObject = _objectSpread(_objectSpread({}, Object(external_lodash_["omit"])(savedMedia, ['alt_text', 'source_url'])), {}, {
               alt: savedMedia.alt_text,
               caption: Object(external_lodash_["get"])(savedMedia, ['caption', 'raw'], ''),
+=======
+            mediaObject = _objectSpread(_objectSpread({}, Object(external_this_lodash_["omit"])(savedMedia, ['alt_text', 'source_url'])), {}, {
+              alt: savedMedia.alt_text,
+              caption: Object(external_this_lodash_["get"])(savedMedia, ['caption', 'raw'], ''),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
               title: savedMedia.title.raw,
               url: savedMedia.source_url
             });
@@ -1188,11 +1515,19 @@ function _uploadMedia() {
             setAndUpdateFiles(idx, null);
             message = void 0;
 
+<<<<<<< HEAD
             if (Object(external_lodash_["has"])(_context.t1, ['message'])) {
               message = Object(external_lodash_["get"])(_context.t1, ['message']);
             } else {
               message = Object(external_wp_i18n_["sprintf"])( // translators: %s: file name
               Object(external_wp_i18n_["__"])('Error while uploading file %s to the media library.'), mediaFile.name);
+=======
+            if (Object(external_this_lodash_["has"])(_context.t1, ['message'])) {
+              message = Object(external_this_lodash_["get"])(_context.t1, ['message']);
+            } else {
+              message = Object(external_this_wp_i18n_["sprintf"])( // translators: %s: file name
+              Object(external_this_wp_i18n_["__"])('Error while uploading file %s to the media library.'), mediaFile.name);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
             }
 
             onError({
@@ -1220,10 +1555,17 @@ function createMediaFromFile(file, additionalData) {
   // Create upload payload
   var data = new window.FormData();
   data.append('file', file, file.name || file.type.replace('/', '.'));
+<<<<<<< HEAD
   Object(external_lodash_["forEach"])(additionalData, function (value, key) {
     return data.append(key, value);
   });
   return external_wp_apiFetch_default()({
+=======
+  Object(external_this_lodash_["forEach"])(additionalData, function (value, key) {
+    return data.append(key, value);
+  });
+  return external_this_wp_apiFetch_default()({
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
     path: '/wp/v2/media',
     body: data,
     method: 'POST'
@@ -1240,6 +1582,7 @@ function createMediaFromFile(file, additionalData) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1283,6 +1626,8 @@ function _asyncToGenerator(fn) {
 
 /***/ }),
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ 5:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1303,6 +1648,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
+<<<<<<< HEAD
 /***/ }),
 
 /***/ 50:
@@ -1326,6 +1672,8 @@ function _setPrototypeOf(o, p) {
   return _setPrototypeOf(o, p);
 }
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ })
 
 /******/ });

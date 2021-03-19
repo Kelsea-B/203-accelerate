@@ -51,7 +51,11 @@ window.wp = window.wp || {};
 		 *
 		 * @return {boolean} The result of revert.
 		 */
+<<<<<<< HEAD
 		qeRow.on( 'keyup', function(e){
+=======
+		qeRow.keyup(function(e){
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			// Revert changes if Escape key is pressed.
 			if ( e.which === 27 ) {
 				return inlineEditPost.revert();
@@ -63,7 +67,11 @@ window.wp = window.wp || {};
 		 *
 		 * @return {boolean} The result of revert.
 		 */
+<<<<<<< HEAD
 		bulkRow.on( 'keyup', function(e){
+=======
+		bulkRow.keyup(function(e){
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			// Revert changes if Escape key is pressed.
 			if ( e.which === 27 ) {
 				return inlineEditPost.revert();
@@ -434,7 +442,11 @@ window.wp = window.wp || {};
 							// Move focus back to the Quick Edit button. $( this ) is the row being animated.
 							$( this ).find( '.editinline' )
 								.attr( 'aria-expanded', 'false' )
+<<<<<<< HEAD
 								.trigger( 'focus' );
+=======
+								.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 							wp.a11y.speak( wp.i18n.__( 'Changes saved.' ) );
 						});
 					} else {

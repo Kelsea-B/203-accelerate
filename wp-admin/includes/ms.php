@@ -1018,8 +1018,11 @@ jQuery(document).ready( function($) {
  *
  * @since 4.6.0
  *
+<<<<<<< HEAD
  * @global string $pagenow
  *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @param array $args {
  *     Optional. Array or string of Query parameters. Default empty array.
  *

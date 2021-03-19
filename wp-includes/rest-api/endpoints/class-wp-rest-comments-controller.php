@@ -449,7 +449,11 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 			}
 
 			/**
+<<<<<<< HEAD
 			 * Filters whether comments can be created via the REST API without authentication.
+=======
+			 * Filters whether comments can be created without authentication.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			 *
 			 * Enables creating comments for anonymous users.
 			 *
@@ -957,7 +961,11 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 		/**
 		 * Filters whether a comment can be trashed via the REST API.
 		 *
+<<<<<<< HEAD
 		 * Return false to disable trash support for the comment.
+=======
+		 * Return false to disable Trash support for the post.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * @since 4.7.0
 		 *
@@ -1674,7 +1682,11 @@ class WP_REST_Comments_Controller extends WP_REST_Controller {
 		);
 
 		/**
+<<<<<<< HEAD
 		 * Filters REST API collection parameters for the comments controller.
+=======
+		 * Filters collection parameters for the comments controller.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		 *
 		 * This filter registers the collection parameter, but does not map the
 		 * collection parameter to an internal WP_Comment_Query parameter. Use the

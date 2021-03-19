@@ -15,7 +15,11 @@
 		tmplAppPassRow = wp.template( 'application-password-row' ),
 		userId = $( '#user_id' ).val();
 
+<<<<<<< HEAD
 	$newAppPassButton.on( 'click', function( e ) {
+=======
+	$newAppPassButton.click( function( e ) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		e.preventDefault();
 
 		if ( $newAppPassButton.prop( 'aria-disabled' ) ) {
@@ -25,7 +29,11 @@
 		var name = $newAppPassField.val();
 
 		if ( 0 === name.length ) {
+<<<<<<< HEAD
 			$newAppPassField.trigger( 'focus' );
+=======
+			$newAppPassField.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			return;
 		}
 
@@ -57,10 +65,17 @@
 			$newAppPassButton.prop( 'disabled', false );
 
 			$newAppPassForm.after( tmplNewAppPass( {
+<<<<<<< HEAD
 				name: response.name,
 				password: response.password
 			} ) );
 			$( '.new-application-password-notice' ).trigger( 'focus' );
+=======
+				name: name,
+				password: response.password
+			} ) );
+			$( '.new-application-password-notice' ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 			$appPassTbody.prepend( tmplAppPassRow( response ) );
 
@@ -105,7 +120,11 @@
 				}
 				$tr.remove();
 
+<<<<<<< HEAD
 				addNotice( wp.i18n.__( 'Application password revoked.' ), 'success' ).trigger( 'focus' );
+=======
+				addNotice( wp.i18n.__( 'Application password revoked.' ), 'success' ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		} ).fail( handleErrorResponse );
 	} );
@@ -133,7 +152,11 @@
 				$appPassSection.children( '.new-application-password' ).remove();
 				$appPassTwrapper.hide();
 
+<<<<<<< HEAD
 				addNotice( wp.i18n.__( 'All application passwords revoked.' ), 'success' ).trigger( 'focus' );
+=======
+				addNotice( wp.i18n.__( 'All application passwords revoked.' ), 'success' ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		} ).fail( handleErrorResponse );
 	} );
@@ -145,7 +168,11 @@
 		$el.fadeTo( 100, 0, function () {
 			$el.slideUp( 100, function () {
 				$el.remove();
+<<<<<<< HEAD
 				$newAppPassField.trigger( 'focus' );
+=======
+				$newAppPassField.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			} );
 		} );
 	} );

@@ -244,7 +244,11 @@ function image_downsize( $id, $size = 'medium' ) {
 		$info       = null;
 
 		if ( $thumb_file ) {
+<<<<<<< HEAD
 			$info = wp_getimagesize( $thumb_file );
+=======
+			$info = @getimagesize( $thumb_file );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		if ( $thumb_file && $info ) {
@@ -962,7 +966,11 @@ function wp_get_attachment_image_src( $attachment_id, $size = 'thumbnail', $icon
 				$icon_dir = apply_filters( 'icon_dir', ABSPATH . WPINC . '/images/media' );
 
 				$src_file               = $icon_dir . '/' . wp_basename( $src );
+<<<<<<< HEAD
 				list( $width, $height ) = wp_getimagesize( $src_file );
+=======
+				list( $width, $height ) = @getimagesize( $src_file );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		}
 
@@ -1600,6 +1608,7 @@ function wp_image_file_matches_image_meta( $image_location, $image_meta, $attach
  *                     or false if dimensions cannot be determined.
  */
 function wp_image_src_get_dimensions( $image_src, $image_meta, $attachment_id = 0 ) {
+<<<<<<< HEAD
 	$dimensions = false;
 
 	// Is it a full size image?
@@ -1642,6 +1651,34 @@ function wp_image_src_get_dimensions( $image_src, $image_meta, $attachment_id = 
 	 * @param int         $attachment_id The image attachment ID. Default 0.
 	 */
 	return apply_filters( 'wp_image_src_get_dimensions', $dimensions, $image_src, $image_meta, $attachment_id );
+=======
+	if ( ! wp_image_file_matches_image_meta( $image_src, $image_meta, $attachment_id ) ) {
+		return false;
+	}
+
+	// Is it a full size image?
+	if ( strpos( $image_src, $image_meta['file'] ) !== false ) {
+		return array(
+			(int) $image_meta['width'],
+			(int) $image_meta['height'],
+		);
+	}
+
+	if ( ! empty( $image_meta['sizes'] ) ) {
+		$src_filename = wp_basename( $image_src );
+
+		foreach ( $image_meta['sizes'] as $image_size_data ) {
+			if ( $src_filename === $image_size_data['file'] ) {
+				return array(
+					(int) $image_size_data['width'],
+					(int) $image_size_data['height'],
+				);
+			}
+		}
+	}
+
+	return false;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }
 
 /**
@@ -1711,6 +1748,246 @@ function wp_image_add_srcset_and_sizes( $image, $image_meta, $attachment_id ) {
 
 		// Add the srcset and sizes attributes to the image markup.
 		return preg_replace( '/<img ([^>]+?)[\/ ]*>/', '<img $1' . $attr . ' />', $image );
+<<<<<<< HEAD
+=======
+	}
+
+	return $image;
+}
+
+/**
+ * Determines whether to add the `loading` attribute to the specified tag in the specified context.
+ *
+ * @since 5.5.0
+ *
+ * @param string $tag_name The tag name.
+ * @param string $context  Additional context, like the current filter name
+ *                         or the function name from where this was called.
+ * @return bool Whether to add the attribute.
+ */
+function wp_lazy_loading_enabled( $tag_name, $context ) {
+	// By default add to all 'img' tags.
+	// See https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-loading
+	$default = ( 'img' === $tag_name );
+
+	/**
+	 * Filters whether to add the `loading` attribute to the specified tag in the specified context.
+	 *
+	 * @since 5.5.0
+	 *
+	 * @param bool   $default  Default value.
+	 * @param string $tag_name The tag name.
+	 * @param string $context  Additional context, like the current filter name
+	 *                         or the function name from where this was called.
+	 */
+	return (bool) apply_filters( 'wp_lazy_loading_enabled', $default, $tag_name, $context );
+}
+
+/**
+ * Filters specific tags in post content and modifies their markup.
+ *
+ * Modifies HTML tags in post content to include new browser and HTML technologies
+ * that may not have existed at the time of post creation. These modifications currently
+ * include adding `srcset`, `sizes`, and `loading` attributes to `img` HTML tags.
+ * Future similar optimizations should be added/expected here.
+ *
+ * @since 5.5.0
+ *
+ * @see wp_img_tag_add_width_and_height_attr()
+ * @see wp_img_tag_add_srcset_and_sizes_attr()
+ * @see wp_img_tag_add_loading_attr()
+ *
+ * @param string $content The HTML content to be filtered.
+ * @param string $context Optional. Additional context to pass to the filters.
+ *                        Defaults to `current_filter()` when not set.
+ * @return string Converted content with images modified.
+ */
+function wp_filter_content_tags( $content, $context = null ) {
+	if ( null === $context ) {
+		$context = current_filter();
+	}
+
+	$add_loading_attr = wp_lazy_loading_enabled( 'img', $context );
+
+	if ( false === strpos( $content, '<img' ) ) {
+		return $content;
+	}
+
+	if ( ! preg_match_all( '/<img\s[^>]+>/', $content, $matches ) ) {
+		return $content;
+	}
+
+	// List of the unique `img` tags found in $content.
+	$images = array();
+
+	foreach ( $matches[0] as $image ) {
+		if ( preg_match( '/wp-image-([0-9]+)/i', $image, $class_id ) ) {
+			$attachment_id = absint( $class_id[1] );
+
+			if ( $attachment_id ) {
+				// If exactly the same image tag is used more than once, overwrite it.
+				// All identical tags will be replaced later with 'str_replace()'.
+				$images[ $image ] = $attachment_id;
+				continue;
+			}
+		}
+
+		$images[ $image ] = 0;
+	}
+
+	// Reduce the array to unique attachment IDs.
+	$attachment_ids = array_unique( array_filter( array_values( $images ) ) );
+
+	if ( count( $attachment_ids ) > 1 ) {
+		/*
+		 * Warm the object cache with post and meta information for all found
+		 * images to avoid making individual database calls.
+		 */
+		_prime_post_caches( $attachment_ids, false, true );
+	}
+
+	foreach ( $images as $image => $attachment_id ) {
+		$filtered_image = $image;
+
+		// Add 'width' and 'height' attributes if applicable.
+		if ( $attachment_id > 0 && false === strpos( $filtered_image, ' width=' ) && false === strpos( $filtered_image, ' height=' ) ) {
+			$filtered_image = wp_img_tag_add_width_and_height_attr( $filtered_image, $context, $attachment_id );
+		}
+
+		// Add 'srcset' and 'sizes' attributes if applicable.
+		if ( $attachment_id > 0 && false === strpos( $filtered_image, ' srcset=' ) ) {
+			$filtered_image = wp_img_tag_add_srcset_and_sizes_attr( $filtered_image, $context, $attachment_id );
+		}
+
+		// Add 'loading' attribute if applicable.
+		if ( $add_loading_attr && false === strpos( $filtered_image, ' loading=' ) ) {
+			$filtered_image = wp_img_tag_add_loading_attr( $filtered_image, $context );
+		}
+
+		if ( $filtered_image !== $image ) {
+			$content = str_replace( $image, $filtered_image, $content );
+		}
+	}
+
+	return $content;
+}
+
+/**
+ * Adds `loading` attribute to an `img` HTML tag.
+ *
+ * @since 5.5.0
+ *
+ * @param string $image   The HTML `img` tag where the attribute should be added.
+ * @param string $context Additional context to pass to the filters.
+ * @return string Converted `img` tag with `loading` attribute added.
+ */
+function wp_img_tag_add_loading_attr( $image, $context ) {
+	/**
+	 * Filters the `loading` attribute value. Default `lazy`.
+	 *
+	 * Returning `false` or an empty string will not add the attribute.
+	 * Returning `true` will add the default value.
+	 *
+	 * @since 5.5.0
+	 *
+	 * @param string|bool $value   The `loading` attribute value. Returning a falsey value will result in
+	 *                             the attribute being omitted for the image. Default 'lazy'.
+	 * @param string      $image   The HTML `img` tag to be filtered.
+	 * @param string      $context Additional context about how the function was called or where the img tag is.
+	 */
+	$value = apply_filters( 'wp_img_tag_add_loading_attr', 'lazy', $image, $context );
+
+	if ( $value ) {
+		if ( ! in_array( $value, array( 'lazy', 'eager' ), true ) ) {
+			$value = 'lazy';
+		}
+
+		// Images should have source and dimension attributes for the `loading` attribute to be added.
+		if ( false === strpos( $image, ' src="' ) || false === strpos( $image, ' width="' ) || false === strpos( $image, ' height="' ) ) {
+			return $image;
+		}
+
+		return str_replace( '<img', '<img loading="' . esc_attr( $value ) . '"', $image );
+	}
+
+	return $image;
+}
+
+/**
+ * Adds `width` and `height` attributes to an `img` HTML tag.
+ *
+ * @since 5.5.0
+ *
+ * @param string $image         The HTML `img` tag where the attribute should be added.
+ * @param string $context       Additional context to pass to the filters.
+ * @param int    $attachment_id Image attachment ID.
+ * @return string Converted 'img' element with 'width' and 'height' attributes added.
+ */
+function wp_img_tag_add_width_and_height_attr( $image, $context, $attachment_id ) {
+	$image_src         = preg_match( '/src="([^"]+)"/', $image, $match_src ) ? $match_src[1] : '';
+	list( $image_src ) = explode( '?', $image_src );
+
+	// Return early if we couldn't get the image source.
+	if ( ! $image_src ) {
+		return $image;
+	}
+
+	/**
+	 * Filters whether to add the missing `width` and `height` HTML attributes to the img tag. Default `true`.
+	 *
+	 * Returning anything else than `true` will not add the attributes.
+	 *
+	 * @since 5.5.0
+	 *
+	 * @param bool   $value         The filtered value, defaults to `true`.
+	 * @param string $image         The HTML `img` tag where the attribute should be added.
+	 * @param string $context       Additional context about how the function was called or where the img tag is.
+	 * @param int    $attachment_id The image attachment ID.
+	 */
+	$add = apply_filters( 'wp_img_tag_add_width_and_height_attr', true, $image, $context, $attachment_id );
+
+	if ( true === $add ) {
+		$image_meta = wp_get_attachment_metadata( $attachment_id );
+		$size_array = wp_image_src_get_dimensions( $image_src, $image_meta, $attachment_id );
+
+		if ( $size_array ) {
+			$hw = trim( image_hwstring( $size_array[0], $size_array[1] ) );
+			return str_replace( '<img', "<img {$hw}", $image );
+		}
+	}
+
+	return $image;
+}
+
+/**
+ * Adds `srcset` and `sizes` attributes to an existing `img` HTML tag.
+ *
+ * @since 5.5.0
+ *
+ * @param string $image         The HTML `img` tag where the attribute should be added.
+ * @param string $context       Additional context to pass to the filters.
+ * @param int    $attachment_id Image attachment ID.
+ * @return string Converted 'img' element with 'loading' attribute added.
+ */
+function wp_img_tag_add_srcset_and_sizes_attr( $image, $context, $attachment_id ) {
+	/**
+	 * Filters whether to add the `srcset` and `sizes` HTML attributes to the img tag. Default `true`.
+	 *
+	 * Returning anything else than `true` will not add the attributes.
+	 *
+	 * @since 5.5.0
+	 *
+	 * @param bool   $value         The filtered value, defaults to `true`.
+	 * @param string $image         The HTML `img` tag where the attribute should be added.
+	 * @param string $context       Additional context about how the function was called or where the img tag is.
+	 * @param int    $attachment_id The image attachment ID.
+	 */
+	$add = apply_filters( 'wp_img_tag_add_srcset_and_sizes_attr', true, $image, $context, $attachment_id );
+
+	if ( true === $add ) {
+		$image_meta = wp_get_attachment_metadata( $attachment_id );
+		return wp_image_add_srcset_and_sizes( $image, $image_meta, $attachment_id );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	return $image;
@@ -3379,7 +3656,11 @@ add_shortcode( 'video', 'wp_video_shortcode' );
  *
  * @param string|int[] $size Optional. Image size. Accepts any registered image size name, or an array
  *                           of width and height values in pixels (in that order). Default 'thumbnail'.
+<<<<<<< HEAD
  * @param string|false $text Optional. Link text. Default false.
+=======
+ * @param string       $text Optional. Link text. Default false.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function previous_image_link( $size = 'thumbnail', $text = false ) {
 	adjacent_image_link( true, $size, $text );
@@ -3394,7 +3675,11 @@ function previous_image_link( $size = 'thumbnail', $text = false ) {
  *
  * @param string|int[] $size Optional. Image size. Accepts any registered image size name, or an array
  *                           of width and height values in pixels (in that order). Default 'thumbnail'.
+<<<<<<< HEAD
  * @param string|false $text Optional. Link text. Default false.
+=======
+ * @param string       $text Optional. Link text. Default false.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function next_image_link( $size = 'thumbnail', $text = false ) {
 	adjacent_image_link( false, $size, $text );
@@ -3590,8 +3875,12 @@ function is_gd_image( $image ) {
  *
  * @param int $width  Image width in pixels.
  * @param int $height Image height in pixels.
+<<<<<<< HEAD
  * @return resource|GdImage|false The GD image resource or GdImage instance on success.
  *                                False on failure.
+=======
+ * @return resource|GdImage|false The GD image resource or GdImage instance on success. False on failure.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_imagecreatetruecolor( $width, $height ) {
 	$img = imagecreatetruecolor( $width, $height );
@@ -4964,6 +5253,7 @@ function wp_show_heic_upload_error( $plupload_settings ) {
 	$plupload_settings['heic_upload_error'] = true;
 	return $plupload_settings;
 }
+<<<<<<< HEAD
 
 /**
  * Allows PHP's getimagesize() to be debuggable when necessary.
@@ -4998,3 +5288,5 @@ function wp_getimagesize( $filename, &$imageinfo = array() ) {
 	 */
 	return @getimagesize( $filename, $imageinfo );
 }
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

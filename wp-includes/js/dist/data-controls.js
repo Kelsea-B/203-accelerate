@@ -82,11 +82,16 @@ this["wp"] = this["wp"] || {}; this["wp"]["dataControls"] =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 423);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 445);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /******/ })
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
 /***/ 35:
 /***/ (function(module, exports) {
 
@@ -102,6 +107,16 @@ this["wp"] = this["wp"] || {}; this["wp"]["dataControls"] =
 /***/ }),
 
 /***/ 423:
+=======
+/***/ 4:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["data"]; }());
+
+/***/ }),
+
+/***/ 445:
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,6 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "select", function() { return select; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "syncSelect", function() { return syncSelect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dispatch", function() { return dispatch; });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__unstableAwaitPromise", function() { return __unstableAwaitPromise; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "controls", function() { return controls; });
 /* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(50);
@@ -118,11 +134,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_deprecated__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
 /* harmony import */ var _wordpress_deprecated__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_deprecated__WEBPACK_IMPORTED_MODULE_2__);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "controls", function() { return controls; });
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(47);
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 /**
  * WordPress dependencies
  */
 
+<<<<<<< HEAD
 
+=======
+ // TODO: mark the deprecated controls after all Gutenberg usages are removed
+// import deprecated from '@wordpress/deprecated';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /**
  * Dispatches a control action for triggering an api fetch call.
@@ -158,9 +186,15 @@ function apiFetch(request) {
  */
 
 function select() {
+<<<<<<< HEAD
   _wordpress_deprecated__WEBPACK_IMPORTED_MODULE_2___default()('`select` control in `@wordpress/data-controls`', {
     alternative: 'built-in `resolveSelect` control in `@wordpress/data`'
   });
+=======
+  // deprecated( '`select` control in `@wordpress/data-controls`', {
+  // 	alternative: 'built-in `resolveSelect` control in `@wordpress/data`',
+  // } );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   return _wordpress_data__WEBPACK_IMPORTED_MODULE_1__["controls"].resolveSelect.apply(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["controls"], arguments);
 }
 /**
@@ -171,9 +205,15 @@ function select() {
  */
 
 function syncSelect() {
+<<<<<<< HEAD
   _wordpress_deprecated__WEBPACK_IMPORTED_MODULE_2___default()('`syncSelect` control in `@wordpress/data-controls`', {
     alternative: 'built-in `select` control in `@wordpress/data`'
   });
+=======
+  // deprecated( '`syncSelect` control in `@wordpress/data-controls`', {
+  // 	alternative: 'built-in `select` control in `@wordpress/data`',
+  // } );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
   return _wordpress_data__WEBPACK_IMPORTED_MODULE_1__["controls"].select.apply(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["controls"], arguments);
 }
 /**
@@ -184,6 +224,7 @@ function syncSelect() {
  */
 
 function dispatch() {
+<<<<<<< HEAD
   _wordpress_deprecated__WEBPACK_IMPORTED_MODULE_2___default()('`dispatch` control in `@wordpress/data-controls`', {
     alternative: 'built-in `dispatch` control in `@wordpress/data`'
   });
@@ -220,6 +261,17 @@ var __unstableAwaitPromise = function __unstableAwaitPromise(promise) {
  * store.
  *
  * @param paths
+=======
+  // deprecated( '`dispatch` control in `@wordpress/data-controls`', {
+  // 	alternative: 'built-in `dispatch` control in `@wordpress/data`',
+  // } );
+  return _wordpress_data__WEBPACK_IMPORTED_MODULE_1__["controls"].dispatch.apply(_wordpress_data__WEBPACK_IMPORTED_MODULE_1__["controls"], arguments);
+}
+/**
+ * The default export is what you use to register the controls with your custom
+ * store.
+ *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * @example
  * ```js
  * // WordPress dependencies
@@ -233,6 +285,7 @@ var __unstableAwaitPromise = function __unstableAwaitPromise(promise) {
  * import * as resolvers from './resolvers';
  *
  * registerStore( 'my-custom-store', {
+<<<<<<< HEAD
  * reducer,
  * controls,
  * actions,
@@ -251,6 +304,23 @@ var controls = {
   },
   API_FETCH: function API_FETCH(_ref2) {
     var request = _ref2.request;
+=======
+ * 	reducer,
+ * 	controls,
+ * 	actions,
+ * 	selectors,
+ * 	resolvers,
+ * } );
+ * ```
+ *
+ * @return {Object} An object for registering the default controls with the
+ *                  store.
+ */
+
+var controls = {
+  API_FETCH: function API_FETCH(_ref) {
+    var request = _ref.request;
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
     return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()(request);
   }
 };
@@ -258,10 +328,17 @@ var controls = {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 50:
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["apiFetch"]; }());
+=======
+/***/ 47:
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["wp"]["apiFetch"]; }());
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 /***/ })
 

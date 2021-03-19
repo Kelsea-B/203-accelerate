@@ -1948,7 +1948,11 @@ function get_attachment_icon( $id = 0, $fullsize = false, $max_dims = false ) {
 	// Do we need to constrain the image?
 	if ( ($max_dims = apply_filters('attachment_max_dims', $max_dims)) && file_exists($src_file) ) {
 
+<<<<<<< HEAD
 		$imagesize = wp_getimagesize($src_file);
+=======
+		$imagesize = @getimagesize($src_file);
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 		if (($imagesize[0] > $max_dims[0]) || $imagesize[1] > $max_dims[1] ) {
 			$actual_aspect = $imagesize[0] / $imagesize[1];
@@ -4135,6 +4139,7 @@ function wp_slash_strings_only( $value ) {
 function addslashes_strings_only( $value ) {
 	return is_string( $value ) ? addslashes( $value ) : $value;
 }
+<<<<<<< HEAD
 
 /**
  * Displays a noindex meta tag if required by the blog configuration.
@@ -4203,3 +4208,5 @@ function wp_sensitive_page_meta() {
 	<?php
 	wp_strict_cross_origin_referrer();
 }
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f

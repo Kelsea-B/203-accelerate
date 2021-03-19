@@ -33,83 +33,113 @@ class WP_Block_Type {
 	public $name;
 
 	/**
+<<<<<<< HEAD
 	 * Human-readable block type label.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var string
 	 */
 	public $title = '';
 
 	/**
+<<<<<<< HEAD
 	 * Block type category classification, used in search interfaces
 	 * to arrange block types by category.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var string|null
 	 */
 	public $category = null;
 
 	/**
+<<<<<<< HEAD
 	 * Setting parent lets a block require that it is only available
 	 * when nested within the specified blocks.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var array|null
 	 */
 	public $parent = null;
 
 	/**
+<<<<<<< HEAD
 	 * Block type icon.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var string|null
 	 */
 	public $icon = null;
 
 	/**
+<<<<<<< HEAD
 	 * A detailed block type description.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var string
 	 */
 	public $description = '';
 
 	/**
+<<<<<<< HEAD
 	 * Additional keywords to produce block type as result
 	 * in search interfaces.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var array
 	 */
 	public $keywords = array();
 
 	/**
+<<<<<<< HEAD
 	 * The translation textdomain.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var string|null
 	 */
 	public $textdomain = null;
 
 	/**
+<<<<<<< HEAD
 	 * Alternative block styles.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var array
 	 */
 	public $styles = array();
 
 	/**
+<<<<<<< HEAD
 	 * Supported features.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var array|null
 	 */
 	public $supports = null;
 
 	/**
+<<<<<<< HEAD
 	 * Structured data for the block preview.
 	 *
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 * @since 5.5.0
 	 * @var array|null
 	 */

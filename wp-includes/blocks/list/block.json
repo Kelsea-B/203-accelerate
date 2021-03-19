@@ -28,12 +28,19 @@
 	"supports": {
 		"anchor": true,
 		"className": false,
+<<<<<<< HEAD
 		"fontSize": true,
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		"color": {
 			"gradients": true
 		},
 		"__unstablePasteTextInline": true
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-list-editor",
 	"style": "wp-block-list"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

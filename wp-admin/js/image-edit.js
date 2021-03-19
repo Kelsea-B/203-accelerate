@@ -689,7 +689,11 @@
 				elementToSetFocusTo = $( '.imgedit-wrap' ).find( ':tabbable:first' );
 			}
 
+<<<<<<< HEAD
 			elementToSetFocusTo.trigger( 'focus' );
+=======
+			elementToSetFocusTo.focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}, 100 );
 	},
 

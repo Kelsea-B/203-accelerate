@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 	"apiVersion": 2,
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	"name": "core/gallery",
 	"category": "media",
 	"attributes": {
@@ -79,7 +82,11 @@
 	"supports": {
 		"anchor": true,
 		"align": true
+<<<<<<< HEAD
 	},
 	"editorStyle": "wp-block-gallery-editor",
 	"style": "wp-block-gallery"
+=======
+	}
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 }

@@ -59,6 +59,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 
 		register_rest_route(
 			$this->namespace,
+<<<<<<< HEAD
 			'/' . $this->rest_base . '/introspect',
 			array(
 				array(
@@ -75,6 +76,8 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 
 		register_rest_route(
 			$this->namespace,
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			'/' . $this->rest_base . '/(?P<uuid>[\w\-]+)',
 			array(
 				array(
@@ -110,6 +113,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has read access, WP_Error object otherwise.
 	 */
 	public function get_items_permissions_check( $request ) {
+<<<<<<< HEAD
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -125,6 +129,9 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		return true;
+=======
+		return $this->do_permissions_check( $request );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -163,6 +170,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has read access for the item, WP_Error object otherwise.
 	 */
 	public function get_item_permissions_check( $request ) {
+<<<<<<< HEAD
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -178,6 +186,9 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		return true;
+=======
+		return $this->do_permissions_check( $request );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -207,6 +218,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has access to create items, WP_Error object otherwise.
 	 */
 	public function create_item_permissions_check( $request ) {
+<<<<<<< HEAD
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -222,6 +234,9 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		return true;
+=======
+		return $this->do_permissions_check( $request );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -290,6 +305,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has access to create items, WP_Error object otherwise.
 	 */
 	public function update_item_permissions_check( $request ) {
+<<<<<<< HEAD
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -305,6 +321,9 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		return true;
+=======
+		return $this->do_permissions_check( $request );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -364,6 +383,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has access to delete the item, WP_Error object otherwise.
 	 */
 	public function delete_items_permissions_check( $request ) {
+<<<<<<< HEAD
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -379,6 +399,9 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		return true;
+=======
+		return $this->do_permissions_check( $request );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -419,6 +442,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 * @return true|WP_Error True if the request has access to delete the item, WP_Error object otherwise.
 	 */
 	public function delete_item_permissions_check( $request ) {
+<<<<<<< HEAD
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -434,6 +458,9 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 		}
 
 		return true;
+=======
+		return $this->do_permissions_check( $request );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	}
 
 	/**
@@ -474,6 +501,7 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks if a given request has access to get the currently used application password.
 	 *
 	 * @since 5.7.0
@@ -542,13 +570,21 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 	 *
 	 * @since 5.6.0
 	 * @deprecated 5.7.0 Use `edit_user` directly or one of the specific meta capabilities introduced in 5.7.0.
+=======
+	 * Performs a permissions check for the request.
+	 *
+	 * @since 5.6.0
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	 *
 	 * @param WP_REST_Request $request
 	 * @return true|WP_Error
 	 */
 	protected function do_permissions_check( $request ) {
+<<<<<<< HEAD
 		_deprecated_function( __METHOD__, '5.7.0' );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		$user = $this->get_user( $request );
 
 		if ( is_wp_error( $user ) ) {
@@ -798,8 +834,11 @@ class WP_REST_Application_Passwords_Controller extends WP_REST_Controller {
 					'type'        => 'string',
 					'required'    => true,
 					'context'     => array( 'view', 'edit', 'embed' ),
+<<<<<<< HEAD
 					'minLength'   => 1,
 					'pattern'     => '.*\S.*',
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				),
 				'password'  => array(
 					'description' => __( 'The generated password. Only available after adding an application.' ),

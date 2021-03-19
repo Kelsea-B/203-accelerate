@@ -38,7 +38,11 @@ function list_core_update( $update ) {
 	static $first_pass = true;
 
 	$wp_version     = get_bloginfo( 'version' );
+<<<<<<< HEAD
 	$version_string = sprintf( '%s&ndash;%s', $update->current, get_locale() );
+=======
+	$version_string = sprintf( '%s&ndash;<strong>%s</strong>', $update->current, $update->locale );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 	if ( 'en_US' === $update->locale && 'en_US' === get_locale() ) {
 		$version_string = $update->current;
@@ -55,10 +59,14 @@ function list_core_update( $update ) {
 		$current = true;
 	}
 
+<<<<<<< HEAD
 	$is_development_version = preg_match( '/alpha|beta|RC/', $version_string );
 
 	$message       = '';
 	$submit        = $is_development_version ? __( 'Update to latest nightly' ) : __( 'Update now' );
+=======
+	$submit        = __( 'Update Now' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	$form_action   = 'update-core.php?action=do-core-upgrade';
 	$php_version   = phpversion();
 	$mysql_version = $wpdb->db_version();
@@ -69,7 +77,12 @@ function list_core_update( $update ) {
 	} else {
 		if ( $current ) {
 			/* translators: %s: WordPress version. */
+<<<<<<< HEAD
 			$submit      = sprintf( __( 'Re-install version %s' ), $version_string );
+=======
+			$message     = sprintf( __( 'If you need to re-install version %s, you can do so here:' ), $version_string );
+			$submit      = __( 'Re-install Now' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			$form_action = 'update-core.php?action=do-core-reinstall';
 		} else {
 			$php_compat = version_compare( $php_version, $update->php_version, '>=' );
@@ -235,9 +248,15 @@ function core_upgrade_preamble() {
 
 	// Include an unmodified $wp_version.
 	require ABSPATH . WPINC . '/version.php';
+<<<<<<< HEAD
 
 	$is_development_version = preg_match( '/alpha|beta|RC/', $wp_version );
 
+=======
+
+	$is_development_version = preg_match( '/alpha|beta|RC/', $wp_version );
+
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	if ( isset( $updates[0]->version ) && version_compare( $updates[0]->version, $wp_version, '>' ) ) {
 		echo '<h2 class="response">';
 		_e( 'An updated version of WordPress is available.' );
@@ -306,7 +325,11 @@ function core_auto_updates_settings() {
 	$upgrade_major = get_site_option( 'auto_update_core_major', 'unset' ) === 'enabled';
 
 	$can_set_update_option = true;
+<<<<<<< HEAD
 	// WP_AUTO_UPDATE_CORE = true (all), 'beta', 'rc', 'development', 'branch-development', 'minor', false.
+=======
+	// WP_AUTO_UPDATE_CORE = true (all), 'beta', 'rc', 'minor', false.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	if ( defined( 'WP_AUTO_UPDATE_CORE' ) ) {
 		if ( false === WP_AUTO_UPDATE_CORE ) {
 			// Defaults to turned off, unless a filter allows it.
@@ -314,7 +337,12 @@ function core_auto_updates_settings() {
 			$upgrade_minor = false;
 			$upgrade_major = false;
 		} elseif ( true === WP_AUTO_UPDATE_CORE
+<<<<<<< HEAD
 			|| in_array( WP_AUTO_UPDATE_CORE, array( 'beta', 'rc', 'development', 'branch-development' ), true )
+=======
+			|| 'beta' === WP_AUTO_UPDATE_CORE
+			|| 'rc' === WP_AUTO_UPDATE_CORE
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		) {
 			// ALL updates for core.
 			$upgrade_dev   = true;

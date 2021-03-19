@@ -560,8 +560,13 @@ window.autosave = function() {
 					} else {
 
 						// Make sure the Text editor is selected.
+<<<<<<< HEAD
 						$( '#content-html' ).trigger( 'click' );
 						$( '#content' ).trigger( 'focus' );
+=======
+						$( '#content-html' ).click();
+						$( '#content' ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 						// Using document.execCommand() will let the user undo.
 						document.execCommand( 'selectAll' );
@@ -882,8 +887,14 @@ window.autosave = function() {
 				}, 1000 );
 			}
 		}).ready( function() {
+<<<<<<< HEAD
 			// Set the initial compare string in case TinyMCE is not used or not loaded first.
 			setInitialCompare();
+=======
+
+			// Set the initial compare string in case TinyMCE is not used or not loaded first.
+			initialCompareString = getCompareString();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		});
 
 		return {

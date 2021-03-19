@@ -13,6 +13,7 @@ if ( ! current_user_can( 'export_others_personal_data' ) ) {
 	wp_die( __( 'Sorry, you are not allowed to export personal data on this site.' ) );
 }
 
+<<<<<<< HEAD
 // Contextual help - choose Help on the top right of admin panel to preview this.
 get_current_screen()->add_help_tab(
 	array(
@@ -63,6 +64,8 @@ get_current_screen()->set_help_sidebar(
 	'<p>' . __( '<a href="https://wordpress.org/support/">Support</a>' ) . '</p>'
 );
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 // Handle list table actions.
 _wp_personal_data_handle_actions();
 
@@ -102,13 +105,17 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 <div class="wrap nosubsub">
 	<h1><?php esc_html_e( 'Export Personal Data' ); ?></h1>
+<<<<<<< HEAD
 	<p><?php _e( 'This tool helps site owners comply with local laws and regulations by exporting known data for a given user in a .zip file.' ); ?></p>
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	<hr class="wp-header-end" />
 
 	<?php settings_errors(); ?>
 
 	<form action="<?php echo esc_url( admin_url( 'export-personal-data.php' ) ); ?>" method="post" class="wp-privacy-request-form">
 		<h2><?php esc_html_e( 'Add Data Export Request' ); ?></h2>
+<<<<<<< HEAD
 		<div class="wp-privacy-request-form-field">
 		<table class="form-table">
 				<tr>
@@ -134,6 +141,14 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 			<p class="submit">
 				<?php submit_button( __( 'Send Request' ), 'secondary', 'submit', false ); ?>
 			</p>
+=======
+		<p><?php esc_html_e( 'An email will be sent to the user at this email address asking them to verify the request.' ); ?></p>
+
+		<div class="wp-privacy-request-form-field">
+			<label for="username_or_email_for_privacy_request"><?php esc_html_e( 'Username or email address' ); ?></label>
+			<input type="text" required class="regular-text ltr" id="username_or_email_for_privacy_request" name="username_or_email_for_privacy_request" />
+			<?php submit_button( __( 'Send Request' ), 'secondary', 'submit', false ); ?>
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		</div>
 		<?php wp_nonce_field( 'personal-data-request' ); ?>
 		<input type="hidden" name="action" value="add_export_personal_data_request" />

@@ -414,10 +414,13 @@ function is_taxonomy_hierarchical( $taxonomy ) {
  *         @type string $slug         Slug for default term. Default empty.
  *         @type string $description  Description for default term. Default empty.
  *     }
+<<<<<<< HEAD
  *     @type bool          $sort                  Whether terms in this taxonomy should be sorted in the order they are
  *                                                provided to `wp_set_object_terms()`. Default null which equates to false.
  *     @type array         $args                  Array of arguments to automatically use inside `wp_get_object_terms()`
  *                                                for this taxonomy.
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  *     @type bool          $_builtin              This taxonomy is a "built-in" taxonomy. INTERNAL USE ONLY!
  *                                                Default false.
  * }
@@ -1189,9 +1192,14 @@ function get_term_to_edit( $id, $taxonomy ) {
  *                                 If present, this parameter will be interpreted as `$args`, and the first
  *                                 function parameter will be parsed as a taxonomy or array of taxonomies.
  *                                 Default empty.
+<<<<<<< HEAD
  * @return WP_Term[]|int[]|string[]|string|WP_Error Array of terms, a count thereof as a numeric string,
  *                                                  or WP_Error if any of the taxonomies do not exist.
  *                                                  See the function description for more information.
+=======
+ * @return WP_Term[]|int|WP_Error Array of WP_Term instances, a count thereof,
+ *                                or WP_Error if any of the taxonomies do not exist.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function get_terms( $args = array(), $deprecated = '' ) {
 	$term_query = new WP_Term_Query();
@@ -1758,8 +1766,12 @@ function sanitize_term_field( $field, $value, $term_id, $taxonomy, $context ) {
  *                                 If present, this parameter will be interpreted as `$args`, and the first
  *                                 function parameter will be parsed as a taxonomy or array of taxonomies.
  *                                 Default empty.
+<<<<<<< HEAD
  * @return string|WP_Error Numeric string containing the number of terms in that
  *                         taxonomy or WP_Error if the taxonomy does not exist.
+=======
+ * @return array|int|WP_Error Number of terms in that taxonomy or WP_Error if the taxonomy does not exist.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function wp_count_terms( $args = array(), $deprecated = '' ) {
 	$use_legacy_args = false;
@@ -1956,7 +1968,10 @@ function wp_delete_term( $term, $taxonomy, $args = array() ) {
 				'orderby' => 'none',
 			)
 		);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		if ( 1 === count( $terms ) && isset( $default ) ) {
 			$terms = array( $default );
 		} else {
@@ -2952,10 +2967,17 @@ function wp_unique_term_slug( $slug, $term ) {
  *
  * Defaults will set 'alias_of', 'description', 'parent', and 'slug' if not
  * defined in `$args` already.
+<<<<<<< HEAD
  *
  * 'alias_of' will create a term group, if it doesn't already exist, and
  * update it for the `$term`.
  *
+=======
+ *
+ * 'alias_of' will create a term group, if it doesn't already exist, and
+ * update it for the `$term`.
+ *
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  * If the 'slug' argument in `$args` is missing, then the 'name' will be used.
  * If you set 'slug' and it isn't unique, then a WP_Error is returned.
  * If you don't pass any slug, then a unique one will be created.
@@ -3552,8 +3574,12 @@ function get_object_term_cache( $id, $taxonomy ) {
  *
  * @param string|int[]    $object_ids  Comma-separated list or array of term object IDs.
  * @param string|string[] $object_type The taxonomy object type or array of the same.
+<<<<<<< HEAD
  * @return void|false Void on success or if the `$object_ids` parameter is empty,
  *                    false if all of the terms in `$object_ids` are already cached.
+=======
+ * @return void|false False if all of the terms in `$object_ids` are already cached.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
  */
 function update_object_term_cache( $object_ids, $object_type ) {
 	if ( empty( $object_ids ) ) {
@@ -3921,7 +3947,11 @@ function _update_post_term_count( $terms, $taxonomy ) {
 
 		if ( $object_types ) {
 			// phpcs:ignore WordPress.DB.PreparedSQLPlaceholders.QuotedDynamicPlaceholderGeneration
+<<<<<<< HEAD
 			$count += (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->term_relationships, $wpdb->posts WHERE $wpdb->posts.ID = $wpdb->term_relationships.object_id AND post_status IN ('" . implode( "', '", $post_statuses ) . "') AND post_type IN ('" . implode( "', '", $object_types ) . "') AND term_taxonomy_id = %d", $term ) );
+=======
+			$count += (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->term_relationships, $wpdb->posts WHERE $wpdb->posts.ID = $wpdb->term_relationships.object_id AND post_status = 'publish' AND post_type IN ('" . implode( "', '", $object_types ) . "') AND term_taxonomy_id = %d", $term ) );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 
 		/** This action is documented in wp-includes/taxonomy.php */

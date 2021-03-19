@@ -263,8 +263,11 @@ function wp_set_script_translations( $handle, $domain = 'default', $path = null 
  * @param string $handle Name of the script to be removed.
  */
 function wp_deregister_script( $handle ) {
+<<<<<<< HEAD
 	global $pagenow;
 
+=======
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 	_wp_scripts_maybe_doing_it_wrong( __FUNCTION__, $handle );
 
 	/**

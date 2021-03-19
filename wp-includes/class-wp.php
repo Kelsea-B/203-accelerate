@@ -405,6 +405,7 @@ class WP {
 		if ( is_user_logged_in() ) {
 			$headers = array_merge( $headers, wp_get_nocache_headers() );
 		} elseif ( ! empty( $_GET['unapproved'] ) && ! empty( $_GET['moderation-hash'] ) ) {
+<<<<<<< HEAD
 			// Unmoderated comments are only visible for 10 minutes via the moderation hash.
 			$expires = 10 * MINUTE_IN_SECONDS;
 
@@ -413,6 +414,11 @@ class WP {
 				'max-age=%d, must-revalidate',
 				$expires
 			);
+=======
+			// Unmoderated comments are only visible for one minute via the moderation hash.
+			$headers['Expires']       = gmdate( 'D, d M Y H:i:s', time() + MINUTE_IN_SECONDS );
+			$headers['Cache-Control'] = 'max-age=60, must-revalidate';
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 		}
 		if ( ! empty( $this->query_vars['error'] ) ) {
 			$status = (int) $this->query_vars['error'];

@@ -572,7 +572,11 @@
 						break;
 					}
 					// Put focus back on same menu item.
+<<<<<<< HEAD
 					$( '#edit-' + thisItemData['menu-item-db-id'] ).trigger( 'focus' );
+=======
+					$( '#edit-' + thisItemData['menu-item-db-id'] ).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 					return false;
 				});
 			});
@@ -947,7 +951,11 @@
 		},
 
 		addCustomLink : function( processMethod ) {
+<<<<<<< HEAD
 			var url = $('#custom-menu-item-url').val().toString(),
+=======
+			var url = $('#custom-menu-item-url').val().trim(),
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				label = $('#custom-menu-item-name').val();
 
 			if ( '' !== url ) {
@@ -967,7 +975,11 @@
 				// Remove the Ajax spinner.
 				$( '.customlinkdiv .spinner' ).removeClass( 'is-active' );
 				// Set custom link form back to defaults.
+<<<<<<< HEAD
 				$('#custom-menu-item-name').val('').trigger( 'blur' );
+=======
+				$('#custom-menu-item-name').val('').blur();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				$( '#custom-menu-item-url' ).val( '' ).attr( 'placeholder', 'https://' );
 			});
 		},
@@ -1003,8 +1015,12 @@
 			$.post( ajaxurl, params, function(menuMarkup) {
 				var ins = $('#menu-instructions');
 
+<<<<<<< HEAD
 				menuMarkup = menuMarkup || '';
 				menuMarkup = menuMarkup.toString().trim(); // Trim leading whitespaces.
+=======
+				menuMarkup = $.trim( menuMarkup ); // Trim leading whitespaces.
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				processMethod(menuMarkup, params);
 
 				// Make it stand out a bit more visually, by adding a fadeIn.
@@ -1059,7 +1075,11 @@
 				};
 			} else {
 				// Make the post boxes read-only, as they can't be used yet.
+<<<<<<< HEAD
 				$( '#menu-settings-column' ).find( 'input,select' ).end().find( 'a' ).attr( 'href', '#' ).off( 'click' );
+=======
+				$( '#menu-settings-column' ).find( 'input,select' ).end().find( 'a' ).attr( 'href', '#' ).unbind( 'click' );
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 			}
 		},
 
@@ -1068,7 +1088,11 @@
 		},
 
 		attachTabsPanelListeners : function() {
+<<<<<<< HEAD
 			$('#menu-settings-column').on('click', function(e) {
+=======
+			$('#menu-settings-column').bind('click', function(e) {
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 				var selectAreaMatch, selectAll, panelId, wrapper, items,
 					target = $(e.target);
 
@@ -1088,7 +1112,11 @@
 					target.parent().addClass('tabs');
 
 					// Select the search bar.
+<<<<<<< HEAD
 					$('.quick-search', wrapper).trigger( 'focus' );
+=======
+					$('.quick-search', wrapper).focus();
+>>>>>>> 337fc74bea26f744696d7cc92b3fbb623fd97f1f
 
 					// Hide controls in the search tab if no items found.
 					if ( ! wrapper.find( '.tabs-panel-active .menu-item-title' ).length ) {
